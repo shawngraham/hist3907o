@@ -155,7 +155,7 @@ To give this a try, why not use the Texan Correspondence network we generated in
 
 ## Leaflet
 
-Maps can be created through a variety of services ([tilemill](https://www.mapbox.com/tilemill/), [cartodb](https://cartodb.com/), [mapbox](http://mapbox.com), for instance). These can then be embedded in your webpages or documents. Often, that's enough. But sometimes, you'd like to take control, and keep all the data, all the map, under your own name, in your own webspace. Here is a gentle introduction to using [leaflet.js](/leaflet.md) to make, style, and serve your maps. [Here is a template](https://github.com/shawngraham/daea) for mapping with leaflet, drawing all of your point data and ancillary information from a csv file.
+Maps can be created through a variety of services ([tilemill](https://www.mapbox.com/tilemill/), [cartodb](https://cartodb.com/), [mapbox](http://mapbox.com), for instance). These can then be embedded in your webpages or documents. Often, that's enough. But sometimes, you'd like to take control, and keep all the data, all the map, under your own name, in your own webspace. Here is a gentle introduction to using [leaflet.js](leaflet.txt.md) to make, style, and serve your maps. [Here is a template](https://github.com/shawngraham/daea) for mapping with leaflet, drawing all of your point data and ancillary information from a csv file.
 
 Oh, and here's a list of background maps you can use: [http://leaflet-extras.github.io/leaflet-providers/preview/index.html](http://leaflet-extras.github.io/leaflet-providers/preview/index.html).
 
