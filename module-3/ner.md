@@ -60,5 +60,5 @@ Open the text file in Notepad++, and you’ll see output like this:
 
 Congratulations – you’ve successfully tagged a document using a named entity recognizer!
 
-Now you need to do a bit more data-munging before you can do anything useful. [Imagine you wanted to eventually visualize this as a network](/regex-ner.md). You will need your regex skills again...
+Now you need to do a bit more data-munging before you can do anything useful. [Imagine you wanted to eventually visualize this as a network](regex-ner.md). You will need your regex skills again...
 

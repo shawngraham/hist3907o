@@ -16,7 +16,7 @@ I also have a [number of pieces of my own archaeological work](https://carleton-
 
 ## Exercises
 
-Exercises in this module focus on concepts of layout, design, colour theory, and so on. See the [exercises page](/exercises.md)
+Exercises in this module focus on concepts of layout, design, colour theory, and so on. See the [exercises page](module5-exercises.txt.md)
 
 *Please note that your assessment piece regarding all module exercises is due on April 1st*
 
