@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Graphing the net.txt - HIST3907o Crafting Digital History</title>
+  <title>1  Finding Data - HIST3907o Crafting Digital History</title>
   
 
   
@@ -76,13 +76,26 @@
         
         <span>Module 2</span>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../../module-2/1- Finding Data">1  Finding Data</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">1  Finding Data</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#how-do-we-find-data-anyway">How do we find data, anyway?</a></li>
+                            
+                                <li><a class="toctree-l3" href="#ok-so">Ok, so?</a></li>
+                            
+                                <li><a class="toctree-l3" href="#and-dont-forget-serendipity">And don't forget serendipity</a></li>
+                            
+                                <li><a class="toctree-l3" href="#but-first-lets-set-a-bit-of-framework">But first... let's set a bit of framework.</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../../module-2/2- Exercises">2  Exercises</a>
+                    <a class="" href="../2- Exercises">2  Exercises</a>
                     
                 </li>
             
@@ -144,52 +157,37 @@
         <span>Module 4</span>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../1- Seeing Patterns">1  Seeing Patterns</a>
+                    <a class="" href="../../module-4/1- Seeing Patterns">1  Seeing Patterns</a>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../2- Exercises">2  Exercises</a>
+                    <a class="" href="../../module-4/2- Exercises">2  Exercises</a>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../cyoa.txt">Cyoa.txt</a>
+                    <a class="" href="../../module-4/cyoa.txt">Cyoa.txt</a>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../geoparsing-w-python.txt">Geoparsing w python.txt</a>
+                    <a class="" href="../../module-4/geoparsing-w-python.txt">Geoparsing w python.txt</a>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../gephi.txt">Gephi.txt</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Graphing the net.txt</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#graphing-the-net">Graphing the Net</a></li>
-                            
-                                <li><a class="toctree-l3" href="#you-will-need">You will need:</a></li>
-                            
-                                <li><a class="toctree-l3" href="#getting-set-up-to-scrape">Getting set up to scrape</a></li>
-                            
-                                <li><a class="toctree-l3" href="#begin-the-scrape">Begin the scrape</a></li>
-                            
-                                <li><a class="toctree-l3" href="#what-does-it-all-mean">What does it all mean?</a></li>
-                            
-                        
-                        </ul>
+                    <a class="" href="../../module-4/gephi.txt">Gephi.txt</a>
                     
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../multimode-networks.txt">Multimode networks.txt</a>
+                    <a class="" href="../../module-4/graphing-the-net.txt">Graphing the net.txt</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../module-4/multimode-networks.txt">Multimode networks.txt</a>
                     
                 </li>
             
@@ -253,7 +251,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Graphing the net.txt</li>
+    <li>1  Finding Data</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -266,25 +264,21 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="graphing-the-net">Graphing the Net</h1>
-<p>It may be that you are interested in the structure of links on the internet. Perhaps you'd like to see how a particular topic plays out across Wikiepedia. What you'd have to do is a <em>web-crawl</em>. Here are quick instructions for setting up a webcrawl, which will follow every link on a page to a particular depth, and echo the results through your browser into Gephi for visualization and analysis.</p>
-<h2 id="you-will-need">You will need:</h2>
-<ul>
-<li>The Chrome browser with <a href="https://chrome.google.com/webstore/detail/site-spider-mark-ii/gedjofgioahckekhpgknhchelbpdogok">Site Spider Mk II</a> installed</li>
-<li><a href="http://gephi.org">Gephi </a></li>
-<li><a href="https://marketplace.gephi.org/plugin/http-graph/">HTTP Graph Generator Plugin for Gephi installed</a></li>
-</ul>
-<p><em>NB</em> You can install the graph generator plugin from <em>within</em> Gephi by selecting 'Tools' on the main menu ribbon at the top of the screen (and <em>not</em> the 'plugins' item). Then, within 'Tools', select 'plugins' and then 'available plugins'. Search for 'HTTPGraph'. Tick off the box and install it. When finished, close and restart Gephi with a new project.</p>
-<h2 id="getting-set-up-to-scrape">Getting set up to scrape</h2>
-<p>In Chrome, go to the settings page (the 'hamburg' icon at the extreme right of the address bar, or by typing <code>chrome://settings/</code> in the address bar. Click on 'show advanced settings' at the bottom of the page. Then, scroll down to 'Network' and click on 'change proxy settings'. </p>
-<p>In the popup that opens, click the 'connections' tab, and then the 'LAN Settings' button. <em>Another</em> popup will open. Select the 'Use a proxy server for your LAN'. Enter:</p>
-<p><code>127.0.0.1</code> for the address, and <code>8088</code> for the port. Now, whenever you go to a website, the info will be echoed through that port. We need to set Gephi up to hear what's being passed.</p>
-<p>Open Gephi. Start a new project. Go to 'file' then 'generate' then 'http graph'. A pop up will open, asking you to specify a port. Input <code>8088</code>. Accept the defaults, and press OK. On the overview panel, nodes will begin to appear when you go to a URL in Chrome. </p>
-<h2 id="begin-the-scrape">Begin the scrape</h2>
-<p>Go back to Chrome. Put in the URL that you want to start your scrape on, eg <code>http://en.wikipedia.org/wiki/Archaeology</code>. Then click the SiteSpider II button in your toolbar. Site spider will open a popup asking you how far and how deep you want to scrape; set the parameters accordingly. Hit 'go' and then flip over to your gephi window. You'll see the network begin to populate! Let it run as long as you want. When you're finished, save your network by 'exporting' it (on the file menu) as any other format than .gephi. I say this because I find sometimes the .gephi format is unstable. You can then filter your network for resources or html pages or what have you. I suggest deleting the node labelled 127.0.0.1 because that's your computer and it will throw off any metrics you choose to calculate. </p>
-<h2 id="what-does-it-all-mean">What does it all mean?</h2>
-<p>Well, that depends.</p>
-<p>For an example of why you might want to do all this, and what you might find, see <a href="http://electricarchaeology.ca/2014/05/01/shouting-into-the-void/">'Shouting Into the Void?'</a> a piece where I tried to understand the shape of the archaeological web.</p>
+              <h1 id="how-do-we-find-data-anyway">How do we find data, anyway?</h1>
+<p><img alt="datum" src="http://i.imgur.com/xvNbwKt.png" /></p>
+<p>'Something given'. That's a nice way of thinking about it. Of course, much of the data that we are 'given' wasn't really given <em>willingly</em>. When we <a href="http://www.cameronblevins.org/posts/topic-modeling-martha-ballards-diary/">topic model Martha Ballard's diary</a>, did she <em>give</em> this to us? Of course, she couldn't have imagined what we might try to do to it. Other kinds of data - census data, for instance - were compelled: folks had to answer the questions, on pain of punishment. This is all to suggest that there is a moral dimension to what we do with big data in history. Stop for a moment and read <a href="http://www.themacroscope.org/?page_id=17">'the joys of big data'</a> (if you haven't already) and then <a href="http://www.themacroscope.org/?page_id=90">'the third wave of computational history'</a>.</p>
+<p>Big data is not value-neutral; we need to think about, and talk about, what it means to collect, transform, analyze and visualize it. Who has the power here? (and you might also reflect on <a href="http://www.huffingtonpost.com/jason-schmitt/academic-journals-the-mos_1_b_6368204.html">'the most profitable obsolete technology'</a> ) Finally, you might also think about recent history - listen to Ian Milligan <a href="http://codinghistory.com/podcast/code5/">discuss how Yahoo's closure of Geocities represented a terrible blow to social history</a>.</p>
+<p>Accepting that big data is out there, that there's more material than one person can usefully digest and understand, and that a big-picture, macroscopic point of view is a useful perspective, means also thinking about the digital milieu that makes this possible. But see this piece by Tim Sherratt on <a href="http://discontents.com.au/seams-and-edges-dreams-of-aggregation-access-discovery-in-a-broken-world/">Seams and edges: Dreams of aggregation, access &amp; discovery in a broken world</a>. We interact with the data we find, and in the process, we alter both it and ourselves! We'll discuss this in class, and as you do your projects, think about the ethical, moral, and legal dimensions to what you are doing. <em>Keep track of your thoughts in your open notebook</em>.</p>
+<h3 id="ok-so">Ok, so?</h3>
+<p>So how can we find big data? The exercises in this module will teach you how to use wget on the command line to grab webpages; they will introduce you to the concept of APIs and what you might achieve with them as a historian; they will have you use some existing free and commercial tools for webscraping; and we will also learn how to grab social media data as well. </p>
+<p>You might like to begin with <a href="https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/resources.md">this list of resources; more being added in time.</a></p>
+<h3 id="and-dont-forget-serendipity">And don't forget serendipity</h3>
+<p>Follow researchers and institutions in your field of study. Today on Twitter I saw something that struck me as an excellent find. Penn Libraries tweeted, and I retweeted, <a href="http://dla.library.upenn.edu/dla/medren/detail.html?id=MEDREN_5103295">a link to a traveller's diary from the 19th century</a> - a woman who sailed from the US to Europe and thence the Nile, which she ascended and explored. 
+<a href="https://twitter.com/electricarchaeo/status/555078078511460352">My tweet</a> led to a flurry of activity amongst scholars, and even now, the transcription has begun...</p>
+<h2 id="but-first-lets-set-a-bit-of-framework">But first... let's set a bit of framework.</h2>
+<p>If we're going to find data, we need to be able to access the power of our machines, to get them to do what we want. It's worth thinking about what Corey Doctorow has called <a href="http://boingboing.net/2012/08/23/civilwar.html">the war on general purpose computing</a> as we begin...</p>
+<p>...and then thinking about what 'search' actually means. Check out Ted Underwood's piece on <a href="https://www.ideals.illinois.edu/handle/2142/50034">'Theorizing Research Practices We Forgot to Theorize Twenty Years Ago'</a>. </p>
+<p>Finally, Cameron Blevins has some thoughts on the <a href="http://www.cameronblevins.org/posts/perpetual-sunrise-methodology/">'perpetual sunrise of methodology'</a>.</p>
 
             </div>
           </div>
@@ -292,10 +286,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../multimode-networks.txt" class="btn btn-neutral float-right" title="Multimode networks.txt"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../2- Exercises" class="btn btn-neutral float-right" title="2  Exercises"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../gephi.txt" class="btn btn-neutral" title="Gephi.txt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../module-1/2- Exercises" class="btn btn-neutral" title="2  Exercises"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -332,8 +326,8 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
         
             <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
         
-      <span><a href="../gephi.txt" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../multimode-networks.txt" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../module-1/2- Exercises" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../2- Exercises" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
