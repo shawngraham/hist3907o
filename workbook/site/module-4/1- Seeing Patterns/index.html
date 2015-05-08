@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Graphing the net.txt - HIST3907o Crafting Digital History</title>
+  <title>1  Seeing Patterns - HIST3907o Crafting Digital History</title>
   
 
   
@@ -143,8 +143,21 @@
         
         <span>Module 4</span>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../1- Seeing Patterns">1  Seeing Patterns</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">1  Seeing Patterns</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#seeing-patterns">Seeing Patterns</a></li>
+                            
+                                <li><a class="toctree-l3" href="#exercises">Exercises</a></li>
+                            
+                                <li><a class="toctree-l3" href="#things-you-will-learn-in-this-module">Things you will learn in this module</a></li>
+                            
+                                <li><a class="toctree-l3" href="#and-finally">And finally...</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -168,23 +181,8 @@
                     
                 </li>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Graphing the net.txt</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#graphing-the-net">Graphing the Net</a></li>
-                            
-                                <li><a class="toctree-l3" href="#you-will-need">You will need:</a></li>
-                            
-                                <li><a class="toctree-l3" href="#getting-set-up-to-scrape">Getting set up to scrape</a></li>
-                            
-                                <li><a class="toctree-l3" href="#begin-the-scrape">Begin the scrape</a></li>
-                            
-                                <li><a class="toctree-l3" href="#what-does-it-all-mean">What does it all mean?</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../graphing-the-net.txt">Graphing the net.txt</a>
                     
                 </li>
             
@@ -253,7 +251,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Graphing the net.txt</li>
+    <li>1  Seeing Patterns</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -266,25 +264,24 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="graphing-the-net">Graphing the Net</h1>
-<p>It may be that you are interested in the structure of links on the internet. Perhaps you'd like to see how a particular topic plays out across Wikiepedia. What you'd have to do is a <em>web-crawl</em>. Here are quick instructions for setting up a webcrawl, which will follow every link on a page to a particular depth, and echo the results through your browser into Gephi for visualization and analysis.</p>
-<h2 id="you-will-need">You will need:</h2>
+              <h1 id="seeing-patterns">Seeing Patterns</h1>
+<p>In the previous module, we collected and cleaned vast amounts of historical data. Let's see what patterns emerge. Part exploration, part reflection, and part argument, these two stages are not linear but feed into one another. Exploration and preliminary visualizations are often about finding the holes. Sometimes, a quick visualization helps you understand what is missing, or what is a glitch in your method, or what is just plain mistaken in your assumptions. I once spent quite a lot of time staring at a network graph before I realized that I'd neglected to import the entire file - I was trying to interpret just a subset of it! Back to my wrangling I went, and in the process of cleaning that data, I realized there were patterns that would be better visualized as simple line plots. I visualized these - and found other errors. Back to wrangling. In the end, a combination of network graph and simple line plots allowed me to identify a story about influence and control of landholding (I was working with archaeological data).</p>
+<p>In this module, let us begin by looking at a couple of pieces that explore this cyclical dynamic between data wrangling and exploration. We'll take a look at the <a href="http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf">Mapping Texts</a> project. We'll look at the work of Michelle Moravec who is using <a href="http://historyinthecity.blogspot.ca/2013/12/corpus-linguistics-for-historians.html">corpus linguistics tools to understand the history of women's suffrage</a> (and also <a href="http://historyinthecity.blogspot.ca/2013/12/visualizing-gender-in-history-of-woman.html">here</a>). We'll listen to Micki Kaufmann on <a href="http://scholarslab.org/announcements/podcast-micki-kaufman-on-quantifying-kissinger/">Quantifying Kissinger</a>. (Her <a href="http://blog.quantifyingkissinger.com/category/methods/">methods are detailed here</a>.) We'll talk about <a href="http://www.scottbot.net/HIAL/?tag=network-analysis">network analysis</a>. We'll talk about <a href="http://humanities.uva.nl/~mkoolen1/materials/KB_Mallet_2015/KB_Mallet.html">topic modeling</a> (and also <a href="http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html">here</a>). We'll talk about <a href="http://www.themacroscope.org/?page_id=469">principles of visualization</a>. We'll probably talk about <a href="http://en.wikipedia.org/wiki/Edward_Tufte">Edward Tufte</a>, too.</p>
+<h2 id="exercises">Exercises</h2>
+<p>The <a href="../2- Exercises">exercises</a> in this module will pick up where we left off, with the Texan Correspondence. You'll represent the exchange of letters as a network. We'll try to extract place names from it. We'll topic model the letters themselves. We'll explore various ways of visualizing those results.</p>
+<h2 id="things-you-will-learn-in-this-module">Things you will learn in this module</h2>
 <ul>
-<li>The Chrome browser with <a href="https://chrome.google.com/webstore/detail/site-spider-mark-ii/gedjofgioahckekhpgknhchelbpdogok">Site Spider Mk II</a> installed</li>
-<li><a href="http://gephi.org">Gephi </a></li>
-<li><a href="https://marketplace.gephi.org/plugin/http-graph/">HTTP Graph Generator Plugin for Gephi installed</a></li>
+<li>importing, querying, and visualizing networks with <a href="http:/gephi.org">Gephi</a></li>
+<li>topic modeling with the GUI topic modeling tool, and MALLET at the command line, and in R</li>
+<li>simple maps with CartoDB (which may include georectifying and displaying historical maps as base layers)</li>
+<li>corpus linguistics with AntConc</li>
+<li>TF-IDF with Overview</li>
+<li>quick visualizations using <a href="http://raw.densitydesign.org/">RAW</a> </li>
 </ul>
-<p><em>NB</em> You can install the graph generator plugin from <em>within</em> Gephi by selecting 'Tools' on the main menu ribbon at the top of the screen (and <em>not</em> the 'plugins' item). Then, within 'Tools', select 'plugins' and then 'available plugins'. Search for 'HTTPGraph'. Tick off the box and install it. When finished, close and restart Gephi with a new project.</p>
-<h2 id="getting-set-up-to-scrape">Getting set up to scrape</h2>
-<p>In Chrome, go to the settings page (the 'hamburg' icon at the extreme right of the address bar, or by typing <code>chrome://settings/</code> in the address bar. Click on 'show advanced settings' at the bottom of the page. Then, scroll down to 'Network' and click on 'change proxy settings'. </p>
-<p>In the popup that opens, click the 'connections' tab, and then the 'LAN Settings' button. <em>Another</em> popup will open. Select the 'Use a proxy server for your LAN'. Enter:</p>
-<p><code>127.0.0.1</code> for the address, and <code>8088</code> for the port. Now, whenever you go to a website, the info will be echoed through that port. We need to set Gephi up to hear what's being passed.</p>
-<p>Open Gephi. Start a new project. Go to 'file' then 'generate' then 'http graph'. A pop up will open, asking you to specify a port. Input <code>8088</code>. Accept the defaults, and press OK. On the overview panel, nodes will begin to appear when you go to a URL in Chrome. </p>
-<h2 id="begin-the-scrape">Begin the scrape</h2>
-<p>Go back to Chrome. Put in the URL that you want to start your scrape on, eg <code>http://en.wikipedia.org/wiki/Archaeology</code>. Then click the SiteSpider II button in your toolbar. Site spider will open a popup asking you how far and how deep you want to scrape; set the parameters accordingly. Hit 'go' and then flip over to your gephi window. You'll see the network begin to populate! Let it run as long as you want. When you're finished, save your network by 'exporting' it (on the file menu) as any other format than .gephi. I say this because I find sometimes the .gephi format is unstable. You can then filter your network for resources or html pages or what have you. I suggest deleting the node labelled 127.0.0.1 because that's your computer and it will throw off any metrics you choose to calculate. </p>
-<h2 id="what-does-it-all-mean">What does it all mean?</h2>
-<p>Well, that depends.</p>
-<p>For an example of why you might want to do all this, and what you might find, see <a href="http://electricarchaeology.ca/2014/05/01/shouting-into-the-void/">'Shouting Into the Void?'</a> a piece where I tried to understand the shape of the archaeological web.</p>
+<p>We will be busy in this module. <em>Do not be afraid</em> to ask myself, your peers, or the wider DH community for help and advice! It's the only way we grow.</p>
+<h2 id="and-finally">And finally...</h2>
+<p>Just because there is a package, or a routine, or an approach to doing <em>x</em> with your data <em>does not mean</em> that you park your critical apparatus at the door. Consider: Matthew Jockers has done some amazing work putting together <a href="https://github.com/mjockers/syuzhet/">a package for the R statistical language that helps one analyze plot arcs in thousands of novels at once</a>. He describes how it works on his <a href="http://www.matthewjockers.net/2015/02/02/syuzhet/">blog</a>. Annie Swafford <a href="https://annieswafford.wordpress.com/2015/03/02/syuzhet/">explores this package</a> in a comprehensive blog post. She highlights important issues in the way the package deals with the complexity of the world, and how that might have an impact on results and conclusions drawn from using the package. The interplay of the work that Jockers has done, and the dialogue that Swafford has started with Jockers, is an important feature (and perhaps, a defining feature) of digital humanities scholarship. Jocker builds; and Swafford approaches the code from a humanistic perspective; and in the dialectic of their exchange, the code and our ability to understand the code's limitations and potentials will improve. And so we understand the world better.</p>
+<p>When you choose your exploratory method, you need to consider that the method has its own agenda!</p>
 
             </div>
           </div>
@@ -292,10 +289,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../multimode-networks.txt" class="btn btn-neutral float-right" title="Multimode networks.txt"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../2- Exercises" class="btn btn-neutral float-right" title="2  Exercises"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../gephi.txt" class="btn btn-neutral" title="Gephi.txt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../module-3/twarc" class="btn btn-neutral" title="Twarc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -332,8 +329,8 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
         
             <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
         
-      <span><a href="../gephi.txt" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../multimode-networks.txt" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../module-3/twarc" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../2- Exercises" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
