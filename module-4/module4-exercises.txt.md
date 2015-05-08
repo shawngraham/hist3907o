@@ -19,7 +19,7 @@
 ## Exercise 1
 ### Network Visualization
 
-In exercise 1, you will transform your Texan Correspondence data into a network, which you will then visualize with Gephi. The detailed instructions are [here](gephi.md). I would recommend that you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/HIAL/?s=%20networks%20demystified). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
+In exercise 1, you will transform your Texan Correspondence data into a network, which you will then visualize with Gephi. The detailed instructions are [here](gephi.txt.md). I would recommend that you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/HIAL/?s=%20networks%20demystified). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
 
 -----
 
