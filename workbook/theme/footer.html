@@ -1,0 +1,31 @@
+<footer>
+  {% if next_page or previous_page %}
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      {% if next_page %}
+        <a href="{{ next_page.url }}" class="btn btn-neutral float-right" title="{{ next_page.title }}"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      {% endif %}
+      {% if previous_page %}
+        <a href="{{ previous_page.url }}" class="btn btn-neutral" title="{{ previous_page.title }}"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="{{ repo_url }}"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".section").fitVids();
+  });
+</script>
