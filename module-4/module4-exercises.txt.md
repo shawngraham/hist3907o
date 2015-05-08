@@ -8,7 +8,7 @@
 | Texts        | Networks         | Maps  | Charts |
 | ------------- |:-------------:|:-----:|--------:|
 | [Topic Modeling Tool](#exercise-2)  |[Network analysis and visualization](#exercise-1) |[Simple mapping & georectifying](#exercise-8) |[Quick charts using RAW](#exercise-7) |
-| [Topic Modeling in R](#exercise-3)  |[Converting 2-mode to 1-mode](multimode-networks.md) |[QGIS (tutorials by Fred Gibbs)](#exercise-10) | |
+| [Topic Modeling in R](#exercise-3)  |[Converting 2-mode to 1-mode](multimode-networks.txt.md) |[QGIS (tutorials by Fred Gibbs)](#exercise-10) | |
 | [Text Analysis with OverviewProject](#exercise-4)   |[Graphing the Net](graphing-the-net.md) |[Geoparsing with Python](geoparsing-w-python.md) | |
 | [Corpus Linguistics with AntConc](#exercise-5)  |[Choose your own adventure](cyoa.md)|[Palladio with Posner](http://miriamposner.com/blog/getting-started-with-palladio/) | |
 | [Text Analysis with Voyant](#exercise-6)    |  | | |
