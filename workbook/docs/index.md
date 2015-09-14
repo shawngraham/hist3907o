@@ -1,6 +1,3 @@
-### HIST3907o Carleton University Winter 2016
-#Crafting Digital History 
-
 ![image](https://www.penflip.com/shawngraham/crafting-digital-history-workbook/blob/master/images/cover.png?raw=true)
 
 This workbook supports #HIST39070 in the Winter 2016 term at Carleton University. The main course materials are in the Github repo; where the information in this book and on the repo diverge, the repo will be taken as the 'correct' version.

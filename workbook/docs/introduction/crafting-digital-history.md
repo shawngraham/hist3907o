@@ -1,4 +1,3 @@
-# Crafting Digital History
 
 *This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [github repository](https://github.com/hist3907b-winter2015/)*
 
@@ -43,14 +42,14 @@ The course is built so that every student makes a meaningful (and publicly ackno
 
 The data and informatics skills that students will learn in this course, as well as the theoretical and historiographical grounding they will receive, are in demand. Students who successfully pass this course will have a piece of public work that they can include in portfolios and CVs that will stand them in good stead in the broader world within and without academia. Indeed, this course is a first step in developing their online scholarly persona.
 
-## Acknowledgements
+### Acknowledgements
 
 Ian Milligan, Melodee Beals, John Bonnett, Chad Gaffield, ... I'm missing many of you - but I'm going through my notes and emails and will have your names here soon!
 
 Assessment exercises
 ====================
 
-### Assessment breakdown:
+### Assessment breakdown
 * Exercises: 30 % 
 * Final project: 30%
 * Paradata document: 20%
@@ -60,7 +59,7 @@ Assessment exercises
 
 There is no final exam in this course.
 
-### Participation: 20%
+#### Participation: 20%
 
 **That is to say, active, value-added community building by participation in the discussion(s), across mutliple media and platforms.**
 
@@ -72,7 +71,7 @@ Ongoing student feedback: github features an issue tracker and a wiki on each re
 
 Privacy issues will be addressed by allowing all public outputs to be done using pseudonyms, under arrangement with the course instructors (while recognizing that pseudonyms run counter to the ideals of managing a scholarly identity online, online safety is a priority. Arrangements for complete behind-the-LMS-gate interactions and project work can be made on an individual basis as warranted). 
 
-##	Exercises (30%)
+####	Exercises (30%)
 NB 'optional' denotes an online tutorial without the purview of this course, to add depth to that section's discussion. Evidence of completion of these may be construed as a bonus on the exercise grade of the course.
 
 Each section also requires students to be actively engaging with each other’s work via the wiki and issues section of their github repositories. The course instructor monitors these by pulling all of their respective RSS into a single feed, (shared with the students via the LMS), but posts responses etc directly within the student’s repository. 
@@ -81,7 +80,7 @@ We 'choose our own adventure' through this material. Students can select their s
 
 These exercises, with instructions and guidance, will be in the course repo. They are also described in this course workbook. 
 
-## The final summative project will include (30%): 
+#### The final summative project will include (30%): 
 - searching digitized newspapers for materials appropriate for the larger research project
 - transcribing and encoding these materials in xml (with all of the reflective decision making that entails)
 - sharing these materials via contributions to the course repository on Github
@@ -91,7 +90,7 @@ These exercises, with instructions and guidance, will be in the course repo. The
 
 **To be submitted April 8th, Midnight.**
 
-## Checkpoints for the major project
+#### Checkpoints for the major project
 
 There are two checkpoints: 
 
@@ -101,10 +100,21 @@ At week 8:  Second checkpoint assignment for the major project: research design;
 
 ...and again, in week 12 *the draft* of your major project (your visualization) should be online for discussion & feedback. (**Midnight, Wednesday March 25th**)
 
-## The ‘paradata’ document (20%)
+#### The ‘paradata’ document (20%)
 - An essay (or unessay) which discusses the process of building this project, the scholarly decisions involved in it, and reflection on how the tools used have helped/hindered the historiography. 
  
 **To be submitted on last day of the term, April 8th, Midnight.**
 
 
 *Where the course repo and this workbook disagree, the _correct_ version will always be the course repo.*
+
+# Some Readings To Kick Things Off
+
+To get things underway, you should read and reflect on the following three pieces. We will discuss these in our initial face-to-face virtual meeting.
+
+------------
+William G Thomas III. 'What is digital scholarship? A typology'. [http://railroads.unl.edu/blog/?p=1159](http://railroads.unl.edu/blog/?p=1159)
+
+Jefferson Bailey, Lily Pregill. 'Speak to the Eyes: The History and Practice of Information Visualization' *Art Documentation: Journal of the Art Libraries Society of North America*, vol. 33 (fall 2014) 0730-7187/2014/3302-0002 (text)[http://www.jeffersonbailey.com/speak-to-the-eyes-the-history-and-practice-of-information-visualization/]
+
+Shawn Graham, Ian Milligan, Scott Weingart. 'Principles of Information Visualization' *The Historian's Macroscope* - working title. Under contract with Imperial College Press. Open Draft Version, Autumn 2013, (site)[http://www.themacroscope.org/?page_id=469]
