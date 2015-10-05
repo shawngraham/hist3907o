@@ -4,7 +4,7 @@ theme_dir: "theme"
 site_url: http://craftingdigitalhistory.ca
 site_description: All course materials crafted ex novo by Shawn Graham are provided with an open source license as Markdown files. I welcome contributions in the form of pull requests.
 site_author: Shawn Graham
-repo_url: https://github.com/shawngraham/hist3907o/
+repo_url: https://github.com/shawngraham/hist3907o/tree/master/workbook/docs
 pages: 
 - Home: 'index.md'
 - Getting Started: 'introduction/crafting-digital-history.md'
