@@ -358,7 +358,7 @@
 <p>in the search bar.  Recall in TextWrangler we would look for <code>\bto\b</code> instead. This will find every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’).  </p>
 <p>We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. You learned earlier that the query <code>.+</code> returns any amount of text, no matter what it says. Assuming you are using Notepad++, if your query is </p>
 <p><code>.+\&lt;to\&gt;.+</code> </p>
-<p>your search will return every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't. In TextWrangler, your query would be ``` .+\bto\b.+. ```` </p>
+<p>your search will return every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't. In TextWrangler, your query would be <code>.+\bto\b.+.</code> </p>
 <p>As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like </p>
 <p><code>(.+\&lt;to\&gt;)</code></p>
 <p>and the entire line is placed within a parenthetical group. In the 'replace' box, enter </p>
@@ -403,7 +403,7 @@
 <p>which will return ", 1836 51", ", 1839 52", etc.    </p>
 <p>The next step is making the parenthetical groups which will be used to remove parts of the text with find-and-replace. In this case, we want to remove the comma and everything after year, but not the year or the space before it. Thus our query will look like:</p>
 <p><code>(,)( [0-9]{4})(.+)</code></p>
-<p>with the comma as the first group "\1", the space and the year as the second "\2", and the rest of the line as the third "\3".  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the <em>replace</em> look like?</p>
+<p>with the comma as the first group <code>"\1"</code>, the space and the year as the second <code>"\2"</code>, and the rest of the line as the third <code>"\3"</code>.  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the <em>replace</em> look like?</p>
 <ul>
 <li>Find the dates using a regex, and replace so that only the <em>second</em> group in the expression is kept. You might want to consult the introduction to regex again before you execute this one.</li>
 </ul>

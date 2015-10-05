@@ -325,33 +325,33 @@
 <p>So, you've learned how to tag a corpus using the Stanford NER (<a href="https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/ner.md">here is that exercise again, as a reminder</a>). There are several ways we might like to visualize that output.</p>
 <p>Unfortunately, depending on what you want to <em>do</em> with that data, you are going to have to go back to the data-munging cycle. </p>
 <h2 id="as-a-network">As a network</h2>
-<p>Let us imagine that we wanted to visualize the locations mentioned in the letters as a kind of network. You may wish to <a href="https://github.com/hist3907b-winter2015/module4-holes/blob/master/gephi.md">examine the exercise introducing Gephi first</a>.</p>
+<p>Let us imagine that we wanted to visualize the locations mentioned in the letters as a kind of network.</p>
 <p>We will use regular expressions to further manipulate the data into a useful source -&gt; target list.</p>
 <h3 id="regex-on-mac-to-useful-output-pc-please-skip-to-next-section">REGEX on Mac to Useful Output (PC, please skip to next section):</h3>
 <p>We need to organize those locations so that locations mentioned in a letter are connected to each other. To begin, we trim away any line that does not start with LOCATION. We do this by using our regular expression skills from module 3, and adding in a few more commands:</p>
-<p>FIND: ^(?!.<em>LOCATION).</em>$</p>
+<p>FIND: <code>^(?!.*LOCATION).*$</code></p>
 <p>and replace with nothing. We had a few new commands in there: the <code>?!</code> tells it to begin looking ahead for the literal phrase LOCATION, and then the dot and dollar sign let us know to end at the end of the line. In any case, this will delete everything that doesn't have the location tag in front. Now, let us also mark those blank lines we noticed as the start of a new letter. </p>
-<p>FIND: ^\s*$</p>
+<p>FIND: <code>^\s*$</code></p>
 <p>where:
-^ marks the beginning of a line<br>
-$ marks the end of a line<Br>
-\s indicates ‘whitespace’<Br>
-* indicates a zero or more repetition of the thing in front of it (in this case, whitespace)</p>
+<code>^</code> marks the beginning of a line<br>
+<code>$</code> marks the end of a line<Br>
+<code>\s</code> indicates ‘whitespace’<Br>
+<code>\*</code> indicates a zero or more repetition of the thing in front of it (in this case, whitespace)</p>
 <p>and we replace with the phrase, “blankspace”. Because there might be a few blank lines, you might see ‘blankspace’ in places. Where you’ve got ‘blankspaceblankspace’, that’s showing us the spaces between the original documents (whereas one ‘blankspace’ was where an ORGANIZATION or PERSON tag was removed).</p>
 <p>At this point, we might want to remove spaces between place names and use underscores instead, so that when we finally get this into a comma separated format, places like ‘United States’ will be ‘United_States’ rather than ‘united, states’.</p>
 <p>Find:  <em>&lt;-a single space</em><br>
-Replace: _</p>
+Replace: <code>\_</code></p>
 <p>Now, we want to reintroduce the space after ‘LOCATION:’, so</p>
-<p>Find: :_       <em>&lt;-this is a colon, followed by an underscore</em><br>
-Replace: :  <em>&lt;-this is a colon, followed by a space</em></p>
+<p>Find: <code>:_</code>       <em>&lt;-this is a colon, followed by an underscore</em><br>
+Replace: <code>:</code> <em>&lt;-this is a colon, followed by a space</em></p>
 <p>Now we want to get all of the locations for a single letter into a single line. So we want to get rid of new lines and LOCATION:</p>
-<p>Find: \n(LOCATION:)<br>
+<p>Find: <code>\n(LOCATION:)</code><br>
 Replace: </p>
 <p>It is beginning to look like a list. Let’s replace ‘blankspaceblankspace’ with ‘new-document’.</p>
-<p>Find: blankspaceblankspace<br>
+<p>Find: <code>blankspaceblankspace</code><br>
 Replace: new-document</p>
 <p>And now let’s get those single blankspace lines excised:</p>
-<p>Find \n(blankspace)<br>
+<p>Find <code>\n(blankspace)</code><br>
 Replace: </p>
 <p>Now you have something that looks like this:</p>
 <p>
@@ -368,40 +368,40 @@ new-document New_Orleans<br>
 </p>
 
 <p>Why not leave ‘new-document’ in the file? It’ll make a handy marker. Let’s replace the spaces with commas:</p>
-<p>Find:      <em>&lt;-a single space</em><br>
-Replace: , </p>
+<p>Find: <code></code>     <em>&lt;-a single space</em><br>
+Replace: <code>,</code> </p>
 <p>Save your work as a *.csv file. You now have a file that you can load into a variety of other platforms or tools to perform your analysis. Of course, NER is not perfect, especially when dealing with names like ‘Houston’ that were a personal name long before they were a place name.</p>
 <h3 id="regex-on-pc-to-useful-output">REGEX on PC to Useful Output:</h3>
 <p>Open your tagged file in Notepad++.  There are a lot of carriage returns, line breaks, and white spaces in this document that will make our regex very complicated and will in fact break it periodically, if we try to work with it as it is. Instead, let us remove all new lines and whitespaces and the outset, and use regex to put structure back. To begin, we want to get the entire document into a single line:</p>
-<p>Find: \n<br>
+<p>Find: <code>\n</code><br>
 Replace with nothing.</p>
 <p>Notepad++ reports the number of lines in the document at the bottom of the window. It should now report lines: 1.</p>
 <p>Let’s introduce line breaks to correspond with the original letters (ie, a line break signals a new letter), since we want to visualize the network of locations mentioned where we join places together on the basis of being mentioned in the same letter. If we examine the original document, one candidate for something to search for, to signal a new letter, could be  <code>&lt;PERSON&gt;</code> to <code>&lt;PERSON&gt;</code> but the named entity recognizer sometimes confuses persons for places or organizations; the object character recognition also makes things complicated.  Since the letters are organized chronologically, and we can see ‘Digitized by Google’ at the bottom of every page (and since no writer in the 1840s is going to use the word digitized) let’s use that as our page break marker. For the most part, one letter corresponds to one page in the book. It’s not ideal, but this is something that the historian will have to discuss in her methods and conclusions. Perhaps, over the seven hundred odd letters in this collection, it doesn’t actually make much difference.</p>
-<p>Find: (digitized)<br>
-Replace: \n\1</p>
+<p>Find: <code>(digitized)</code><br>
+Replace:<code>\n\1</code></p>
 <p>You now have on the order of 700 odd lines in the document. </p>
 <p>Let’s find the locations and put them on individual lines, so that we can strip out everything else. </p>
-<p>Find: (LOCATION)(.*?)(LOCATION)<br>
-Replace: \n\2</p>
-<p>In the search string above, the .* would look for everything between the first <code>&lt;location&gt;</code> on the line and the last <code>&lt;location&gt;</code>in the line, so we would get a lot of junk. By using .*? we just get the text between <code>&lt;location&gt;</code>and the next <code>&lt;location&gt;</code> tag.
+<p>Find: <code>(LOCATION)(.\*?)(LOCATION)</code><br>
+Replace: <code>\n\2</code></p>
+<p>In the search string above, the <code>.\*</code> would look for everything between the first <code>&lt;location&gt;</code> on the line and the last <code>&lt;location&gt;</code>in the line, so we would get a lot of junk. By using <code>.\*?</code> we just get the text between <code>&lt;location&gt;</code>and the next <code>&lt;location&gt;</code> tag.
 W
 e need to replace the &lt; and &gt; from the location tags now, as those are characters with special meanings in our regular expressions. Turn off the regular expressions in notepad ++ by unticking the ‘regular expression’ box. Now search for &lt;, &gt;, and \ in turn, replacing them with tildes:</p>
 <p><code>&lt;LOCATION&gt;</code>Texas<code>&lt;/LOCATION&gt;</code> becomes <code>~Texas~~~</code></p>
 <p>Now we want to delete in each line everything that isn’t a location. Our locations start the line and are trailed by three tildes, so we just need to find those three tildes and everything that comes after, and delete. Turn regular expressions back on in the search window.</p>
-<p>Find: (~~~)(.*)<br>
+<p>Find: <code>(~~~)(.*)</code><br>
 Replace with nothing.</p>
 <p>Our marker for a new page in this book was the line that began with ‘Digitized by’. We need to delete that line in its entirety, leaving a blank line.</p>
-<p>Find: (Digitized)(.*)<br>
-Replace: \n</p>
+<p>Find: <code>(Digitized)(.\*)</code><br>
+Replace: <code>\n</code></p>
 <p>Now we want to get those locations all in the same line again. We need to find the new line character followed by the tilde, and then delete that new line, replacing it with a comma:</p>
-<p>Find: (\n)(~)<br>
-Replace: ,</p>
+<p>Find: <code>(\n)(~)</code><br>
+Replace: <code>,</code></p>
 <p>Now we remove extraneous blank lines.</p>
-<p>Find: \s*$<br>
+<p>Find: <code>\s*$</code><br>
 Replace with nothing. </p>
 <p>We’re almost there. Let’s remove the comma that starts each line by searching for 
 <code>^,</code> (remembering that the carat character indicates the start of a line) and replacing with nothing. Save this as 'cleaned-locations.csv' Congratulations! You’ve taken quite complicated output and cleaned it so that every place mentioned on a single page in the original publication is now on its own line, which means you can import it into a network visualization package, a spreadsheet, or some other tool!</p>
-<p>Now you can upload this csv to Gephi <a href="https://github.com/hist3907b-winter2015/module4-holes">see module 4</a>.</p>
+<p>Now you can upload this csv to Gephi.</p>
               
             </div>
           </div>

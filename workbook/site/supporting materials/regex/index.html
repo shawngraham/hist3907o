@@ -375,7 +375,7 @@
 <p>for example, might return "dried fruits are g", because the string begins with "d" and ends with "g", and has various characters in the middle. Searching for simply ".+" will yield query results that are entire lines of text, because you are searching for any character, and any amount of them.</p>
 <p>Parentheses in regular expressions are also very useful when replacing text. The text within a regular expression forms what's called a group, and the software you use to search remembers which groups you queried in order of their appearance. For example, if you search for </p>
 <p><code>(dogs)( and )(cats)</code></p>
-<p>which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as "\1", "\2", and "\3" for each group respectively.</p>
+<p>which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as <code>"\1"</code>, <code>"\2"</code>, and <code>"\3"</code> for each group respectively.</p>
 <p>If you wanted to switch the order of "dogs" and "cats" every time the phrase "dogs and cats" appeared in your document, you would type </p>
 <p><code>(dogs)( and )(cats)</code></p>
 <p>in the 'find' box, and </p>
