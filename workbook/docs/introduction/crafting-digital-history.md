@@ -5,6 +5,8 @@ Welcome! This workbook is made by converting several plain-text files into a ful
 
 Writing, crafting, coding: these are like a small river, flowing in one direction into the future. You get new ideas, new hunches: the river branches. There's a fork in its path. Sometimes new ideas, new hunches fold back into that original stream: they merge. 
 
+Github is a way of mapping that stream, and a guide to revisiting the interesting parts of it.
+
 It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.
 
 Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in Module 1. You'll see why you'd want to do that, and how to keep an open notebook of your work on Github, writing things in a plain-text format called ['markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). 
@@ -23,15 +25,14 @@ Finally, while there is no formal requirement for you to do this, it would be a 
 
 To get things underway, you should read and reflect on the following three pieces. We will discuss these in our initial face-to-face virtual meeting.
 
-------------
-William G Thomas III. 'What is digital scholarship? A typology'. [http://railroads.unl.edu/blog/?p=1159](http://railroads.unl.edu/blog/?p=1159)
+> William G Thomas III. 'What is digital scholarship? A typology'. [http://railroads.unl.edu/blog/?p=1159](http://railroads.unl.edu/blog/?p=1159)
 
-Jefferson Bailey, Lily Pregill. 'Speak to the Eyes: The History and Practice of Information Visualization' *Art Documentation: Journal of the Art Libraries Society of North America*, vol. 33 (fall 2014) 0730-7187/2014/3302-0002 (text)[http://www.jeffersonbailey.com/speak-to-the-eyes-the-history-and-practice-of-information-visualization/]
+> Jefferson Bailey, Lily Pregill. 'Speak to the Eyes: The History and Practice of Information Visualization' *Art Documentation: Journal of the Art Libraries Society of North America*, vol. 33 (fall 2014) 0730-7187/2014/3302-0002 [text](http://www.jeffersonbailey.com/speak-to-the-eyes-the-history-and-practice-of-information-visualization/)
 
-Shawn Graham, Ian Milligan, Scott Weingart. 'Principles of Information Visualization' *The Historian's Macroscope* - working title. Under contract with Imperial College Press. Open Draft Version, Autumn 2013, (site)[http://www.themacroscope.org/?page_id=469]
+> Shawn Graham, Ian Milligan, Scott Weingart. 'Principles of Information Visualization' *The Historian's Macroscope* - working title. Under contract with Imperial College Press. Open Draft Version, Autumn 2013, [site](http://www.themacroscope.org/?page_id=469)
 
 # Acknowledgements
 
-The writing of this workbook took place alongside the writing of my more formal book on digital methods co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://www.scottbot.net/HIAL/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, and of course, the digital history community on Twitter. My thanks to you all.
+The writing of this workbook took place alongside the writing of my more formal book on [digital methods](http://themacroscope.org) co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://www.scottbot.net/HIAL/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, and of course, the digital history community on Twitter. My thanks to you all.
 
 *This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [github repository](https://github.com/hist3907b-winter2015/)*
