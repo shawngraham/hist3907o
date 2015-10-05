@@ -4,4 +4,37 @@ theme_dir: "theme"
 site_url: http://craftingdigitalhistory.ca
 site_description: All course materials crafted ex novo by Shawn Graham are provided with an open source license as Markdown files. I welcome contributions in the form of pull requests.
 site_author: Shawn Graham
-repo_url: https://github.com/shawngraham/hist3907o/
+repo_url: https://github.com/shawngraham/hist3907o/tree/master/workbook/docs
+pages: 
+- Home: 'index.md'
+- Getting Started: 'introduction/crafting-digital-history.md'
+- 1. Open Access Research: 
+    - 'Why you should be open': 'Open-Access-Research/Open-Access-Research.md'
+    - 'Exercises': 'Open-Access-Research/Exercises.md'
+- 2. Finding Data: 
+    - 'How do we find data?': 'module-2/Finding Data.md'
+    - 'Exercises': 'module-2/Exercises.md'
+- 3. Fixing Data:
+    - 'Data is messy': 'module-3/Wrangling Data.md'
+    - 'Exercises': 'module-3/Exercises.md'
+- 4. Analysis:
+    - 'Seeing Patterns': 'module-4/Seeing Patterns.md'
+    - 'Exercises': 'module-4/Exercises.md'
+- 5. Visualization:
+    - 'Communicating your Findings': 'module-5/Humanities Visualization.md'
+    - 'Exercises': 'module-5/Exercises.md'
+- Appendices: 
+    - 'Text Encoding': 'supporting materials/tei.md'
+    - 'NER': 'supporting materials/ner.md'
+    - 'Open Refine': 'supporting materials/open-refine.md'
+    - 'Regular Expressions (regex)': 'supporting materials/regex.md'
+    - 'Going further with regex': 'supporting materials/regex-ner.md'
+    - 'Regex & the Republic of Texas': 'supporting materials/regexex.md'
+    - 'Twarc': 'supporting materials/twarc.md'
+    - 'CYOA': 'supporting materials/cyoa.txt.md'
+    - 'Geoparsing with Python': 'supporting materials/geoparsing-w-python.txt.md'
+    - 'SNA with Gephi': 'supporting materials/gephi.txt.md'
+    - 'Graphing the Net': 'supporting materials/graphing-the-net.txt.md'
+    - 'Multimode Networks': 'supporting materials/multimode-networks.txt.md'
+    - 'Leaflet': 'supporting materials/leaflet.txt.md'
+

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data is messy - HIST3907o Crafting Digital History</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data is messy";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> HIST3907o Crafting Digital History</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>1. Open Access Research</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Open-Access-Research/">Why you should be open</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>2. Finding Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Finding Data/">How do we find data?</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>3. Fixing Data</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Data is messy</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#wrangling-data">Wrangling Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#exercises">Exercises</a></li>
+                
+                    <li><a class="toctree-l4" href="#things-you-will-learn-in-this-module">Things you will learn in this module:</a></li>
+                
+                    <li><a class="toctree-l4" href="#articles-where-the-wrangling-of-data-is-discussed">Articles where the wrangling of data is discussed</a></li>
+                
+                    <li><a class="toctree-l4" href="#blog-posts">Blog posts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>4. Analysis</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>5. Visualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Appendices</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/tei/">Text Encoding</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/ner/">NER</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/open-refine/">Open Refine</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regex/">Regular Expressions (regex)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regex-ner/">Going further with regex</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regexex/">Regex & the Republic of Texas</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/twarc/">Twarc</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/cyoa.txt/">CYOA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/geoparsing-w-python.txt/">Geoparsing with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/gephi.txt/">SNA with Gephi</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/graphing-the-net.txt/">Graphing the Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/multimode-networks.txt/">Multimode Networks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/leaflet.txt/">Leaflet</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">HIST3907o Crafting Digital History</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>3. Fixing Data &raquo;</li>
+        
+      
+    
+    <li>Data is messy</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="wrangling-data">Wrangling Data</h1>
+<p>In the previous module, we successfully grabbed <em>lots</em> of data from various online repositories. Some of it was already in well-structured tables; much of it was not. All of it was text though. Initially, it (or most of it) was just scanned images of documents. At some point, <em>object character recognition</em> was used to identify the black dots from the white dots in those images, to recognize the patterns that make up letters, numbers, and punctuation. There are commercial products that can do this (and we have some installed in the Underhill Research Room that you can use), and there are <a href="http://electricarchaeology.ca/2014/07/15/doing-ocr-within-r/">free products that you can install</a> on your computer to do it yourself.</p>
+<p>It all looks so neat and tidy. Ian Milligan discusses this <a href="http://utpjournals.metapress.com/content/k002j61230g4556w/?p=8d64dca8cfec44e8b4858483ebf23daf&amp;pi=2">'illusionary order'</a> and its implications for historians:</p>
+<blockquote>
+<p>In this article, I make two arguments. Firstly, online historical databases have profoundly shaped Canadian historiography. In a shift that is rarely – if ever – made explicit, Canadian historians have profoundly reacted to the availability of online databases. Secondly, historians need to understand how OCR works, in order to bring a level of methodological rigor to their work that use these sources.</p>
+</blockquote>
+<p>Just as we saw with Ted Underwood's article on <a href="http://www.jstor.org/stable/10.1525/rep.2014.127.1.64">theorizing search</a>, these 'simple' steps in the research process are anything but. They are also profoundly theoretical in how they change what it is we can know. In archaeology, every step of the method, every stage in the process, has a profound impact on the stories we eventually tell about the past. Decisions we make destroy data, and create new data. Historians aren't used to thinking about these kinds of issues!</p>
+<p>There are also <em>manual</em> ways of doing the same thing as OCR does - we call these things 'humans', and we organize their work through 'crowdsourcing'. We break the process up into wee manageable steps, and make these available over the net. Sometimes we gamify these steps, to make them more 'fun'. If several people all work on the same piece of text, the thinking is that errors will cancel each other out: a proper transcription will emerge from the work of the crowd. Take a look at these two pieces concerning the <a href="http://www.transcribe-bentham.da.ulcc.ac.uk/td/Transcribe_Bentham"><em>Transcribe Bentham</em></a> project:</p>
+<ul>
+<li>Causer &amp; Wallace, <a href="http://www.digitalhumanities.org/dhq/vol/6/2/000125/000125.html">Building A Volunteer Community: Results and Findings from Transcribe Bentham</a> DHQ 6.2, 2012</li>
+<li>Causer, Tonra, &amp; Wallace <a href="http://llc.oxfordjournals.org/content/27/2/119.abstract">Transcription maximized; expense minimized? Crowdsourcing and editing The Collected Works of Jeremy Bentham</a>LLC 27.2, 2012</li>
+</ul>
+<p>While transcriptions might've provided the earliest examples of crowdsourcing research (but see also <a href="http://quod.lib.umich.edu/d/dh/12230987.0001.001/1:9/--writing-history-in-the-digital-age?g=dculture;rgn=div1;view=fulltext;xc=1#9.3">The HeritageCrowd Project</a> and the subsequent <a href="http://electricarchaeology.ca/2012/05/18/how-i-lost-the-crowd-a-tale-of-sorrow-and-hope/">'How I Lost the Crowd'</a>), other tasks are now finding their way into the crowdsourced world - see the archaeological applications within the <a href="http://micropasts.org/">MicroPasts</a> platform. These include things like 'masking' artefact photographs in order to develop 3d photogrammetric models.</p>
+<p>But often, we don't have a whole crowd. We're just one person, alone, with a computer, at the archive. Or working with someone else's <a href="http://dla.library.upenn.edu/dla/medren/detail.html?id=MEDREN_5103295">digitized image that we found online</a>. How do we wrangle that data? Let's start with <a href="http://mhbeals.com/xmling-my-way-to-data-management-or-what-should-i-do-with-all-my-old-notes/">M. H. Beal's account of how she 'xml'd her way to data management'</a> and then we'll consider a few more of the nuts and bolts of her work in <a href="http://mhbeals.com/oa-tei-xml-dh-on-the-www-or-my-guide-to-acronymic-success/">OA TEI-XML DH on the WWW; or, My Guide to Acronymic Success</a>.</p>
+<p><em>This kind of work is extraordinarily important!</em> So we're going to try our hand at it too. (Now, if we had a <em>seriously</em> big project where we were transcribing lots of text, we'd invest in a dedicated XML editor like <a href="http://www.oxygenxml.com/">Oxygen</a> - there are <a href="https://github.com/odaata/HisTEI/wiki/Getting-Started">plugins available and frameworks for doing historical transcription</a> on this platform. There is a 30 day free trial license if you want to give it a try. But for now, Notepad++, Textwrangler, Komodo Edit, Sublime text, or any of a number of good text editors will do all that we need to do). Also, check out the <a href="http://www.tei-c.org/index.xml">TEI</a>. Take 15 minutes and read throuhg <a href="http://dh.obdurodon.org/what-is-xml.xhtml">What is XML and Why Should Humanists Care?</a> by David Birnbaum. Keep notes in your notebook!</p>
+<h3 id="exercises">Exercises</h3>
+<p>In the exercises for this week we are going to focus on some bare-bones wrangling of data. First, we are going to do some activities and exercises to get in the right frame of mind. Then, we'll transcribe and mark up some text that has already been digitized (in the sense that there exists a digital image). If you've done HIST2809 with me, this will feel rather familiar - but instead of making a transcription that sits in our notebook, we'll make one that lives online. Since it is online, the use of xml tags like <date> or <advertisement> etc allow us to do some other quite interesting things. We'll look at M. Beal's Colonial Newspaper Database in more detail. This will introduce us to the 'Text Encoding Initiative' and some of the scholarly work surrounding making scholarly editions online. Some of you might be interested in how all of this ties into <em>linked data</em>, so I'll provide further resources to that world for those who wish to go exploring.</p>
+<p>Then, we'll switch gears and we'll use <em>regular expressions</em> to search and extract information from the Diplomatic Correspondence of the Republic of Texas, which you'll find at the Internet Archive. If you're on a PC, download <a href="http://notepad-plus-plus.org/">Notepad++</a> - this is a souped-up version of the simple notepad application, and allows us to do very useful things indeed. If you're on a Mac, TextWrangler is probably already installed and is all you need. If you're working in Linux, you can use whatever text editor you're familiar with.</p>
+<p>We'll conclude by using 'Open Refine' to tidy up the information we extracted from the Texan correspondence. </p>
+<h3 id="things-you-will-learn-in-this-module">Things you will learn in this module:</h3>
+<ul>
+<li>the basic concepts of XML and TEI for marking up text</li>
+<li>the power of regular expressions. 'Search' and 'Replace' in Word just won't cut it any more for you! (Another reason why you should write in Markdown in the first place and then convert to Word for the final typesetting - Indeed, there will be an optional exercise to install and use <a href="http://johnmacfarlane.net/pandoc/demos.html">Pandoc</a> to convert your .md files to .docx).</li>
+<li>Open Refine as a powerful engine for tidying up the messiness that is ocr'd text.</li>
+</ul>
+<h3 id="articles-where-the-wrangling-of-data-is-discussed">Articles where the wrangling of data is discussed</h3>
+<p>Blevins, <a href="https://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=93">Mining and Mapping the Production of Space A View of the World from Houston</a></p>
+<p>Blevins, <a href="http://jah.oxfordjournals.org/content/101/1/122.full?keytype=ref&amp;ijkey=unucsImiwNrelaF">Space, Nation, and the Triumph of Region: A View of the World from Houston</a></p>
+<h3 id="blog-posts">Blog posts</h3>
+<p><a href="http://ianmilligan.ca/2014/08/27/using-imageplot-to-explore-web-archived-images/">Ian Milligan on Imageplot</a> and <a href="http://ianmilligan.ca/2014/08/11/using-images-to-gain-insight-into-web-archives/">here</a></p>
+<p><a href="http://electricarchaeology.ca/2014/07/15/doing-ocr-within-r/">Shawn Graham on extracting text &amp; diy OCR</a></p>
+<p><em>more will be added in due time</em></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Exercises/" class="btn btn-neutral float-right" title="Exercises"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../module-2/Exercises/" class="btn btn-neutral" title="Exercises"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".section").fitVids();
+  });
+</script>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../module-2/Exercises/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Exercises/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

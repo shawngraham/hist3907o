@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exercises - HIST3907o Crafting Digital History</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Exercises";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> HIST3907o Crafting Digital History</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>1. Open Access Research</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Open-Access-Research/">Why you should be open</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>2. Finding Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Finding Data/">How do we find data?</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Exercises</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#module-2-exercises">Module 2: Exercises</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#background">Background</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercise-1-the-dream-case">Exercise 1: The Dream Case</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercise-2-outwit-hub">Exercise 2: Outwit Hub</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercise-3-apis">Exercise 3: APIs</a></li>
+                
+                    <li><a class="toctree-l4" href="#mac-instructions">Mac instructions:</a></li>
+                
+                    <li><a class="toctree-l4" href="#windows78-instructions">Windows7&amp;8 instructions:</a></li>
+                
+                    <li><a class="toctree-l4" href="#an-alternative-windows-installation">An alternative Windows installation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#wget">Wget</a></li>
+                
+                    <li><a class="toctree-l4" href="#hints">hints:</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#going-further">Going Further</a></li>
+                
+                    <li><a class="toctree-l4" href="#did-you-know">Did you know?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>3. Fixing Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Wrangling Data/">Data is messy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>4. Analysis</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>5. Visualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Appendices</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/tei/">Text Encoding</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/ner/">NER</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/open-refine/">Open Refine</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regex/">Regular Expressions (regex)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regex-ner/">Going further with regex</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/regexex/">Regex & the Republic of Texas</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/twarc/">Twarc</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/cyoa.txt/">CYOA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/geoparsing-w-python.txt/">Geoparsing with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/gephi.txt/">SNA with Gephi</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/graphing-the-net.txt/">Graphing the Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/multimode-networks.txt/">Multimode Networks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../supporting materials/leaflet.txt/">Leaflet</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">HIST3907o Crafting Digital History</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>2. Finding Data &raquo;</li>
+        
+      
+    
+    <li>Exercises</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="module-2-exercises">Module 2: Exercises</h1>
+<p><em>All four exercises are on this page. Don't forget to scroll. If you have difficulties, or if the instructions need clarification, please click the 'issues' button and leave a note. Feel free to fork and improve these instructions, if you are so inclined. Remember, these exercises get progressively more difficult, and will require you to either download materials or read materials on other websites. Give yourself plenty of time. Try them all, and remember you can turn to (I encourage you to!) your classmates for help. Work together!</em></p>
+<h1 id="background">Background</h1>
+<p>Where do we go to find data? Part of that problem is solved by knowing what question you are asking, and what <em>kinds</em> of data would help solve that question. Let's assume that you have a pretty good question you want an answer to - say, something concerning social and household history in early Ottawa, like what was the role of 'corner' stores (if such things exist?) in fostering a sense of neighbourhood - and begin thinking about how you'd find data to explore that question. </p>
+<p><a href="http://ianmilligan.ca">Ian Milligan</a> recently gave a <a href="https://ianmilli.files.wordpress.com/2015/01/downloading-sources2.pdf">workshop on these issues</a>. He identifies a few different ways by which you might obtain your data, and we will follow him closely as we look at:</p>
+<ul>
+<li>The Dream Case</li>
+<li>Scraping Data yourself with free software (Outwit Hub)</li>
+<li>Application Programming Interfaces (APIs)</li>
+<li>Wget</li>
+</ul>
+<p>There is so much data available; with these methods, we can gather enormous amounts that will let us see large-scale macroscopic patterns. At the same time, it allows us to dive into the details with comparative ease. The thing is, not all digital data are created equally. Google has spent millions digitizing <em>everything</em>; newspapers have digitized their own collections. Genealogists and local historical societies upload yoinks of digitized photographs, wills, local tax records, <a href="http://www.bytown.net/">you-name-it</a>, <em>every day</em>. But, consider what Milligan has to say about <a href="http://ianmilligan.ca/2012/03/26/illusionary-order-cautionary-notes-for-online-newspapers/">'illusionary order'</a>:</p>
+<blockquote>
+<p>[...] poor and misunderstood use of online newspapers can skew historical research. In a conference presentation or a lecture, it’s not uknown to see the familiar yellow highlighting of found searchwords on projected images: indicative of how the original primary material was obtained. But this historical approach generally usually remains unspoken, without a critical methodological reflection. As I hope I’ll show here, using Pages of the Past uncritically for historical research is akin to using a volume of the Canadian Historical Review with 10% or so of the pages ripped out. Historians, journalists, policy researchers, genealogists, and amateur researchers need to at least have a basic understanding of what goes on behind the black box.</p>
+</blockquote>
+<p>Please go and read that full article. You should makes some notes: what are some of the key dangers? Reflect: how have you used digitized resources uncritically in the past?</p>
+<hr />
+<p>Remember: 'To digitize' doesn't - or shouldn't - mean uploading a photograph of a document. There's a lot more going on that that. We'll get to that in a moment.</p>
+<h1 id="exercise-1-the-dream-case">Exercise 1: The Dream Case</h1>
+<p>In the dream case, your data are not just images, but are actually sorted and structured into some kind of pre-existing database. There are choices made in the <em>creation</em> of the database, but a good database, a good project, will lay out for you their decision making, their corpora, and how they've dealt with ambiguity and so on. You search using a robust interface, and you get a well-formed spreadsheet of data in return. Two examples of 'dream case' data:</p>
+<ul>
+<li><a href="http://edh-www.adw.uni-heidelberg.de/inschrift/suche">Epigraphic Database Heidelberg</a></li>
+<li><a href="http://www.cwgc.org/find-war-dead.aspx">Commwealth War Graves Commission, Find War Dead</a></li>
+</ul>
+<p>Explore both databases. Perform a search of interest to you. In the case of the epigraphic database, if you've done any Latin, try searching for terms related to occupations; or you could search '<a href="http://www.latin-dictionary.org/Latin-English-Dictionary/figlina">Figlin*</a>'. In the CWGC database, search your own surname. Download your results. You now have data that you can explore! In your online research notebook, make a record (or records) of what you searched, the URL for your search &amp; its results, and where you're keeping your data. </p>
+<h1 id="exercise-2-outwit-hub">Exercise 2: Outwit Hub</h1>
+<p>Download, and install, <a href="https://www.outwit.com/products/hub/">outwit hub</a>. Do not buy it (not unless you really want to; the free trial is good enough for our purposes here)</p>
+<p>Outwit hub is a piece of software that lets you scrape the html of a webpage. It comes with its own browser. In essence, you look at the html source code of your page to identify the <em>markers</em> that embrace the information you want. Outwit then copies just that information into a table for you, which you can then download. Take a look at the <a href="http://www.stoa.org/sol/">Suda Online</a> and do a search for 'pie' (the Suda is a 10th century Byzantine Greek encyclopedia, and its online version is one of the earliest examples of what we'd now recognize as digital humanities scholarship). </p>
+<p>Right-click anywhere on the results page, and 'view source'. You'll see something like this:
+<img alt="Imgur" src="http://i.imgur.com/zCSRR9H.png" />
+The record number - the Adler number - is very clearly marked, as is the translation. Those are the bits we want. So</p>
+<p>Open outwit hub. Copy and paste the search URL into the Outwit hub address bar:
+<img alt="Imgur" src="http://i.imgur.com/fDM1tog.png" /></p>
+<p>At the bottom of the page - that's where you tell Outwit how to scrape that source.  Click ‘scrapers,’ then ‘new,’ give it a name. Enter the markers that you are interested in:
+<img alt="Imgur" src="http://i.imgur.com/5SdbgeQ.png" /></p>
+<p>Hit Execute to run the scraper. Press ‘Catch’ to move it into your memory. Press 'export' to generate (and save) a spreadsheet of your data.</p>
+<p>Write this exercise up in your notebook. What other data does outwit include with your export? How might that data be useful?</p>
+<h1 id="exercise-3-apis">Exercise 3: APIs</h1>
+<p>Sometimes, a website will have what is called an 'application programming interface'. In essence, this lets a program on your computer talk to the computer serving the website you're interested in, such that the website gives you the data that you're looking for.</p>
+<p>That is, instead of <em>you</em> punching in the search terms, and copying and pasting the results, you get the computer to do it. More or less. The thing is, the results come back to you in a machine-readable format - often, JSON, which is a kind of text format. It looks like this:
+<img alt="Imgur" src="http://i.imgur.com/LtZWyle.png" /></p>
+<p>The 'Canadiana Discovery Portal' has tonnes of materials related to Canada's history, from a wide variety of sources. Its search page is at: http://search.canadiana.ca/</p>
+<ul>
+<li>Go there, and search "ottawa" and set the date range to 1800 to 1900. Hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:</li>
+</ul>
+<p>http://search.canadiana.ca/search?q=ottawa&amp;field=&amp;df=1800&amp;dt=1900</p>
+<p>Your search query has been put into the URL. You're looking at the API! Everything after /search is a command that you are sending to the Canadiana server.</p>
+<p>Scroll through the results, and you'll see a number just before the ?</p>
+<p>http://search.canadiana.ca/search/2?df=1800&amp;dt=1900&amp;q=ottawa&amp;field=</p>
+<p>http://search.canadiana.ca/search/3?df=1800&amp;dt=1900&amp;q=ottawa&amp;field=</p>
+<p>http://search.canadiana.ca/search/4?df=1800&amp;dt=1900&amp;q=ottawa&amp;field=</p>
+<p>....all the way up to 5625 (ie, 10 results per page, so 56249 / 10).</p>
+<p>If you go to http://search.canadiana.ca/support/api you can see the full list of options. What we are particularly interested in now is the bit that looks like this:</p>
+<p><code>&amp;fmt=json</code></p>
+<p>Add that to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine - which we'll learn more about in due course.</p>
+<p>If you look back at the full list of API options, you'll see at the bottom that one of the options is 'retrieving individual item records'; the key for that is a field called 'oocihm'. If you look at your page of json results, and scroll through them, you'll see that each individual record has its own oocihm number. If we could get a list of those, we'd be able to programmatically slot them into the commands for retrieving individual item records:</p>
+<p>http://eco.canadiana.ca/view/oocihm.16278/?r=0&amp;s=1&amp;fmt=json&amp;api_text=1</p>
+<p>The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be <a href="http://ianmilligan.ca/api-example-sh/">found here</a>. Study that program carefully. There are a number of useful things happening in there, notably 'curl', 'jq', 'sed', 'awk'. curl  is a program for downloading webpages, jq for dealing with json, and sed and awk for searching within and cleaning up text. If this all sounds greek to you, there is an excellent gentle introduction over at <a href="http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/">William Turkel's blog</a>.</p>
+<p>I've put a copy <a href="https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-mac.sh">in the module 2 repository, to save you the trouble.</a></p>
+<h3 id="mac-instructions">Mac instructions:</h3>
+<p>First question: do you have wget installed on your computer? If you don't, you'll need it for this exercise and the next one (if you look in the program 'api-ex-mac.sh', you'll see that the final line of the program asks wget to go get the results you've scraped from Canadiana). Installing wget is quite straightforward - follow <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">the Programming Historian's instructions</a>.</p>
+<p>Our program requires a helper program that reads the .json data - It's called JQ. You can install this by using HOMEBREW. But to install homebrew, visit <a href="http://brew.sh">http://brew.sh</a> and follow instructions. Then, to install jq, type <code>brew install jq</code> from your terminal.</p>
+<p>Now, download api-ex-mac.sh from the repository and save it to your desktop. Open your terminal program (which you can find under 'applications' and then 'utilities'.) Navigate to your desktop:</p>
+<p><code>cd desktop</code></p>
+<p>then tell your computer that this 'api-ex-mac.sh' program is one that you want to run:</p>
+<p><code>sudo chmod 700 file.sh</code></p>
+<p>And then you can run it by typing:</p>
+<p><code>./api-ex-mac.sh</code>  but <em>don't</em> do that yet! You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name, and then run the new command. Move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out <em>exactly what you did</em> to collect your data. </p>
+<h3 id="windows78-instructions">Windows7&amp;8 instructions:</h3>
+<p>Begin by making a folder for this exercise on your desktop.</p>
+<ol>
+<li>You'll need <em>gitbash</em> (which comes with git; I know you already have github on your desktop, which has <em>git shell</em> but that's not what we want. Download <a href="http://git-scm.com/download/win">git</a> and install it, and that will give you the git bash utility, and will not mess with your github set up. 'Bash' is  "a shell that runs commands once you type the name of a command and press <enter> on your keyboard." You can see screenshots and find help on all this <a href="http://openhatch.org/missions/windows-setup/open-git-bash-prompt">here</a>. You will be running our scraper program from within this shell.</li>
+<li>You'll need jq <a href="http://stedolan.github.io/jq/download/">download here</a>. You're going to put this in the folder you've made for this exercise.</li>
+<li>You'll need CoreUtils <a href="http://gnuwin32.sourceforge.net/downlinks/coreutils.php">from here</a>. Download and install this.</li>
+<li>You need to tell your computer that CoreUtils now exists on your machine. Go to your computer's control panel. On 'my computer' (or whatever Windows calls it these days) right click and select 'properties'. Then select 'advanced'.</li>
+<li>Click on the 'environment variables' button.</li>
+<li>In the pop-up box that opens, there is a box marked 'system variables'. Highlight the one called 'Path'. Click on 'Edit'.</li>
+<li>In the variable box that you can now edit, there should already be many things. Scroll to the very end of that (to the right) and add:</li>
+</ol>
+<p><code>;C:\Program Files (x86)\GnuWin32\bin</code></p>
+<p>+nb: make sure there's a space between files and (x86).</p>
+<p>...so yes, start that with a semicolon- and what you are putting in is the exact location of where the coreutils package of programs is located.</p>
+<p>Finally, you'll need wget installed on your machine. Get it <a href="http://users.ugent.be/~bpuype/wget/">here</a> and download it to C:Windows directory.</p>
+<p>Now:<br />
+- download api-ex-pc.sh from our <a href="https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-pc.sh">repository</a>
+- open <em>git bash</em> - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. <em>Git bash</em>. 
+- inside git bash, you change directory so that you are working within the folder you made on your desktop. The command to change directory is <code>cd</code>  ie <code>cd course-notes</code> would go one level down into a folder called 'course notes'. To go one level up, you'd type <code>cd ..</code> &lt;- ie, two periods. More help on finding your way around this interface is <a href="http://programminghistorian.org/lessons/intro-to-bash">here</a>
+- Once you're in the right folder, all you have to do is type the name of our programme: <code>api-ex-pc.sh</code> and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. <em>But don't do that yet!</em> </p>
+<p>You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name (make sure to keep the same file extenion, <code>.sh</code> - in notepad, change the save as file type to <code>all files</code> and then write the new name, e.g, <code>api-ex-pc-2.sh</code>, and then run your program by typing its name at the prompt in the git bash window. When it's finished, move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out <em>exactly what you did</em> to collect your data. </p>
+<h3 id="an-alternative-windows-installation">An alternative Windows installation</h3>
+<p>This can also work for Windows 7 <em>if</em> you've got powershell 3 installed. Win7 comes with an earlier version, so you'd have to update it, <a href="https://technet.microsoft.com/en-us/library/hh847837.aspx">which isn't straightforward</a>. I'm grateful to <a href="http://outcoldman.com/en/archive/2014/07/20/scoop/">Denis Gladkikh for his blog post on the matter</a>._</p>
+<ol>
+<li>Make a folder somewhere handy for this exercise. Download the <code>api-ex-pc.sh</code> program into it, as well as <a href="http://stedolan.github.io/jq/download/">jq</a></li>
+<li>Find, and run, 'Powershell'</li>
+<li>At the prompt, type in these commands in sequence:</li>
+</ol>
+<p><code>set-executionpolicy unrestricted -s cu</code></p>
+<p>Say 'yes' at the prompt that asks if you really want to do this.</p>
+<p><code>iex (new-object net.webclient).downloadstring('https://get.scoop.sh')</code></p>
+<p><code>scoop install 7zip coreutils curl git grep openssh sed wget vim grep</code></p>
+<p>A number of components will download and get configured to work from within powershell. When they finish, at the command prompt, you can run your program like so:</p>
+<p><code>./api-ex-pc.sh</code></p>
+<p>If all goes well A new window will pop open, and you'll be downloading material from Canadiana! You can close that window where the downloading is happening to stop the process. If you open your program, you can adjust it to search for your own requests <a href="https://github.com/hist3907b-winter2015/module2-findingdata/issues/2">see this discussion for hints on how to do this</a></p>
+<h4 id="youve-got-a-pretty-powerful-tool-now-for-grabbing-data-from-one-of-the-largest-portals-for-canadian-history">You've got a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history!</h4>
+<p>Just remember to move your results from your folder before running a new search.</p>
+<h1 id="wget">Wget</h1>
+<p>Finally, we can use wget to retrieve data in cases where there is no API. If you look carefully at the program in exercise 3, you'll see we used the wget command. In this exercise, we search for a collection in the internet archive, grab all of the file identifiers, and feed these into wget <em>from the command line or terminal</em>. One command, thousands of documents!</p>
+<p>(If you skipped the previous exercise, you need to install wget. Go to <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">the programming historian tutorial on wget</a> and follow the relevant instructions (depending on your operating system) to install it.)</p>
+<p>This section will follow <a href="https://ianmilli.files.wordpress.com/2015/01/downloading-sources2.pdf">Milligan p52-64</a>. I am not going to spell out the steps this time; I want you to carefully peruse Milligan's presentation, and see if you can follow along (pgs 52-64: he uses wget plus a text file so that wget auto-completes the URLs and scrapes the data found there - much like the final line of the program in exercise 3). There will often be cases where you want to do something, and you find someone's presentations or notes which <em>almost</em> tell you everything you need to know. Alternatively, you can complete the tutorial from the <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">Programming historian</a> for this exercise. In either case, keep notes on what you've done, what works, where the problems seem to lie, what the tacit knowledge is that isn't made clear (ie, are there assumptions being made in the tutorial or the presentation that are opaque to you?). </p>
+<h3 id="hints">hints:</h3>
+<ul>
+<li>remember that wget is run from your terminal (Mac) or command line (PC). Do you know where to find these?</li>
+<li>if you're working on a mac, when you get to the point that Milligan directs you to save the search results file (which came as csv) as a .txt file, you need to select the unicode-16 txt file option.</li>
+<li>the wget command is <code>wget -r -H -nc -np -nH --cut-dirs=2 -A .txt -e robots=off -l1 -i ./itemlist.txt -B 'http://archive.org/download/'</code></li>
+<li>to make sure everything is working, perhaps make a copy of your itemlist.txt file with only ten or so items in it. Call it 'itemlist-short.txt' and put that in the command. That way, if there are errors, you'll find out sooner rather than later!</li>
+<li>You might want to make a note in your notebook about what all those 'flags' in the command are doing. <a href="http://www.gnu.org/software/wget/manual/wget.html">Here's the wget manual</a></li>
+<li>Once it starts working, you might see something like this:
+<img alt="Imgur" src="http://i.imgur.com/Sh3LEQ4.png" /></li>
+</ul>
+<p><em>but</em> if that's all you get, and nothing downloads, the problem is in your txt file. <em>Make sure</em> to create your txt file with a text editor (textwrangler, sublime text, notepad) and <em>not</em> from <code>save as...txt</code> in excel. (If you have an option when you create the text file, make sure the encoding is 'utf-8' rather than 'utf-16').
+- if you're really stuck, see this <a href="http://blog.archive.org/2012/04/26/downloading-in-bulk-using-wget/">blog post from the Internet Archive</a></p>
+<h1 id="going-further">Going Further</h1>
+<ul>
+<li>use Ed Summer's <a href="https://github.com/shawngraham/twarc">TWARC</a> to grab, archive, share, inflate, and visualize tweets</li>
+<li>convert JSON to CSV with <a href="http://konklone.io/json/">this tool</a></li>
+<li>use R to grab resources from <a href="http://dp.la">dp.la</a> with this wee R script on my <a href="https://gist.github.com/shawngraham/0907ab2c2185cfe9f91b">gists</a></li>
+</ul>
+<h3 id="did-you-know">Did you know?</h3>
+<ul>
+<li>you can drop geojson into github, and <a href="https://github.com/shawngraham/twarc/blob/master/ottawa-museum-tweets.geojson">github will turn it into a map</a></li>
+<li>twarc can be used to extract the coordinates from tweets, and turn them into geojson data.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../module-3/Wrangling Data/" class="btn btn-neutral float-right" title="Data is messy"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Finding Data/" class="btn btn-neutral" title="How do we find data?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".section").fitVids();
+  });
+</script>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Finding Data/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../module-3/Wrangling Data/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
