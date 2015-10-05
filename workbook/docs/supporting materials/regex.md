@@ -94,7 +94,7 @@ Parentheses in regular expressions are also very useful when replacing text. The
 
 ``` (dogs)( and )(cats) ```
 
-which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as "\1", "\2", and "\3" for each group respectively.
+which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as `"\1"`, `"\2"`, and `"\3"` for each group respectively.
 
 If you wanted to switch the order of "dogs" and "cats" every time the phrase "dogs and cats" appeared in your document, you would type 
 

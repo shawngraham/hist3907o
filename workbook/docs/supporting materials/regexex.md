@@ -59,7 +59,7 @@ We don't just want to find "to", but the entire line that contains it. We assume
 
 ``` .+\<to\>.+ ``` 
 
-your search will return every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't. In TextWrangler, your query would be ``` .+\bto\b.+. ```` 
+your search will return every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't. In TextWrangler, your query would be ```.+\bto\b.+.``` 
 
 As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like 
 
@@ -136,7 +136,7 @@ The next step is making the parenthetical groups which will be used to remove pa
 
 ``` (,)( [0-9]{4})(.+) ```
 
-with the comma as the first group "\1", the space and the year as the second "\2", and the rest of the line as the third "\3".  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the *replace* look like?
+with the comma as the first group `"\1"`, the space and the year as the second `"\2"`, and the rest of the line as the third `"\3"`.  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the *replace* look like?
 
 + Find the dates using a regex, and replace so that only the *second* group in the expression is kept. You might want to consult the introduction to regex again before you execute this one.
 
