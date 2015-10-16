@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Regular Expressions (regex) - HIST3907o Crafting Digital History</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Regular Expressions (regex)";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> HIST3907o Crafting Digital History</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>1. Open Access Research</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Open-Access-Research/">Why you should be open</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Open-Access-Research/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>2. Finding Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Finding Data/">How do we find data?</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>3. Fixing Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Wrangling Data/">Data is messy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>4. Analysis</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>5. Visualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Appendices</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tei/">Text Encoding</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ner/">NER</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../open-refine/">Open Refine</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Regular Expressions (regex)</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#a-gentle-introduction-to-regular-expressions">A gentle introduction to Regular Expressions</a></li>
+                
+                    <li><a class="toctree-l4" href="#introduction">Introduction</a></li>
+                
+                    <li><a class="toctree-l4" href="#some-basic-principles">Some basic principles</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-ner/">Going further with regex</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regexex/">Regex & the Republic of Texas</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../twarc/">Twarc</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cyoa.txt/">CYOA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../geoparsing-w-python.txt/">Geoparsing with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../gephi.txt/">SNA with Gephi</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../graphing-the-net.txt/">Graphing the Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../multimode-networks.txt/">Multimode Networks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../leaflet.txt/">Leaflet</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">HIST3907o Crafting Digital History</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Appendices &raquo;</li>
+        
+      
+    
+    <li>Regular Expressions (regex)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="a-gentle-introduction-to-regular-expressions">A gentle introduction to Regular Expressions</h1>
+<p><em>this text is adopted from the first drafts of</em> The Macroscope <em>which is currently in-press with Imperial College Press. Users should consult that version once it's published.</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>A regular expression (also called regex) is a powerful tool for finding and manipulating text.  At its simplest, a regular expression is just a way of looking through texts to locate patterns. A regular expression can help you find every line that begins with a number, or every instance of an email address, or whenever a word is used even if there are slight variations in how it's spelled. As long as you can describe the pattern you're looking for, regular expressions can help you find it. Once you've found your patterns, they can then help you manipulate your text so that it fits just what you need. </p>
+<p>Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Notepad++ on Windows, or TextWrangler on OS X. Do not use Microsoft Word, however! To find these text editors, you can find <a href="http://notepad-plus-plus.org/">Notepad++ here</a> or <a href="http://www.barebones.com/products/textwrangler/">TextWrangler here</a>.</p>
+<ul>
+<li>NB in Notepad++ when you do a search, to use regular expressions in your search you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact <em>text</em> rather than the <em>pattern</em>. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel.</li>
+</ul>
+<h2 id="some-basic-principles">Some basic principles</h2>
+<blockquote>
+<p>protip: there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them</p>
+</blockquote>
+<p>Let's say you're looking for all the instances of "cat" or "dog" in your document. When you type the vertical bar on your keyboard (it looks like <code>|</code>, shift+backslash on windows keyboards), that means 'or' in regular expressions. So, if your query is dog|cat and you press 'find', it will show you the first time either dog or cat appears in your text.</p>
+<p>If you want to replace every instance of either "cat" or "dog" in your document with the world "animal", you would open your find-and-replace box, put <code>dog|cat</code> in the search query, put animal in the 'replace' box, hit 'replace all', and watch your entire document fill up with references to animals instead of dogs and cats.</p>
+<p>The astute reader will have noticed a problem with the instructions above; simply replacing every instance of "dog" or "cat" with "animal" is bound to create problems. Simple searches don't differentiate between letters and spaces, so every time "cat" or "dog" appear within words, they'll also be replaced with "animal". "catch" will become "animalch"; "dogma" will become "animalma"; "certificate" will become "certifianimale". In this case, the solution appears simple; put a space before and after your search query, so now it reads: </p>
+<p><code>dog | cat</code>  </p>
+<p>With the spaces, "animal" replace "dog" or "cat" only in those instances where they're definitely complete words; that is, when they're separated by spaces.</p>
+<p>The even more astute reader will notice that this still does not solve our problem of replacing every instance of "dog" or "cat". What if the word comes at the beginning of a line, so it is not in front of a space? What if the word is at the end of a sentence or a clause, and thus followed by a punctuation? Luckily, in the language of regex, you can represent the beginning or end of a word using special characters. </p>
+<p><code>\&lt;</code> </p>
+<p>means the beginning of a word. In some programs, like TextWrangler, this is used instead:</p>
+<p><code>\b</code></p>
+<p>so if you search for <code>\&lt;cat</code> , (or, in TextWrangler, <code>\bcat</code> )it will find "cat", "catch", and "catsup", but not "copycat", because your query searched for words beginning with "cat". For patterns at the end of the line, you would use:</p>
+<p><code>\&gt;</code> </p>
+<p>or in TextWrangler,</p>
+<p><code>\b</code></p>
+<p>again.  The remainder of this walk-through imagines that you are using Notepad++, but if you’re using Textwrangler, keep this quirk in mind. If you search for </p>
+<p><code>cat\&gt;</code> </p>
+<p>it will find "cat" and "copycat", but not "catch," because your query searched for words ending with -"cat".</p>
+<p>Regular expressions can be mixed, so if you wanted to find words only matching "cat", no matter where in the sentence, you'd search for </p>
+<p><code>\&lt;cat\&gt;</code></p>
+<p>which would find every instance. And, because all regular expressions can be mixed, if you searched for (in Notepad++; what would you change, if you were using TextWrangler?)</p>
+<p><code>\&lt;cat|dog\&gt;</code></p>
+<p>and replaced all with "animal", you would have a document that replaced all instances of "dog" or "cat" with "animal", no matter where in the sentence they appear. You can also search for variations within a single word using parentheses. For example if you were looking for instances of "gray" or "grey", instead of the search query</p>
+<p><code>gray|grey</code></p>
+<p>you could type </p>
+<p><code>gr(a|e)y</code></p>
+<p>instead. The parentheses signify a group, and like the order of operations in arithmetic, regular expressions read the parentheses before anything else. Similarly, if you wanted to find instances of either "that dog" or "that cat", you would search for: </p>
+<p><code>(that dog)|(that cat)</code></p>
+<p>Notice that the vertical bar | can appear either inside or outside the parentheses, depending on what you want to search for.</p>
+<p>The period character . in regular expressions directs the search to just find any character at all. For example, if we searched for:</p>
+<p><code>d.g</code> </p>
+<p>the search would return "dig", "dog", "dug", and so forth. </p>
+<p>Another special character from our cheat sheet, the plus + instructs the program to find any number of the previous character. If we search for </p>
+<p><code>do+g</code></p>
+<p>it would return any words that looked like "dog", "doog", "dooog", and so forth. Adding parentheses before the plus would make a search for repetitions of whatever is in the parentheses, for example querying </p>
+<p><code>(do)+g</code></p>
+<p>would return "dog", "dodog", "dododog", and so forth.</p>
+<p>Combining the plus '+' and period '.' characters can be particularly powerful in regular expressions, instructing the program to find any amount of any characters within your search. A search for </p>
+<p><code>d.+g</code></p>
+<p>for example, might return "dried fruits are g", because the string begins with "d" and ends with "g", and has various characters in the middle. Searching for simply ".+" will yield query results that are entire lines of text, because you are searching for any character, and any amount of them.</p>
+<p>Parentheses in regular expressions are also very useful when replacing text. The text within a regular expression forms what's called a group, and the software you use to search remembers which groups you queried in order of their appearance. For example, if you search for </p>
+<p><code>(dogs)( and )(cats)</code></p>
+<p>which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as <code>"\1"</code>, <code>"\2"</code>, and <code>"\3"</code> for each group respectively.</p>
+<p>If you wanted to switch the order of "dogs" and "cats" every time the phrase "dogs and cats" appeared in your document, you would type </p>
+<p><code>(dogs)( and )(cats)</code></p>
+<p>in the 'find' box, and </p>
+<p><code>\3\2\1</code></p>
+<p>in the 'replace' box. That would replace the entire string with group 3 ("cats") in the first spot, group 2 (" and ") in the second spot, and group 1 ("dogs") in the last spot, thus changing the result to "cats and dogs".</p>
+<p>The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that we sometimes use is http://regexlib.com/CheatSheet.aspx. Another good one is at http://docs.activestate.com/komodo/4.4/regex-intro.html)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../regex-ner/" class="btn btn-neutral float-right" title="Going further with regex"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../open-refine/" class="btn btn-neutral" title="Open Refine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".section").fitVids();
+  });
+</script>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../open-refine/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../regex-ner/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
