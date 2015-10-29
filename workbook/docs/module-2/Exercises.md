@@ -2,6 +2,8 @@
 
 _All four exercises are on this page. Don't forget to scroll. If you have difficulties, or if the instructions need clarification, please click the 'issues' button and leave a note. Feel free to fork and improve these instructions, if you are so inclined. Remember, these exercises get progressively more difficult, and will require you to either download materials or read materials on other websites. Give yourself plenty of time. Try them all, and remember you can turn to (I encourage you to!) your classmates for help. Work together!_
 
+*nb. The third exercise will be the most difficult because everyone's machine is slightly different. Mac users should experience the least difficulty; PC users the most. Sites like [stackoverflow](http://stackoverflow.org) will be extremely helpful. DO NOT suffer in silence as you try these exercises! Ask for help, set up a video appointment, or find me in person.*
+
 # Background
 Where do we go to find data? Part of that problem is solved by knowing what question you are asking, and what _kinds_ of data would help solve that question. Let's assume that you have a pretty good question you want an answer to - say, something concerning social and household history in early Ottawa, like what was the role of 'corner' stores (if such things exist?) in fostering a sense of neighbourhood - and begin thinking about how you'd find data to explore that question. 
 
@@ -109,34 +111,41 @@ And then you can run it by typing:
 Begin by making a folder for this exercise on your desktop.
 
 1. You'll need *gitbash* (which comes with git; I know you already have github on your desktop, which has _git shell_ but that's not what we want. Download [git](http://git-scm.com/download/win) and install it, and that will give you the git bash utility, and will not mess with your github set up. 'Bash' is  "a shell that runs commands once you type the name of a command and press <enter> on your keyboard." You can see screenshots and find help on all this [here](http://openhatch.org/missions/windows-setup/open-git-bash-prompt). You will be running our scraper program from within this shell.
-2. You'll need jq [download here](http://stedolan.github.io/jq/download/). You're going to put this in the folder you've made for this exercise.
+2. You'll need jq [download here](http://stedolan.github.io/jq/download/). You're going to put this in the folder you've made for this exercise. *Make sure that you rename it 'jq.exe'* (in somecases, the download name might be slightly different).
 3. You'll need CoreUtils [from here](http://gnuwin32.sourceforge.net/downlinks/coreutils.php). Download and install this.
-4. You need to tell your computer that CoreUtils now exists on your machine. Go to your computer's control panel. On 'my computer' (or whatever Windows calls it these days) right click and select 'properties'. Then select 'advanced'.
+4. You need to tell your computer that CoreUtils now exists on your machine. Go to your computer's control panel. On 'my computer' (or whatever Windows calls it these days, possibly `control panel - system and security - system - advanced system settings`) right click and select 'properties'. Then select 'advanced'.
 5. Click on the 'environment variables' button.
 6. In the pop-up box that opens, there is a box marked 'system variables'. Highlight the one called 'Path'. Click on 'Edit'.
 7. In the variable box that you can now edit, there should already be many things. Scroll to the very end of that (to the right) and add:
 
 `;C:\Program Files (x86)\GnuWin32\bin`
 
-+nb: make sure there's a space between files and (x86).
++ nb: make sure there's a space between files and (x86).
 
 ...so yes, start that with a semicolon- and what you are putting in is the exact location of where the coreutils package of programs is located.
 
 Finally, you'll need wget installed on your machine. Get it [here](http://users.ugent.be/~bpuype/wget/) and download it to C:Windows directory.
 
 Now:  
-- download api-ex-pc.sh from our [repository](https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-pc.sh)
+- download api-ex-pc.sh from this [repository](https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-pc.sh)
 - open *git bash* - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. *Git bash*. 
 - inside git bash, you change directory so that you are working within the folder you made on your desktop. The command to change directory is `cd`  ie `cd course-notes` would go one level down into a folder called 'course notes'. To go one level up, you'd type `cd ..` <- ie, two periods. More help on finding your way around this interface is [here](http://programminghistorian.org/lessons/intro-to-bash)
-- Once you're in the right folder, all you have to do is type the name of our programme: `api-ex-pc.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!* 
+- Once you're in the right folder, all you have to do is type the name of our programme: `./api-ex-pc.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!* 
 
 You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name (make sure to keep the same file extenion, `.sh` - in notepad, change the save as file type to `all files` and then write the new name, e.g, `api-ex-pc-2.sh`, and then run your program by typing its name at the prompt in the git bash window. When it's finished, move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data. 
+
+### if you get an error message: jq or seq cannot be found
+
+If this happens, your computer is not finding the coreutils installation or the `jq.exe` program. First thing: when you downloaded jq, did you make sure to change the name to `jq.exe`? When it downloads, it downloads as (eg) `jq-win64.exe`. Shorten up the name. Second thing: is it in the same folder as your script? Third thing: sometimes, it just might be easier to move the `seq.exe` program into the same folder as your script, that is, your working folder. Go to `C:\Program Files (x86)\GnuWin32\bin` and *copy* `seq.exe` to your working folder. You will also need to copy: 
++ `libiconv2.dll`
++ `libintl3.dll`
+...to the same folder. 
 
 ###An alternative Windows installation
 
 This can also work for Windows 7 *if* you've got powershell 3 installed. Win7 comes with an earlier version, so you'd have to update it, [which isn't straightforward](https://technet.microsoft.com/en-us/library/hh847837.aspx). I'm grateful to [Denis Gladkikh for his blog post on the matter](http://outcoldman.com/en/archive/2014/07/20/scoop/)._
 
-1. Make a folder somewhere handy for this exercise. Download the `api-ex-pc.sh` program into it, as well as [jq](http://stedolan.github.io/jq/download/)
+1. Make a folder somewhere handy for this exercise. Download the `api-ex-pc.sh` program into it, as well as [jq](http://stedolan.github.io/jq/download/). Make sure you rename the downloaded jq file to `jq.exe`.
 2. Find, and run, 'Powershell'
 3. At the prompt, type in these commands in sequence:
 
@@ -152,10 +161,18 @@ A number of components will download and get configured to work from within powe
 
 `./api-ex-pc.sh`
 
-If all goes well A new window will pop open, and you'll be downloading material from Canadiana! You can close that window where the downloading is happening to stop the process. If you open your program, you can adjust it to search for your own requests [see this discussion for hints on how to do this](https://github.com/hist3907b-winter2015/module2-findingdata/issues/2)
+If all goes well a new window will pop open, and you'll be downloading material from Canadiana! You can close that window where the downloading is happening to stop the process. If you open your program, you can adjust it to search for your own requests [see this discussion for hints on how to do this](https://github.com/hist3907b-winter2015/module2-findingdata/issues/2)
 
 #### You've got a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history!
 Just remember to move your results from your folder before running a new search.
+
+## The last step: splitting your output.txt
+
+Now you've got a file called `output.txt` on your machine. If you open that up in a text editor, you'll see it is replete with text, with various field delimiters, and other extraneous stuff that will make it difficult for you to get a sense of what's going on. One way of splitting this file up into useful bits is to split it at a useful reference point - perhaps at `oocihm`. There are many ways of achieving this: always google your problem! Ie, 'splitting file based on a pattern' will yield many different ways of doing this. You could try this:
+
+`sed 's/oocihm/\n&/2g' output.txt | split -dl1 --aditional-suffix=.txt - splitfile`
+
+There are two commands there, divided by the | ('pipe') character. Indeed, the output of the first command is 'piped' as the input into the second one. The first command, `sed` (which stands for 'stream editor') looks for the pattern in each line in your `output.txt`. When it finds it, it pipes it to the `split` command which throws it into a new file called `splitfile000.txt`, iterating the file name upwards each time. Google 'sed' and 'split' for examples to try on your own.
 
 # Exercise 4: Tracking the ephemeral web
 
@@ -184,7 +201,7 @@ This section will follow [Milligan p52-64](https://ianmilli.files.wordpress.com/
 # Going Further: Archiving Twitter
 - use Ed Summer's [TWARC](https://github.com/shawngraham/twarc) to grab, archive, share, inflate, and visualize tweets
 - convert JSON to CSV with [this tool](http://konklone.io/json/)
-- use R to grab resources from [dp.la](http://dp.la) with this wee R script on my [gists](https://gist.github.com/shawngraham/0907ab2c2185cfe9f91b)
+- use R to grab resources from [dp.la](http://dp.la) with this wee R script on my [gists](https://gist.github.com/shawngraham/0907ab2c2185cfe9f91b) (What's R? a great environment for doing many many things. Get it [here](https://cran.r-project.org/) and use [RStudio to work in it](https://www.rstudio.com/) (grab the free version))
 
 ### Did you know?
 - you can drop geojson into github, and [github will turn it into a map](https://github.com/shawngraham/twarc/blob/master/ottawa-museum-tweets.geojson)
