@@ -1,6 +1,6 @@
 # Module 1: Exercises
 
-_All 4 exercises are on this page. Remember to scroll!_
+_All 5 exercises are on this page. Remember to scroll! Push yourself to complete as many as you can. If these are not challening for you, there's an advanced one at the end._
 
 ## EXERCISE 1: learning markdown syntax with dillinger.io or prose.io
 
