@@ -105,7 +105,7 @@ And then you can run it by typing:
 
 `./api-ex-mac.sh`  but *don't* do that yet! You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name, and then run the new command. Move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data. 
 
-### Windows7&8 instructions:
+### Windows7&8&10 instructions:
 Begin by making a folder for this exercise on your desktop.
 
 1. You'll need *gitbash* (which comes with git; I know you already have github on your desktop, which has _git shell_ but that's not what we want. Download [git](http://git-scm.com/download/win) and install it, and that will give you the git bash utility, and will not mess with your github set up. 'Bash' is  "a shell that runs commands once you type the name of a command and press <enter> on your keyboard." You can see screenshots and find help on all this [here](http://openhatch.org/missions/windows-setup/open-git-bash-prompt). You will be running our scraper program from within this shell.
@@ -157,9 +157,13 @@ If all goes well A new window will pop open, and you'll be downloading material 
 #### You've got a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history!
 Just remember to move your results from your folder before running a new search.
 
-# Wget
+# Exercise 4: Tracking the ephemeral web
 
-Finally, we can use wget to retrieve data in cases where there is no API. If you look carefully at the program in exercise 3, you'll see we used the wget command. In this exercise, we search for a collection in the internet archive, grab all of the file identifiers, and feed these into wget _from the command line or terminal_. One command, thousands of documents!
+Nothing lasts for ever on the internet. By some measures, for some kinds of content, the half-life is on the order of *hours*. In this exercise, I want you to [read this post](http://www.anonymousswisscollector.com/2015/10/saving-info-and-your-skin-on-the-ephemeral-internet-a-how-to-for-researchers.html) from Donna Yates of the _[Trafficking Culture](http://traffickingculture.org)_ project at the University of Glasgow. Consider her workflow, and develop your own workflow for preserving copies of what you find in the course of your research. You might wish to investigate [BibDesk](http://bibdesk.sourceforge.net/) or [Zotero](https://www.zotero.org/). Then, in the narrative of your work for me in this class (ie, on your blog or similar) describe your research interests and the ways in which your materials might prove ephemeral online. Describe your workflow for dealing with this problem (that is, show you understand how your chosen tools/flow work). Integrate what you have already learned in modules 1 & 2. 
+
+# Going Further: Wget
+
+Finally, we can use wget to retrieve data (or indeed, _mirror_ an entire site) in cases where there is no API. If you look carefully at the program in exercise 3, you'll see we used the wget command. In this exercise, we search for a collection in the internet archive, grab all of the file identifiers, and feed these into wget _from the command line or terminal_. One command, thousands of documents!
 
 (If you skipped the previous exercise, you need to install wget. Go to [the programming historian tutorial on wget](http://programminghistorian.org/lessons/automated-downloading-with-wget) and follow the relevant instructions (depending on your operating system) to install it.)
 
@@ -177,7 +181,7 @@ This section will follow [Milligan p52-64](https://ianmilli.files.wordpress.com/
 *but* if that's all you get, and nothing downloads, the problem is in your txt file. *Make sure* to create your txt file with a text editor (textwrangler, sublime text, notepad) and *not* from `save as...txt` in excel. (If you have an option when you create the text file, make sure the encoding is 'utf-8' rather than 'utf-16').
 - if you're really stuck, see this [blog post from the Internet Archive](http://blog.archive.org/2012/04/26/downloading-in-bulk-using-wget/)
 
-# Going Further
+# Going Further: Archiving Twitter
 - use Ed Summer's [TWARC](https://github.com/shawngraham/twarc) to grab, archive, share, inflate, and visualize tweets
 - convert JSON to CSV with [this tool](http://konklone.io/json/)
 - use R to grab resources from [dp.la](http://dp.la) with this wee R script on my [gists](https://gist.github.com/shawngraham/0907ab2c2185cfe9f91b)

@@ -1,6 +1,6 @@
 # Module 1: Exercises
 
-_All 5 exercises are on this page. Remember to scroll! Push yourself to complete as many as you can. If these are not challening for you, there's an advanced one at the end._
+_All 4 exercises are on this page. Remember to scroll! Push yourself to complete as many as you can. If these are not challening for you, there's an advanced one at the end._
 
 ## EXERCISE 1: learning markdown syntax with dillinger.io or prose.io
 
@@ -99,10 +99,6 @@ In this exercise, I would like you to
 3. Make a pull request.
 
 ** before you start ** Now, when we're writing files from scratch (as opposed to making notes) you will need a good text editor. If you're on a Mac, you might already have something like TextWrangler. If you're on Windows, you're out of luck (notepad and wordpad are not useful to us; you can ask me why). A good text editor that works on both Mac and Windows is [Sublime Text](http://www.sublimetext.com/). This is free, though you will be reminded periodically to purchase a license to support development. If you find yourself using it a lot, you should. 
-
-## EXERCISE 5: tracking the ephemeral web
-
-Nothing lasts for ever on the internet. By some measures, for some kinds of content, the half-life is on the order of *hours*. In this exercise, I want you to [read this post](http://www.anonymousswisscollector.com/2015/10/saving-info-and-your-skin-on-the-ephemeral-internet-a-how-to-for-researchers.html) from Donna Yates of the _[Trafficking Culture](http://traffickingculture.org)_ project at the University of Glasgow. Consider her workflow, and develop your own workflow for preserving copies of what you find in the course of your research. You might wish to investigate [BibDesk](http://bibdesk.sourceforge.net/) or [Zotero](https://www.zotero.org/). Then, in the narrative of your work for me in this class (ie, on your blog or similar) describe your research interests and the ways in which your materials might prove ephemeral online. Describe your workflow for dealing with this problem (that is, show you understand how your chosen tools/flow work). Integrate what you have already learned in this module. 
 
 -----
 
