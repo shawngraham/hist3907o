@@ -1,1 +1,1 @@
-sed 's/oocihm/\n&/g' output.txt | split > splitfile
+sed 's/oocihm/\n&/2g' output.txt | split -a5 -dl1 - splitfile
