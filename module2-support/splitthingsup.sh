@@ -1,0 +1,1 @@
+sed 's/oocihm/\n&/g' output.txt | split > splitfile
