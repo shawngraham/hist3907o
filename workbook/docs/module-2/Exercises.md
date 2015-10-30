@@ -127,19 +127,19 @@ Begin by making a folder for this exercise on your desktop.
 Finally, you'll need wget installed on your machine. Get it [here](http://users.ugent.be/~bpuype/wget/) and download it to C:Windows directory.
 
 Now:  
-- download api-ex-pc.sh from this [repository](https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-pc.sh)
-- open *git bash* - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. *Git bash*. 
-- inside git bash, you change directory so that you are working within the folder you made on your desktop. The command to change directory is `cd`  ie `cd course-notes` would go one level down into a folder called 'course notes'. To go one level up, you'd type `cd ..` <- ie, two periods. More help on finding your way around this interface is [here](http://programminghistorian.org/lessons/intro-to-bash)
-- Once you're in the right folder, all you have to do is type the name of our programme: `./api-ex-pc.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!* 
+- download canadiana.sh from this [zip file](https://github.com/shawngraham/hist3907o/raw/master/module2-support/windows-canadiana-script-w-all-helpers.zip)
+- open *git bash* - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. *Git bash*. (You can also navigate to a folder in explorer, then right-click in that folder and select 'open git bash here'.)
+- make sure you are working within the folder you made on your desktop. The command to change directory when you are in bash (or the command line, for that matter) is `cd`  ie `cd course-notes` would go one level down into a folder called 'course notes'. To go one level up, you'd type `cd ..` <- ie, two periods. More help on finding your way around this interface is [here](http://programminghistorian.org/lessons/intro-to-bash)
+- Once you're in the right folder, all you have to do is type the name of our programme: `canadiana.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!* 
 
-You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name (make sure to keep the same file extenion, `.sh` - in notepad, change the save as file type to `all files` and then write the new name, e.g, `api-ex-pc-2.sh`, and then run your program by typing its name at the prompt in the git bash window. When it's finished, move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data. 
+You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name (make sure to keep the same file extenion, `.sh` - in notepad, change the save as file type to `all files` and then write the new name, e.g, `canadiana-2.sh`, and then run your program by typing its name at the prompt in the git bash window. When it's finished, move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data. 
 
 ### if you get an error message: jq or seq cannot be found
 
 If this happens, your computer is not finding the coreutils installation or the `jq.exe` program. First thing: when you downloaded jq, did you make sure to change the name to `jq.exe`? When it downloads, it downloads as (eg) `jq-win64.exe`. Shorten up the name. Second thing: is it in the same folder as your script? Third thing: sometimes, it just might be easier to move the `seq.exe` program into the same folder as your script, that is, your working folder. Go to `C:\Program Files (x86)\GnuWin32\bin` and *copy* `seq.exe` to your working folder. You will also need to copy: 
 + `libiconv2.dll`
 + `libintl3.dll`
-...to the same folder. 
+...to the same folder. (*shortcut* - the same zip file I gave you that has the `canadiana.sh` in it has all of the helper files in it too. You could navigate to this unzipped folder, open a gitbash window there, and run the scripts. In this case, FYI, all you needed installed was gitbash.)
 
 ###An alternative Windows installation
 
@@ -159,7 +159,7 @@ Say 'yes' at the prompt that asks if you really want to do this.
 
 A number of components will download and get configured to work from within powershell. When they finish, at the command prompt, you can run your program like so:
 
-`./api-ex-pc.sh`
+`./canadiana.sh`
 
 If all goes well a new window will pop open, and you'll be downloading material from Canadiana! You can close that window where the downloading is happening to stop the process. If you open your program, you can adjust it to search for your own requests [see this discussion for hints on how to do this](https://github.com/hist3907b-winter2015/module2-findingdata/issues/2)
 
@@ -168,11 +168,13 @@ Just remember to move your results from your folder before running a new search.
 
 ## The last step: splitting your output.txt
 
-Now you've got a file called `output.txt` on your machine. If you open that up in a text editor, you'll see it is replete with text, with various field delimiters, and other extraneous stuff that will make it difficult for you to get a sense of what's going on. One way of splitting this file up into useful bits is to split it at a useful reference point - perhaps at `oocihm`. There are many ways of achieving this: always google your problem! Ie, 'splitting file based on a pattern' will yield many different ways of doing this. You could try this:
+Now you've got a file called `output.txt` on your machine. If you open that up in a text editor, you'll see it is replete with text, with various field delimiters, and other extraneous stuff that will make it difficult for you to get a sense of what's going on. One way of splitting this file up into useful bits is to split it at a useful reference point - perhaps at `oocihm`. There are many ways of achieving this: always google your problem! Ie, 'splitting file based on a pattern' will yield many different ways of doing this. Mac users, you could try this from your terminal prompt in the folder where you've been doing your work:
 
 `sed 's/oocihm/\n&/2g' output.txt | split -dl1 --aditional-suffix=.txt - splitfile`
 
-There are two commands there, divided by the | ('pipe') character. Indeed, the output of the first command is 'piped' as the input into the second one. The first command, `sed` (which stands for 'stream editor') looks for the pattern in each line in your `output.txt`. When it finds it, it pipes it to the `split` command which throws it into a new file called `splitfile000.txt`, iterating the file name upwards each time. Google 'sed' and 'split' for examples to try on your own.
+There are two commands there, divided by the | ('pipe') character. Indeed, the output of the first command is 'piped' as the input into the second one. The first command, `sed` (which stands for 'stream editor') looks for the pattern in each line in your `output.txt`. When it finds it, it pipes it to the `split` command which throws it into a new file called `splitfile000.txt`, iterating the file name upwards each time. Google 'sed' and 'split' for examples to try on your own. *Windows users* things are not quite as easy, but not too bad. In the zip file I provided you there is a script called `splitthingsup.sh` which contains the same `sed` command (modified slightly to work on your machine). Just run `splitthingsup.sh` from the git bash prompt. Ta da! Having everything split up will allow you to start doing text analysis. 
+
+Experiment with the `sed` command. Google `sed patterns`. Can you improve the pattern to make the resulting files more useful for you? 
 
 # Exercise 4: Tracking the ephemeral web
 
@@ -206,3 +208,4 @@ This section will follow [Milligan p52-64](https://ianmilli.files.wordpress.com/
 ### Did you know?
 - you can drop geojson into github, and [github will turn it into a map](https://github.com/shawngraham/twarc/blob/master/ottawa-museum-tweets.geojson)
 - twarc can be used to extract the coordinates from tweets, and turn them into geojson data.
+- Open Refine can also work with APIs - [give this tutorial using Outwith hub, Google Refine and the UK postcode API a whirl](http://sophiemurraymorris.com/2014/03/01/data-tutorial-open-refine-outwit-hub/)
