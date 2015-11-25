@@ -135,6 +135,9 @@ A project of [Melodee Beals, Loughborough University](http://www.scissorsandpast
 
 Read: [Losing my methodology](http://mhbeals.com/losing-my-methodology-revisiting-the-workflow/)
 
+
+
+
 + [Middlesex Convicts Delivered for Transportation, 1785-1792](http://sharonhoward.github.io/cdt/)
   
 A dataset compiled by [Sharon Howard, University of Sheffield](http://sharonhoward.org/)
@@ -144,6 +147,7 @@ A dataset compiled by [Sharon Howard, University of Sheffield](http://sharonhowa
 # Start exploring digital history projects now
 
 and start imagining what you could do...
+
 
 
 ### Talk to each other
