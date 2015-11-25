@@ -74,7 +74,7 @@ You will share your final project and all *ancillary files* by keeping them in a
 
 
 # Building as a way of knowing
-Many projects make their materials available via githug.
+Many projects make their materials available via github.
 
 > It is not necessary to reinvent the wheel!
 
