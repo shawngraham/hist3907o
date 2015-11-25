@@ -1,6 +1,7 @@
 The Final Project
 ============
 <small>Crafting Digital History</small>
+
 <small>craftingdigitalhistory.ca</small>
 
 
@@ -10,11 +11,13 @@ The Final Project
 + _ie, you conceive, create, document, a work of digital history that *visualizes* some argument about the past_
 
 
+
 # The final form
 + could be an infographic ([picktochart, for instance](http://piktochart.com/))
 + could be online
 + could be a poster for printing
 + ... key thing: the form serves the function!
+
 
 
 # Let's look at what Ryan did
@@ -27,10 +30,12 @@ when he went [_searching for residential schools_](http://ryanpickering.github.i
 - you *can* do this!
 
 
+
 # Project Options
 1. The Migrant Experience at Home: the Colonial Newspapers Database
 2. The Business History of Ottawa: advertisements, etc
 3. A topic of your own devising *cleared with me by the third week of class*
+
 
 
 ## All datasets:
@@ -38,10 +43,12 @@ when he went [_searching for residential schools_](http://ryanpickering.github.i
 You will share your final project and all *ancillary files* by keeping them in a repository in your github space; the final project will be mounted in your own domain.
 
 
+
 ### Your main analytical tool must serve the research question!
 
 + but remember that exploration & deformation are valid too
 + use your online notebooks to keep track of *what* you are doing and *why*
+
 
 
 You will draw on your online notebook for your paradata document.
@@ -57,13 +64,11 @@ You will draw on your online notebook for your paradata document.
 + [Networks of Commemoration](http://figshare.com/articles/Networks_of_Commemoration_Gender_Class_and_the_Remembrance_of_General_Brock_1898_1912/710956)
 
 
+
 + [Geography of the Post](http://cameronblevins.org/gotp/)
 + [Mapping the Freedmen's Bureau](http://mappingthefreedmensbureau.com/)
 + [Mental Maps of Texts](http://dclure.org/essays/mental-maps-of-texts/)
 
-
-# Pause. Consider.
-Take a quick glance at one of those projects. What strikes you immediately?
 
 
 # Building as a way of knowing
@@ -74,7 +79,8 @@ Many projects make their materials available via github, ex:
 
 
 
-## It is not necessary to reinvent the wheel!
+It is not necessary to reinvent the wheel!
++ Look for 'how tos', 'how did they make that', search github for code
 
 
 
