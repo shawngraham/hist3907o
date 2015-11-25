@@ -35,7 +35,7 @@ when he went [_searching for residential schools_](http://ryanpickering.github.i
 
 # Project Options
 1. The Migrant Experience at Home: the Colonial Newspapers Database
-2. The Business History of Ottawa: advertisements, etc
+2. Middlesex Convicts
 3. A topic of your own devising *cleared with me by the third week of class*
 
 
