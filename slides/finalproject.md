@@ -20,12 +20,14 @@ The Final Project
 
 
 
-# Let's look at what Ryan did
+## Let's look at what Ryan did
 when he went [_searching for residential schools_](http://ryanpickering.github.io/Residential-School-Online-Response/startbootstrap-grayscale-1.0.3/)
 
 
-# How did he do that?
-- research via data mining
+
+## How did he do that?
+- collected data via data mining
+- simple visualizations to understand the story
 - visualized with 'Twitter Bootstrap' templates
 - you *can* do this!
 
@@ -51,7 +53,7 @@ You will share your final project and all *ancillary files* by keeping them in a
 
 
 
-You will draw on your online notebook for your paradata document.
+### You will draw on your online notebook for your paradata document.
 
 + if everything goes pearshape, we can use your notebook to craft a post-mortem: this, too, is productive!
 
@@ -74,13 +76,9 @@ You will draw on your online notebook for your paradata document.
 # Building as a way of knowing
 Many projects make their materials available via github, ex:
 
-+ David McClure, [Textplot](https://github.com/davidmcclure/textplot)
-+ ANP455, MSU, Fall 2014 [Digital Atlas of Ancient Egypt](https://github.com/matrix-msu/daea)
+> It is not necessary to reinvent the wheel!
 
-
-
-It is not necessary to reinvent the wheel!
-+ Look for 'how tos', 'how did they make that', search github for code
+Look for 'how tos', 'how did they make that', search github for code
 
 
 
@@ -91,6 +89,7 @@ _see [DevDH](http://devdh.org) for helpful tutorials_
 Appleford, Simon, and Jennifer Guiliano. 'Best Practice Principles Of Designing Your First Project.' DevDH.org, 2013. http://devdh.org/lectures/design/bestpractice/
 
 
+
 ## The components of a project:
 1. the question, problem, or provocation
 2. sources (primary, secondary)
@@ -99,10 +98,12 @@ Appleford, Simon, and Jennifer Guiliano. 'Best Practice Principles Of Designing 
 5. product
 
 
+
 ## Workplan
 
 You should post a publically available workplan. *This is not a grading requirement*. It is, rather, good practice.
 See Appleford, Simon, and Jennifer Guiliano. 'Building Your First Work Plan.' DevDH.org, 2013. http://devdh.org/lectures/manageproject/workplan/.
+
 
 
 ## Planning your time
@@ -112,14 +113,16 @@ See Appleford, Simon, and Jennifer Guiliano. 'Building Your First Work Plan.' De
 That's how much time you have to spend on everything I'm asking you to do. Call it X.
 
 
+
 ## Planning your time /2
 
 1. Look at the modules for this course. Which parts do you think will be hardest for you? How much time do you think you'll need for each one? I reckon for me that it'd take about 3 hours per module *to do just the exercises*, if everything goes well each time. That doesn't include writing up your notebooks & narrative, which should take another hour or so per module.
 2. Call this Y.
 
 
+
 ## You've got:
-# x - Y = project time
+# X - Y = project time
 
 The modules correspond to the various steps in working with data. Build into your plan time to learn the tool you think you're most likely going to use.
 
@@ -127,13 +130,23 @@ The modules correspond to the various steps in working with data. Build into you
 
 # Some possible databases to get you started:
 + [Colonial Newspaper Database](https://github.com/mhbeals/scissorsandpaste/blob/master/Outputs/CSV/TEISAP.csv)
-  A project of [Melodee Beals, Loughborough University](http://www.scissorsandpaste.net/)
-  Read: [Losing my methodology](http://mhbeals.com/losing-my-methodology-revisiting-the-workflow/)
+  
+A project of [Melodee Beals, Loughborough University](http://www.scissorsandpaste.net/)
+
+Read: [Losing my methodology](http://mhbeals.com/losing-my-methodology-revisiting-the-workflow/)
+
 + [Middlesex Convicts Delivered for Transportation, 1785-1792](http://sharonhoward.github.io/cdt/)
-  A dataset compiled by [Sharon Howard, University of Sheffield](http://sharonhoward.org/)
+  
+A dataset compiled by [Sharon Howard, University of Sheffield](http://sharonhoward.org/)
 
 
 
 # Start exploring digital history projects now
 
 and start imagining what you could do...
+
+
+### Talk to each other
+There is a channel in slack called 'Final Project'. Use this to help each other out. Collaborate!
+
+Document all collaboration to give credit where credit is due.
