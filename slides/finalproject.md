@@ -1,28 +1,133 @@
-# Final Project
-
-Things you should know
-blah blah
-
-
-
-## Another slide
-blah blah blah
+The Final Project
+============
+<small>Crafting Digital History</small>
+<small>craftingdigitalhistory.ca</small>
 
 
 
-## And Another
+# Goals for this project
++ You will demonstrate via your project mastery of the six modules in this course
++ _ie, you conceive, create, document, a work of digital history that *visualizes* some argument about the past_
+
+
+# The final form
++ could be an infographic ([picktochart, for instance](http://piktochart.com/))
++ could be online
++ could be a poster for printing
++ ... key thing: the form serves the function!
+
+
+# Let's look at what Ryan did
+when he went [_searching for residential schools_](http://ryanpickering.github.io/Residential-School-Online-Response/startbootstrap-grayscale-1.0.3/)
+
+
+# How did he do that?
+- research via data mining
+- visualized with 'Twitter Bootstrap' templates
+- you *can* do this!
+
+
+# Project Options
+1. The Migrant Experience at Home: the Colonial Newspapers Database
+2. The Business History of Ottawa: advertisements, etc
+3. A topic of your own devising *cleared with me by the third week of class*
+
+
+## All datasets:
+
+You will share your final project and all *ancillary files* by keeping them in a repository in your github space; the final project will be mounted in your own domain.
+
+
+### Your main analytical tool must serve the research question!
+
++ but remember that exploration & deformation are valid too
++ use your online notebooks to keep track of *what* you are doing and *why*
+
+
+You will draw on your online notebook for your paradata document.
+
++ if everything goes pearshape, we can use your notebook to craft a post-mortem: this, too, is productive!
 
 
 
+### Some Examples of Interesting Digital History Visualizations
 
-[Start digging in the data mines for this module here](https://github.com/hist3907b-winter2015/module4-holes)
-
-<small><small>'Shaft', by [Kačka a Ondra](https://www.flickr.com/photos/14548166@N03/), [Flickr](https://www.flickr.com/photos/14548166@N03/4687041921/in/photolist-89bjgB-JKAoz-YAA11-YAvoo-9ETqED-byG16U-9rVJXU-9rVGU7-9rVGjw-9rVHtq-9rSKUt-9rVFAJ-o1A5F3-ebnFcx-76obyM-do1Joq-5Pm4Eb-6jw6QT-7d9eqA-fFPwRD-85GG8p-eahux-d4Aaxj-8pt9DT-m6QW8Y-fgQ9BL-7U4b6g-5JUN3F-6hbbGA-7AQdw5-omxKJh-5cRAAE-ebnFeH-Eb8ZV-o1yRKy-nJcpRq-4if229-6NbpGV-jJhhN-2CM7N6-ebnFhT-47JYou-d9LaWU-7ximkQ-8pmJfn-8ppVeE-8i5WKX-6UTV59-47ELxX-6UTU2A)
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/jIfu2A0ezq0" frameborder="0" allowfullscreen></iframe>
-
-
-#Qualitative data vs Quantitative
-+ how do you see patterns in words?
++ [Quantifying Kissinger](http://blog.quantifyingkissinger.com/)
++ [Six Degrees of Francis Bacon](http://sixdegreesoffrancisbacon.com/)
++ [Networks of Commemoration](http://figshare.com/articles/Networks_of_Commemoration_Gender_Class_and_the_Remembrance_of_General_Brock_1898_1912/710956)
 
 
++ [Geography of the Post](http://cameronblevins.org/gotp/)
++ [Mapping the Freedmen's Bureau](http://mappingthefreedmensbureau.com/)
++ [Mental Maps of Texts](http://dclure.org/essays/mental-maps-of-texts/)
+
+
+# Pause. Consider.
+Take a quick glance at one of those projects. What strikes you immediately?
+
+
+# Building as a way of knowing
+Many projects make their materials available via github, ex:
+
++ David McClure, [Textplot](https://github.com/davidmcclure/textplot)
++ ANP455, MSU, Fall 2014 [Digital Atlas of Ancient Egypt](https://github.com/matrix-msu/daea)
+
+
+
+## It is not necessary to reinvent the wheel!
+
+
+
+# An Introduction to Project Management
+
+_see [DevDH](http://devdh.org) for helpful tutorials_
+
+Appleford, Simon, and Jennifer Guiliano. 'Best Practice Principles Of Designing Your First Project.' DevDH.org, 2013. http://devdh.org/lectures/design/bestpractice/
+
+
+## The components of a project:
+1. the question, problem, or provocation
+2. sources (primary, secondary)
+3. analytical activity
+4. audience
+5. product
+
+
+## Workplan
+
+You should post a publically available workplan. *This is not a grading requirement*. It is, rather, good practice.
+See Appleford, Simon, and Jennifer Guiliano. 'Building Your First Work Plan.' DevDH.org, 2013. http://devdh.org/lectures/manageproject/workplan/.
+
+
+## Planning your time
+1. How many hours, total, do you think you have this term outside of class time, work time, social time? Divide that by 12. That's how many hours per week you can spend *on all your non-lecture time course, including _all of this one_.* 
+2. Divide those hours by the number of courses you have. 
+
+That's how much time you have to spend on everything I'm asking you to do. Call it X.
+
+
+## Planning your time /2
+
+1. Look at the modules for this course. Which parts do you think will be hardest for you? How much time do you think you'll need for each one? I reckon for me that it'd take about 3 hours per module *to do just the exercises*, if everything goes well each time. That doesn't include writing up your notebooks & narrative, which should take another hour or so per module.
+2. Call this Y.
+
+
+## You've got:
+# x - Y = project time
+
+The modules correspond to the various steps in working with data. Build into your plan time to learn the tool you think you're most likely going to use.
+
+
+
+# Some possible databases to get you started:
++ [Colonial Newspaper Database](https://github.com/mhbeals/scissorsandpaste/blob/master/Outputs/CSV/TEISAP.csv)
+  A project of [Melodee Beals, Loughborough University](http://www.scissorsandpaste.net/)
+  Read: [Losing my methodology](http://mhbeals.com/losing-my-methodology-revisiting-the-workflow/)
++ [Middlesex Convicts Delivered for Transportation, 1785-1792](http://sharonhoward.github.io/cdt/)
+  A dataset compiled by [Sharon Howard, University of Sheffield](http://sharonhoward.org/)
+
+
+
+# Start exploring digital history projects now
+
+and start imagining what you could do...
