@@ -74,10 +74,13 @@ You will share your final project and all *ancillary files* by keeping them in a
 
 
 # Building as a way of knowing
-Many projects make their materials available via github, ex:
+Many projects make their materials available via githug.
 
 > It is not necessary to reinvent the wheel!
 
+
+[DHCommons.org](http://dhcommons.org/journal/issue-1/how-did-they-make-adams-timeline)
+![[Imgur](http://i.imgur.com/uTGtXdk.png)
 Look for 'how tos', 'how did they make that', search github for code
 
 
