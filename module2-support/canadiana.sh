@@ -33,4 +33,6 @@ sed -e 's/\"key\": \"//g' results.txt | tr -d "\"" | tr -d "{" | tr -d "}" | tr 
 # this adds a prefix and a suffix.
 awk '$0="http://eco.canadiana.ca/view/"$0' cleanlist.txt| awk '{print $0 "/1?r=0&s=1&fmt=json&api_text=1"}' > urlstograb.txt
 # then if we want we can take those URLs and output them all to a big text file for analysis.
+
+#make sure you have wget installed! Get it from http://gnuwin32.sourceforge.net/packages/wget.htm
 wget -i urlstograb.txt -O output.txt
