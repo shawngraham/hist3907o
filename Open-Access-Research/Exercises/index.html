@@ -91,6 +91,10 @@
                 
                     <li><a class="toctree-l4" href="#exercise-4-forking-contributing-to-a-repository">EXERCISE 4: forking &amp; contributing to a repository</a></li>
                 
+                    <li><a class="toctree-l4" href="#advanced">Advanced</a></li>
+                
+                    <li><a class="toctree-l4" href="#conclusion">Conclusion</a></li>
+                
             
             </ul>
         
@@ -328,22 +332,19 @@
             <div class="section">
               
                 <h1 id="module-1-exercises">Module 1: Exercises</h1>
-<p><em>All 4 exercises are on this page. Remember to scroll!</em></p>
+<p><em>All 4 exercises are on this page. Remember to scroll! Push yourself to complete as many as you can. If these are not challening for you, there's an advanced one at the end.</em></p>
 <h2 id="exercise-1-learning-markdown-syntax-with-dillingerio-or-proseio">EXERCISE 1: learning markdown syntax with dillinger.io or prose.io</h2>
 <p>Have you ever fought with Word or another wordprocessor, trying to get things just <em>right</em>? Word processing is a mess. It conflates writing with typesetting and layout. Sometimes, you just want to get the words out. Othertimes, you want to make your writing as accessible as possible... but your intended recipient can't open your file, because they don't use the same wordprocessor. Or perhaps you wrote up some great notes that you'd love to have in a slideshow; but you can't, because copying and pasting preserves a whole lot of extra <em>gunk</em> that messes up your materials.</p>
 <p>The answer is to separate your <em>content</em> from your tool:</p>
 <p>This is where Markdown shines. Markdown is a syntax for marking semantic elements within a document explicitly, not in some hidden layer. The idea is to identify units that are meaningful to humans, like titles, sections, subsections, footnotes, and illustrations. At the very least, your files will always remain comprehensible to you, even if the editor you are currently using stops working or “goes out of business.”</p>
 <p>Writing in this way liberates the author from the tool. Markdown can be written in any plain text editor and offers a rich ecosystem of software that can render that text into beautiful looking documents. For this reason, Markdown is currently enjoying a period of growth, not just as as means for writing scholarly papers but as a convention for online editing in general.</p>
 <p>Popular general purpose plain text editors include TextWrangler and Sublime for Mac, Notepad++ for Windows, as well as Gedit and Kate for Linux. However, there are also editors that specialize in displaying and editing Markdown.</p>
-<ul>
-<li>Tenen and Wythoff, <a href="http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Sustainable Authorship in Plain Text Using Pandoc and Markdown</a></li>
-</ul>
-<p>In this exercise, I want you to become familiar with Markdown syntax. There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on. </p>
+<p>In this exercise, I want you to become familiar with Markdown syntax (<a href="http://programminghistorian.org/lessons/getting-started-with-markdown">here is a quick primer on markdown by Sarah Simpkin</a>). There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on.</p>
 <ol>
-<li>You will need this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">cheatsheet</a>. </li>
+<li>You will need this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">cheatsheet</a>.</li>
 <li>Go to <a href="http://dillinger.io">dillinger.io</a> in a new browser window. This looks like a wordprocessor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your dropbox, google drive, or github account (under the cogwheel icon. Do you have a dropbox etc account? You should set that up now, if you don't).</li>
 <li>Write a short 200-500 word piece on why you are taking this class; what you hope to achieve here; the kind of digital experience you already have versus the kind of experience you wish to have.</li>
-<li>Have at least two images (creative commons licensed for re-use - do you know how to find these?) and link outwards to four websites that are relevant to your piece.</li>
+<li>Have at least two images (creative commons licensed for re-use - do you know how to <a href="https://search.creativecommons.org/">find these</a>?) and link outwards to four websites that are relevant to your piece.</li>
 <li>In the 'document name' slot, make sure to add the file type .md at the end</li>
 <li>'Save to' your dropbox, github, google drive, or one drive account.</li>
 </ol>
@@ -351,13 +352,17 @@
 <blockquote>
 <p>nb: the next time you go to dillinger.io the last document you were working on will load up. That's because dillinger stashes your work in the browser cache. If you clear your cache (from your browser's tools or settings) you'll lose it, which is why in step 6 I suggested saving to those various accounts.</p>
 </blockquote>
+<p>(For a richer discussion of some more ways markdown and pandoc can make your research sustainable, see Tenen and Wythoff, <a href="http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Sustainable Authorship in Plain Text Using Pandoc and Markdown</a>)</p>
 <h2 id="exercise-2-setting-up-your-github-space">EXERCISE 2: setting up your github space</h2>
 <p>In this exercise, you will 1. get an account on github; 2. download and install git &amp; the github desktop program; 3. setup a webpage using the gh-pages branch for a repo</p>
 <ol>
-<li>Get an account with github: <a href="http://github.com/join">Github</a></li>
-<li>Get the desktop 'gui' (graphical user interface; a program) for github <a href="https://desktop.github.com/">here</a></li>
-<li>Work your way through the material below:</li>
+<li>Download this interactive tutorial, "Git It": <a href="https://github.com/jlord/git-it-electron/releases/download/2.0.0/Git-it-darwin-x64.zip">mac</a>, <a href="https://github.com/jlord/git-it-electron/releases/download/2.0.0/Git-it-win32-x64.zip">windows</a>, <a href="https://github.com/jlord/git-it-electron/releases/download/2.0.0/Git-it-linux-x64.zip">linux</a>. Unzip and install.</li>
+<li>Download and install Github Desktop <a href="https://desktop.github.com/">here</a></li>
+<li>Download and install a text editor. Both <a href="http://atom.io/">Atom</a> and <a href="http://www.sublimetext.com/">Sublime Text</a> are very good.</li>
+<li>Work your way through the Git It tutorial. As part of that tutorial, you will set up a github account. The instructions regarding that tutorial are <a href="https://github.com/jlord/git-it-electron/blob/master/README.md">here</a></li>
 </ol>
+<p><img alt="" src="https://cloud.githubusercontent.com/assets/1305617/9652620/fce0cc46-51d1-11e5-9cb6-d2d71535dfc5.png" /></p>
+<p>Push yourself as far as you can. Ask for help in our module 1 channel in Slack! Find a friend, and work through this together.</p>
 <p>Please note:</p>
 <ul>
 <li>git is a program that keeps snapshots of the contents of a designated folder; it watches for 'difs' or differences between one snapshot and the next.</li>
@@ -365,13 +370,19 @@
 </ul>
 <p>Some key terms:</p>
 <ul>
-<li>repository: a single folder that holds all of the files and subfolders of your project</li>
-<li>commit: this means, 'take a snapshot of the current state of my repostiory'</li>
-<li>publish: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname</li>
-<li>sync: update the web repository with the latest commit from my local folder</li>
-<li>branch: make a copy of my repository with a 'working name'</li>
-<li>merge: fold the changes I have made on a branch into another branch (typically, either <code>master</code> or <code>gh-pages</code>)</li>
+<li><code>repository</code>: a single folder that holds all of the files and subfolders of your project</li>
+<li><code>commit</code>: this means, 'take a snapshot of the current state of my repostiory'</li>
+<li><code>publish</code>: take my folder on my computer, and copy it and its contents to the web as a repository at github.com/myusername/repositoryname</li>
+<li><code>sync</code>: update the web repository with the latest commit from my local folder</li>
+<li><code>branch</code>: make a copy of my repository with a 'working name'</li>
+<li><code>merge</code>: fold the changes I have made on a branch into another branch (typically, either <code>master</code> or <code>gh-pages</code>)</li>
+<li><code>fork</code>: to make a copy of someone else's repo</li>
+<li><code>clone</code>: to copy a repo online onto your own computer</li>
+<li><code>pull</code> request: to ask the original maker of a repo to 'pull' your changes into their master, original, repository</li>
+<li><code>push</code>: to move your changes from your computer to the online repo</li>
 </ul>
+<h3 id="now-lets-set-up-a-website-that-lives-in-a-github-repo">Now, let's set up a website that lives in a github repo</h3>
+<p><em>don't worry, exercise 2 is already done. This is just to push you further...</em></p>
 <p>The historian Jack Dougherty has an excellent video and step-by-step instructions for getting set up with git and github. Please <a href="http://www.datavizbook.org/content/publish/host-html-code-ghpages/tutorial.html">read his steps</a> and then watch his video:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVejLE8qtOI" frameborder="0" allowfullscreen></iframe>
 
@@ -381,48 +392,56 @@
 <p>nb here are some more resources about git and github -<a href="https://guides.github.com/">Github Guides</a> this explain in more depth some of the concepts behind Github. You could also try this tutorial, but it's not mandatory: <a href="https://try.github.io/levels/1/challenges/1">trygit</a>. This tutorial emulates using the version control software git itself (upon which Github is built) from the command line. Some more tutorials and resources<a href="http://swcarpentry.github.io/git-novice/">here</a> and <a href="http://software-carpentry.org/v5/novice/git/01-backup.html">here</a>).</p>
 </blockquote>
 <h2 id="exercise-3-setting-up-a-simple-open-notebook-blog-personal-github-repo-notational-velocity-or-notation-as-appropriate">EXERCISE 3: setting up a simple open notebook (blog + personal github repo + notational velocity or notation, as appropriate)</h2>
-<p>In this exercise, you will create a new repository, and then set up your note taking software so that it saves your notes into your repository. This allows you to keep track of changes to your notes, and also to have an open backup online. An online version of your notes allows others to contribute to, and build from, your research! When people 'fork' or copy your repository, you can consider that a form of citation, as well. There are other benefits; we will discuss these in class.</p>
+<p>In this exercise, you will create a new repository, and then set up your note taking software so that it saves your notes into your repository. This allows you to keep track of changes to your notes, and also to have an open backup online. An online version of your notes allows others to contribute to, and build from, your research! When people 'fork' or copy your repository, you can consider that a form of citation, as well. There are other benefits; we can chat about these.</p>
 <ol>
 <li>The essence of an open notebook is a) it's easy to update b) it is under version control c) it's open and can be viewed/share online. We do this by storing notes from our notetaking software in a folder on our computer <em>which is also a repository that your github desktop software monitors.</em> Periodically, you will make 'commits' and 'sync' your local folder with the online version.</li>
 <li>First, let's set up the folder/repository. We do this by going to github.com and logging in. Then, follow these <a href="https://help.github.com/articles/create-a-repo/">detailed instructions to create a new repository</a>. Call it 'my research notebook' or something similar. The github website will ask you if wish to initialize your repository with a readme.me file. Say 'yes'.</li>
-<li>In your github interface on your computer (the desktop gui), select 'syncronize'. The repository you just created online is now on your computer (it will be a folder inside your github folder). Challenge: can you locate this folder? </li>
-<li>Download and set up Notational Velocity Alt (nvAlt) <a href="http://brettterpstra.com/projects/nvalt/">(Mac)</a> or ResophNotes <a href="http://resoph.com/ResophNotes/Welcome.html">(PC)</a>. 
-    a. In <strong>notational velocity</strong> you can change the settings so that each note is its own plain text file, and you can change the location where notational velocity saves. Go to preferences &gt; notes &gt; storage. Under 'recognize individual files with attributes' there are two lists. Hit the <code>+</code> under each list and add <code>md</code>. Then highlight all the other file extensions and hit <code>-</code> in turn. Under <code>read notes from folder</code> select the location of the folder/repository you created in the previous step. (A quick guide for nvAlt lives <a href="http://bettermess.com/plain-text-primer-nvalt-101/">here</a>) 
+<li>In your github interface on your computer (the desktop app), select 'syncronize'. The repository you just created online is now on your computer (it will be a folder inside your github folder). Challenge: can you locate this folder?</li>
+<li>Download and set up Notational Velocity Alt (nvAlt) <a href="http://brettterpstra.com/projects/nvalt/">(Mac)</a> or ResophNotes <a href="http://resoph.com/ResophNotes/Welcome.html">(PC)</a>.
+    a. In <strong>notational velocity</strong> you can change the settings so that each note is its own plain text file, and you can change the location where notational velocity saves these notes. Go to preferences &gt; notes &gt; storage. Under 'recognize individual files with attributes' there are two lists. Hit the <code>+</code> under each list and add <code>md</code>. Then highlight all the other file extensions and hit <code>-</code> in turn. Under <code>read notes from folder</code> select the location of the folder/repository you created in the previous step. (A quick guide for nvAlt lives <a href="http://bettermess.com/plain-text-primer-nvalt-101/">here</a>)
     b. For <strong>ResophNotes</strong>, click on the cogwheel icon at the bottom right. Then select the storage tab. Tick the 'plain text file' radio button, and the 'save title in text file' option. Then, in 'file directory', change the path to your open notebook repository. Then click ok. Under 'options' click the 'enable markdown' radiobox. (A quick guide to Resophnotes lives <a href="http://www.thewindowsclub.com/resophnotes-create-notes-synchronize-simplenote">here</a>)</li>
-<li>You now have a system in place for quickly taking notes, and for archiving them online on github. Let's take some notes.</li>
-</ol>
-<p>Let's think about how you take notes. Knowing that this software searches the titles of your notes, you might like to figure out a system for grouping notes in the title. I will create a new 'to read' note for instance by titling it </p>
-<blockquote>
-<p>.xtoread The Information James Gleick </p>
-</blockquote>
-<p>The bit with the .toread is a tag. I'm not likely to use that particular pattern of letters anywhere else, so it makes a good tag to search on. Then, when I want to know what it is I have under that tag, I just type into the search field .xtoread and I get all my notes. </p>
-<ol>
 <li>
-<p>Think of five tags you would often use in your research. Then, I would like you to make ten notes on this keynote by Tim Hitchock, <a href="http://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html">Big Data For Dead People</a> </p>
+<p>You now have a system in place for quickly taking notes, and for archiving them online on github. Let's take some notes. <strong>At this point, please put the piece you wrote for exercise 1 - the markdown version - into a new note in your notetaking software set up in the preceding step. Then, make a new note with the direct URL to the demo repository you created in exercise 2.</strong></p>
+<p>Let's take a moment and think about how you take notes. Knowing that this software searches the titles of your notes, you might like to figure out a system for grouping notes in the title. I will create a new 'to read' note for instance by titling it  <code>.xtoread The Information James Gleick</code></p>
+<p>The bit with the <code>.toread</code> can be thought of as a tag. I'm not likely to use that particular pattern of letters anywhere else, so it makes a good tag to search on. Then, when I want to know what it is I have under that tag, I just type into the search field .xtoread and I get all my notes.</p>
+</li>
+<li>
+<p>Think of five tags you would often use in your research. Then, I would like you to make ten notes on this keynote by Tim Hitchock, <a href="http://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html">Big Data For Dead People</a></p>
 </li>
 <li>
 <p>Once you've finished your notes (summarize! don't copy out text! include some bibliography in every note, so you know where your thoughts came from! you can copy your notes into your essay drafts as part of your writing if you've used summaries!) open your github software. It will now be showing that changes have happened in your repository. Commit the changes, then synchronize. Remember: you have to leave a message in the 'commit summary' box in order to commit.</p>
 </li>
 <li>
-<p>Go to your repository online. Refresh the page. Your notes are now online. The final step is the 'narrative' of your notetaking. I often make blog posts to remind myself of what I was doing, what I was thinking, and to gather together links to useful resources etc. The narrative part of your open notebook ecology could be done as a new note, or a blog post. Your choice. Explain your tagging system, and link to your repository.</p>
+<p>Go to your repository online. Refresh the page. Your notes are now online. The final step is the 'narrative' of your notetaking. I often make blog posts to remind myself of what I was doing, what I was thinking, and to gather together links to useful resources etc. The narrative part of your open notebook ecology could be done in a variety of ways, but a blog post is probably simplest. Your choice. Explain your tagging system, and link to your repository.</p>
 </li>
 </ol>
+<p>If you get stuck, watch this video. I'm no <a href="http://www.imdb.com/name/nm0000040/">Kubrick</a>, but hey.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bVMiuHmYD6U" frameborder="0" allowfullscreen></iframe></p>
 <p><em>Postscript to this exercise</em> Read James Baker's piece on <a href="http://programminghistorian.org/lessons/preserving-your-research-data">'Preserving Your Research Data'</a> and, when you come to start working on your final project, see if you can apply his lessons to organizing your research.</p>
 <h2 id="exercise-4-forking-contributing-to-a-repository">EXERCISE 4: forking &amp; contributing to a repository</h2>
-<p>In this exercise, I would like you to </p>
+<p>In this exercise, I would like you to</p>
 <ol>
 <li>
-<p>Fork the syllabus for this course.</p>
+<p>Fork the <a href="https://github.com/craftingdigitalhistory/who-we-are">'who-we-are'</a> repo for this course.</p>
 </li>
 <li>
-<p>Add your name, and the location of your online HQ &amp; open notebook as properly formatted markdown.</p>
+<p>Rename the <code>template.md</code> file with <code>&lt;yourname&gt;.md</code>. Change the file accordingly to edit in your name, and the location of your online HQ &amp; open notebook as properly formatted markdown. Remember, when we're working with files you will need a good text editor. If you're on a Mac, you might already have something like TextWrangler. If you're on Windows, you're out of luck (notepad and wordpad are not useful to us; you can ask me why). I've already mentioned Atom and Sublime Text; make sure you have something appropriate installed. <a href="https://notepad-plus-plus.org/">Notepad++ is also good</a> (for windows folks)</p>
 </li>
 <li>
 <p>Make a pull request.</p>
 </li>
 </ol>
+<p>If you get stuck, watch this video.
+<iframe width=606 height=370 frameborder="0" scrolling="no" src="//screencast-o-matic.com/embed?sc=coljnQhtKQ&w=606&v=3"></iframe></p>
 <hr />
-<p>Now that you've worked through all of that, I can tell you that there are many different ways you could approach the problem of making your research notes publically available. You could connect dillinger.io or prose.io directly to your github accounts, and always make your notes that way. The advantage of notational velocity and resophnotes is that search &amp; note creation happen at the same time. There are also more features in both programs that let you cross-reference notes and so on. The key is to figure out a solution that works for you, <em>and</em> that lets you make your research open. 'What if I get scooped?' I hear you say. Well, let's talk about what <a href="http://wcm1.web.rice.edu/open-notebook-history.html">Caleb McDaniel has to say</a>. And we should also talk about the <a href="http://hapgood.us/2014/11/06/federated-education-new-directions-in-digital-collaboration/">smallest federated wiki</a>.</p>
+<h2 id="advanced">Advanced</h2>
+<p>It is possible to build a website with a single command from your open notebook markdown formatted pages. I use something called 'pykwiki' to generate my own <a href="http://shawngraham.github.io">open notebook</a>. Are you familiar with blogs? Blogs work by using a series of templates that dictate the look of the website, while dynamically building the website fresh each time some one visits (content is pulled out of a database). This is cool, but it can be hacked; it can be slow; and it puts a strain on computing resources. A website like my open notebook is generated by me, with a single command on my computer, whenever I want to update it. The version that lives online is just a series of static html pages: no dynamic loading, no vulnerabilities, easy to search, easy to archive, easy to share.</p>
+<p>You can try this out for yourself with a python package called 'MkDocs'. If you're on a mac, you have the python programming language already installed. If you're on windows, you'll need to <a href="https://www.python.org/downloads/">install it; get version 2.7.11</a>. Go on, I'll wait.</p>
+<p>Then, install <code>mk-docs</code> (<a href="http://www.mkdocs.org/">instructions here</a>). Since you already have a repository, navigate to it via your terminal or command line. Follow the instructions on that page to generate your site. Then, there's one command that will push your entire site to the <code>gh-pages</code> branch of your repository <a href="http://www.mkdocs.org/user-guide/deploying-your-docs/">instructions here</a>. Ta da!</p>
+<p>Now, you might run into hiccups, depending on how your system is set up. That's why this part of the exercises is called 'advanced'. See if you can solve them. Re-write this exercise with all the tacit bits spelt out - put it into your open notebook. Often, a major part of being a 'digital humanist' is uncovering all the tacit bits of how our digital tools are affecting our lives.</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Now that you've worked through all of that, I can tell you that there are many different ways you could approach the problem of making your research notes publicly available. You could connect dillinger.io or prose.io directly to your github accounts, and always make your notes that way. The advantage of notational velocity and resophnotes is that search &amp; note creation happen at the same time. There are also more features in both programs that let you cross-reference notes and so on. The key is to figure out a solution that works for you, <em>and</em> that lets you make your research open. 'What if I get scooped?' I hear you say. Well, let's talk about what <a href="http://wcm1.web.rice.edu/open-notebook-history.html">Caleb McDaniel has to say</a>. And we should also talk about the <a href="http://hapgood.us/2014/11/06/federated-education-new-directions-in-digital-collaboration/">smallest federated wiki</a>.</p>
               
             </div>
           </div>
