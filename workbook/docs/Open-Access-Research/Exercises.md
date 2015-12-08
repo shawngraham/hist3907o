@@ -111,7 +111,7 @@ In this exercise, I would like you to
 3. Make a pull request.
 
 If you get stuck, watch this video.
-<iframe width=1212 height=708 frameborder="0" scrolling="no" src="//screencast-o-matic.com/embed?sc=coljnQhtKQ&w=1212&v=3"></iframe>
+<iframe width=606 height=370 frameborder="0" scrolling="no" src="//screencast-o-matic.com/embed?sc=coljnQhtKQ&w=606&v=3"></iframe>
 
 -----
 
