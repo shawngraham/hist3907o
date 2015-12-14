@@ -108,9 +108,13 @@ Peter's data has a number of *attributes* describing it, including the membershi
 You should now have a network with 188 nodes and 8728 edges, showing the women who were active in 1902.
 
 Let’s learn something about this network. Under the statistics tab at the right hand side of the Gephi interface,
+
 + Run ‘avg. path length’ by clicking on ‘run’
+
 + In the pop up that opens, select ‘undirected’ (as we know nothing about directionality in this network; we simply know that two women were members of the same organization at the same time. Note also that if the same pair were members of the more than one organziation, the weight of their connection will be corresponding stronger).
+
 + click ok.
+
 + run ‘modularity’ to look for subgroups. make sure ‘randomize’ and ‘use weights’ are selected. Leave ‘resolution’ at 1.0
 
 We selected 'average path length' because one of the byproducts of this routine is 'betweeness centrality'. We're making an assumption here that a woman who has a high betweeness centrality score was in a position to affect information flow in 1902 society. Modularity looks at similar patterns of connections to cluster women who have more-or-less similar connections into groups.

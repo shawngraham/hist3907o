@@ -1,6 +1,11 @@
 #Getting yourself ready
 ![LOC](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg "'Getting Ready for the Kaiser' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7")
 
+#A Video Introduction to the Course
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XvDF_Xo7DQI" frameborder="0" allowfullscreen></iframe>
+
+#Welcome!
+
 Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the 'mkdocs' [static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into 'github', you can 'fork' (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
 
 Writing, crafting, coding: these are like a small river, flowing in one direction into the future. You get new ideas, new hunches: the river branches. There's a fork in its path. Sometimes new ideas, new hunches fold back into that original stream: they merge. 

@@ -23,6 +23,7 @@ pages:
 - 5. Visualization:
     - 'Communicating your Findings': 'module-5/Humanities Visualization.md'
     - 'Exercises': 'module-5/Exercises.md'
+- 6. Final Thoughts: 'conclusion/conclusion.md'
 - Appendices: 
     - 'Text Encoding': 'supporting materials/tei.md'
     - 'NER': 'supporting materials/ner.md'

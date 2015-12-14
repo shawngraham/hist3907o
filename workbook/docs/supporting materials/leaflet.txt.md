@@ -35,10 +35,11 @@ In a new browser window, open the [example map for the quickstart guide](http://
 5. Add a series of markers with historical information by duplicating and then changing up the ```L.marker``` settings to your own data. Commit your changes!
 
 This all just makes the map. The rest of the webpage would have to be styled as you would normally for a webpage. That is, you'd probably want to add an explanation about what the map shows, how it was created, and how the user ought to interact with it, links to your source data, and so on. The easiest place to add all that kind of information would be between these two tags in the page source:
+
 ```html
 </script>
 </body>
-````
+```
 
 ### Going further
 Let's say you have a whole bunch of information that you want to represent on the map. Perhaps it's in a well organized csv file, with a latitude and a longitude column in decimal degrees. Adding points one at a time to the map as described above would take ages. Instead, let's convert that csv to geojson, and then use [bootleaf](https://github.com/bmcbride/bootleaf) to make a map.
