@@ -3,7 +3,7 @@
 _Before we go much further, I would recommend that you look at the work of Clement Levallois, who has a suite of excellent tutorials on working with Gephi at [http://clementlevallois.net/gephi.html](http://clementlevallois.net/gephi.html). The tutorial below is adapted from our open draft of [The Macroscope](http://themacroscope.org)._
 
 ## Introduction
-Gephi is quickly becoming the tool of choice for network analysts who do not need the full suite of algorithms offered by [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/pajek/) or [UCINET](https://sites.google.com/site/ucinetsoftware/home). It is relatively easy to use (eclipsed in this only by [NodeXL](http://nodexl.codeplex.com/)), it is usable on all platforms, it can analyze fairly large networks, and it creates beautiful visualizations. The development community is also extremely active, with improvements being added constantly. We recommend Gephi for the majority of historians undertaking serious network analysis research. Gephi is available at http://gephi.github.io. Download and install it on your machine.
+Gephi is quickly becoming the tool of choice for network analysts who do not need the full suite of algorithms offered by [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/pajek/) or [UCINET](https://sites.google.com/site/ucinetsoftware/home). It is relatively easy to use (eclipsed in this only by [NodeXL](http://nodexl.codeplex.com/)), it is usable on all platforms, it can analyze fairly large networks, and it creates beautiful visualizations. The development community is also extremely active, with improvements being added constantly. We recommend Gephi for the majority of historians undertaking serious network analysis research. Gephi is available at [http://gephi.github.io](http://gephi.github.io). Download and install it on your machine.
 
 ## When Not To Use Networks 
 
@@ -18,6 +18,8 @@ When deciding whether to use networks to explore a historiographical question, t
 You will need the information you created in Module 3, after cleaning the correspondence data using Open Refine: 
 
 > In order to get these data into Gephi, we will have to rename the “Sender” column to “source” and the “Recipient” column to “target”. In the arrow to the left of Sender in the main OpenRefine window, select Edit column->Rename this column, and rename the column “source”. Now, in the top right of the window, select “Export->Custom tabular exporter.” Notice that “source,” “target,” and “Date” are checked in the content tab; uncheck “Date,” as it will not be used in Gephi. Go to the download tab and change the download option from “Tab-separated values (TSV)” to “Comma-separated values (CSV)” and press download.   The file will likely download to your automatic download directory.
+
+(but see below)
 
 ## Quick instructions for getting the data into Gephi:
 
@@ -41,17 +43,19 @@ This file is called 'an edge list' - it's a list of connections, or edges, betwe
 
 ### Installing Gephi on OS 10 Mavericks
 
-Mac users might have some trouble installing Gephi. We have found that, on Mac OS X Mavericks, Gephi does not load properly after installation. This is a Java-related issue, so you’ll need to install an earlier version of Java than the one provided. To fix this, control click (or right-click) on the Gephi package, and select “show package contents.” Click on “contents >> resources >> gephi >> etc.” Control-click (or right-click) on “gephi.conf” and open with your text editor. Find the line reading:
+Mac users might have some trouble installing Gephi 0.8 (as I write this, the release of Gephi 0.9 [should happen any day](https://gephi.wordpress.com/2015/11/02/announcing-gephi-0-9-release-date/), and this newer Gephi should solve these problems). We have found that, on Mac OS X Mavericks, Gephi does not load properly after installation. This is a Java-related issue, so you’ll need to install an earlier version of Java than the one provided. To fix this, control click (or right-click) on the Gephi package, and select “show package contents.” Click on “contents >> resources >> gephi >> etc.” Control-click (or right-click) on “gephi.conf” and open with your text editor. Find the line reading:
 
 ``` #jdkhome="/path/to/jdk" ```
 
 and paste the following underneath:
 
-``` jdkhome="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home ```
+``` jdkhome="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home 
+```
 
-Save that file. Then, go to http://support.apple.com/kb/DL1572 and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
+Save that file. Then, go to [http://support.apple.com/kb/DL1572](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
 
 Run Gephi once it is installed. You will be presented with a welcome prompting you to open a recent file, create a new project, or load a sample file. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window (Fig. 7.3).
+
 
 ## Navigating Gephi
 
@@ -83,4 +87,4 @@ At this point, the network is processed enough to visualize in the Preview pane,
 
 The visualization immediately reveals apparent structure: central figures on the top (Ashbel Smith and Anson Jones) and bottom (Mirabeau B. Lamar, James Webb, and James Treat), and two central figures who connect the two split communities (James Hamilton and James S. Mayfield). A quick search online shows the top network to be associated with the last president of the Republic of Texas, Anson Jones; whereas the bottom network largely revolves around the second president, Mirabeau Lamar. Experts on this period in history could use this analysis to understand the structure of communities building to the annexation of Texas or they could ask meta-questions about the nature of the data themselves. For example, why is Sam Houston, the first and third president of the Republic of Texas, barely visible in this network?
 
-Write up your own observations on this process in your open notebook, and export your gephi file as a .graphml file. Upload that to your repository.
+Write up your own observations on this process in your open notebook, and export your gephi file as a .graphml file (because Gephi's `.gephi` format is a bit unstable, always save as or export your work in a variety of formats). Upload that to your repository.

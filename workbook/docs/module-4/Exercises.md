@@ -36,7 +36,7 @@ In exercise 2, you will use the 'Topic Modeling Tool' to create a simple topic m
 7. Click 'train topics' to run the algorithm.
 8. When it finishes, go to the folder you selected for output, and find the file 'all_topics.html' in the 'output_html' folder. Click on that, and you now have a browser-based way of navigating your topics and documents. In the output_csv folder created, you will find the same information as csv, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)
 
-Make a note in your open notebook about your process and your observations.
+Make a note in your open notebook about your process and your observations. How does reading this material in this way change/challenge/or focus your understanding of the material?
 
 *Going Further* Remember when we did the Canadiana API and WGET exercises in Module 2? Somewhere on your machine you have a collection of those materials. Now, you can load those materials into the Topic Modeling Tool if you have all of the txt files in a single folder. In the case of the slavery documents, that was something like 7500 items. That's a lot of drag-and-drop. You can 'flatten' the folder structure so that all of the documents in your subfolders are put into a single folder. If you are on a Mac, [try these instructions](http://osxdaily.com/2015/02/11/flatten-nested-directory-structure-command-line/). On a PC, [try this one](http://superuser.com/questions/412982/win-7-copy-all-files-from-a-complex-folder-structure-to-one-folder) (there are scripts you can use, but for the time being this is probably simplest).  Then, you can point your topic modeling tool at your flattened folder, and *boom* you have a topic model fitted to your collection.
 
@@ -57,10 +57,12 @@ Make a note in your open notebook about your process and your observations.
 
 *Going further* If you wanted to use that script on the materials you collected in module 2, you would have to tell R to load up those materials from a directory, rather than by reading a csv file. Take a look at [my script for topic modeling the Ferguson Grand Jury documents](https://github.com/shawngraham/ferguson/blob/master/R%20script/ferguson-topicmodel.R), especially this line:
 
-```documents <- mallet.read.dir("originaldocs/1000chunks/") ```
+```documents <- mallet.read.dir("originaldocs/1000chunks/")```
 
 You feed it the path to your documents. If you are on a windows machine, the path would look a bit different, for instance: 
-``` "C:\\research\\originaldocs\\1000chunks\\" ```
+
+``` "C:\\research\\originaldocs\\1000chunks\\" 
+```
 
 ----
 
@@ -69,11 +71,11 @@ You feed it the path to your documents. If you are on a windows machine, the pat
 
 In exercise 4, we're going to look at the Colonial Newspaper Database again, but this time using a tool called 'Overview'. Overview uses a different approach that the topic models we've been discussing. In essence, it looks at word frequencies and their distributions within a document, and within a corpus, to organize the documents into folders of progressively similar word use. 
 
-You can download Overview to run on your own machine, but for our purposes, the hosted version at [https://www.overviewproject.org/](https://www.overviewproject.org/) is sufficient. Go to that page, watch the video, create an account, and then log in.
+You can download Overview to run on your own machine, but for our purposes, the hosted version at [https://www.overviewdocs.com/](https://www.overviewdocs.com/) is sufficient. Go to that page, watch the video, create an account, and then log in. (More help about how Overview works [may be found on their blog](https://blog.overviewdocs.com/), including helpful videos.)
 
-Once you're inside, click 'import from a CSV file', and upload the CND.csv (which you can download and save to your own machine from [here](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv) <- right-click and save as. On the 'UPLOAD A CSV FILE' page click 'browse' and select the CND.csv. It will give you a preview. There are a number of options here - you can tell Overview which words to ignore, and which words to give added importance to. What words will you select? Make a note in your notebook. Then hit 'upload'.
+Once you're inside, click 'import from a CSV file', and upload the CND.csv (which you can download and save to your own machine from [here](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv) <- right-click and save as. On the 'UPLOAD A CSV FILE' page in Overview click 'browse' and select the CND.csv. It will give you a preview. There are a number of options here - you can tell Overview which words to ignore, and which words to give added importance to. What words will you select? Make a note in your notebook. Then hit 'upload'.
 
-A new page appears, called 'YOUR DOCUMENT SETS'. Click on the one you just uploaded. A file folder tree showing documents of progressively greater similarity will open; on the right hand side will be the list of documents within each box (the box in question will be greyed out when you click on it, so you know where you are). You can search for words in your document, and Overview will tell you where they are; you can tag documents that you find interesting. The Overview system allows you to jump between a distant, macroscopic view and a close, document level view. Jump back and forth, see what you can find. For suggestions about how to use Overview effectively, try [their blog](http://overview.ap.org/). Make notes about what you observe in your notebook. Also, you can export your tagged document set from Overview, so that you could visualize the patterns of tagging in a spreadsheet (for instance). 
+A new page appears, called 'YOUR DOCUMENT SETS'. Click on the one you just uploaded. A file folder tree showing documents of progressively greater similarity will open; on the right hand side will be the list of documents within each box (the box in question will be greyed out when you click on it, so you know where you are). You can search for words in your document, and Overview will tell you where they are; you can tag documents that you find interesting. The Overview system allows you to jump between a distant, macroscopic view and a close, document level view. Jump back and forth, see what you can find. For suggestions about how to use Overview effectively, try [their blog](https://blog.overviewdocs.com/). Make notes about what you observe in your notebook. Also, you can export your tagged document set from Overview, so that you could visualize the patterns of tagging in a spreadsheet (for instance). 
 
 *Going further* Do you see how you could upload your documents that you collected during Module 2?
 
@@ -81,9 +83,9 @@ A new page appears, called 'YOUR DOCUMENT SETS'. Click on the one you just uploa
 
 ## exercise 5
 ### Corpus Linguistics with AntConc
-Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her tutorial: http://hfroehli.ch/workshops/getting-started-with-antconc/
+Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her [tutorial](http://hfroehli.ch/workshops/getting-started-with-antconc/)
 
-Can you get our example materials (from the CND ) into AntConc? [This might help you](http://www.themacroscope.org/?page_id=418) to split the csv into individual txt iles. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
+Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [This might help you](http://www.themacroscope.org/?page_id=418) to split the csv into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
 
 FYI, [here is a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html)
 
@@ -94,13 +96,13 @@ FYI, [here is a collection of corpora that you can explore](http://www.helsinki.
 
 In module 3 if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns in word use in the database. Voyant can read either a CSV *or* text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
 
-Go to [http://voyant-tools.org](http://voyant-tools.org). Paste the URL to the csv of the CND database:https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv . 
+Go to [http://voyant-tools.org](http://voyant-tools.org). Paste the URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]([https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]) . 
 
-Now, open a new browser window, and go here http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt
+Now, open a new browser window, and go here [http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt)
 
 Do you see the difference? In the latter window, the individual articles have been uploaded individually, and thus are treated as individual documents in chronological order.
 
-Explore the corpus, comparing terms over time, looking at keywords in context, and using RezoViz to create a graph where people, places, and organizations that appear in the same documents (and across documents) are connected. You can embed any of the tools in your blogs by using the 'save' icon. (You can find 'rezoviz' under the cogwheel icon at the top right of the panel). You can apply 'stopwords' by clicking on the cogwheel in any of the different tools, and selecting stopwords. Apply the stopwords globally, and you'll only have to do this once! What patterns do you see? What do different tools highlight? Which ones are useful? What patterns do you see that strike you as interesting? Note this all down. 
+Explore the corpus, comparing terms over time, looking at keywords in context, and using the RezoViz tool to create a graph where people, places, and organizations that appear in the same documents (and across documents) are connected (you can find 'rezoviz' under the cogwheel icon at the top right of the panel). You can embed any of the tools in your blogs by using the 'save' icon and getting the iframe or embed code.  You can apply 'stopwords' by clicking on the cogwheel in any of the different tools, and selecting stopwords. Apply the stopwords globally, and you'll only have to do this once! What patterns do you see? What do different tools highlight? Which ones are useful? What patterns do you see that strike you as interesting? Note this all down. 
 
 *Going further* Upload materials you collected in module 2 and explore them.
 
@@ -111,10 +113,31 @@ Explore the corpus, comparing terms over time, looking at keywords in context, a
 
 A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). Open that in a new window. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen. 
 
+#### A quick data munge
+You should get an error message, to the effect that you need to check 'line 2'. What's gone wrong? RAW has checked the number of values you have in that row, and compared it to the number of columns in row 1 (which contains all the column names). It sees that the two don't match. What we need to do is add a default null value in those cells. So, go to [Google Sheets](https://www.google.ca/sheets/about/), click the 'go to google sheets' button, and then click on the big green plus sign to start a new sheet. Paste the following into the top-left cell (cell A1):
+
+`=IMPORTDATA("https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv")`
+
+Pretty neat, eh? Now, here's the thing: even though your sheet _looks_ like it is filled with information, it's not (at least, as far as the script we are about to run is concerned). That is to say, the sheet itself only has one cell of data, and that one cell is grabbing info from elsewhere on the web and dynamically filling the sheet. The script we're going to run works only on static values (more or less). 
+
+So, place your cursor in cell B1. On a Mac, hit `shift+cmnd+downarrow`. On a Windows machine, hit `shift+ctrl+downarrow`. Then on Mac `shit+cmnd+rightarrow`, on Windows `shitf+crtl+rightarrow`. Then copy all of that data (`cmnd+c` or `ctrl+c`). Then, under 'Edit' select 'paste special' -> 'paste VALUES only'.
+
+The formula you put in cell A1 now says `#REF!`. You can delete this now. This mucking about is necessary so that the add on script we are about to run will work.
+
+We now need to fill those empty values. In the tool bar, click `add ons` -> `get add ons`. Search for `blanks`. You want to add `Blank Detector`.
+
+Now, click somewhere in your data. On Mac, hit `cmnd+a`. On Windows, hit `ctrl+a`. This highlights all of your data. Click `Add ons` -> `blank detector` -> `detect cells`. A dialogue panel will open on the right hand side of your screen. Click the button beside `set value` and type in `null`. Hit `run`. All of the blank cells will fill with the word `null`. Delete column A (which formerly had record numbers, but is now just filled with the word `null`. We don't need it). **If you get the error, run exceeded maximum time** just hit the run button again. This script might take a few minutes.
+
+You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying x records have been successfully parsed!
+
+#### Playing with RAW
 RAW takes your data, and depending on your choices, passes it into chart templates built on the d3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
-With your data pasted in, you can now experiment with a number of different visualizations that are all built on the d3.js code library.  Try the ‘alluvial’ diagram.  Pick place1 and place2 as your dimensions. Does anything jump out? Try place3 and place 4. Try place1, place2, place3, and place4 in a single alluvial diagram. When we look at the original letters, we see that the writer often identified the town in which he was writing, and the town of the addressee. Why choose the third and fourth places? Perhaps it makes sense, for a given research question, to assume that with the pleasantries out of the way the writers will discuss the places important to their message. Experiment! This is one of the joys of working with data, experimenting to see how you can deform your materials to see them in a new light.
+With your data pasted in, you can now experiment with a number of different visualizations that are all built on the d3.js code library.  Try the ‘alluvial’ diagram.  Pick place1 and place2 as your dimensions - you click and drag the green boxes under 'map your data' into the 'steps' box. Leave the 'size' box empty. Under 'customize your visualization' you can click inside the 'width' box to make the diagram wider and more legible.
 
+Does anything jump out? Try place3 and place 4. Try place1, place2, place3, and place4 in a single alluvial diagram. When we look at the original letters, we see that the writer often identified the town in which he was writing, and the town of the addressee. Why choose the third and fourth places? Perhaps it makes sense, for a given research question, to assume that with the pleasantries out of the way the writers will discuss the places important to their message. Experiment! This is one of the joys of working with data, experimenting to see how you can deform your materials to see them in a new light.
+
+You can export your visualization under the 'download' box at the bottom of the RAW page - your choices are as a simple raster image (png), a vector image (svg) or a data representation (json).
 
 -----
 ## exercise 8
@@ -137,15 +160,17 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
-1. We need some place data for Palladio. Here's what I'm using <br> ![Imgur](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see [this tutorial](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf). Basically, you want something like this:
-          Place   Coordinates<br>
-    Mexico  23.634501,-102.552784<br>
-    California  36.778261,-119.4179324<br>
-    Brazos  32.661389,-98.121667<br>
+We need some place data for Palladio. Here's what I'm using <br> ![Imgur](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see [this tutorial](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf)). Basically, you want something like this:<br>
+ 
+|   | Place      | Coordinates            |
+|---|------------|------------------------|
+|   | Mexico     | 23.634501,-102.552784  |
+|   | California | 36.778261,-119.4179324 |
+|   | Brazos     | 32.661389,-98.121667   |
 
-    etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. 
+etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. 
 
-2. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+2. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in - see the video below.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
 3. Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but **replace** the ```/z/x/y``` part with ```{z}/{x}/{y}```. Click add.
 
 Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
@@ -177,7 +202,7 @@ Then, to get going, you'd need
 
 You can then work through the entire pdf, or jump ahead to page 37 to see what the completed script would look like (here's [my version using the CND again](https://github.com/hist3907b-winter2015/module4-holes/blob/master/text-analysis-cnd.R). Makes notes of what you find. Google any error messages you find to try to figure out a solution.
 
-## exercise 10
+## exercise 10 QGIS
 ### QGIS
 
 There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any *serious* mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform *QGIS* to make and map historical data.
@@ -189,3 +214,6 @@ For this exercise, I would recommend you try Gibbs' first tutorial,
 ...and then, try georectifying a historical map and adding it to your GIS:
 
 ['Using historica maps with qgis'](http://fredgibbs.net/tutorials/using-historic-maps-with-qgis/)
+
+## Going Further
+There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'data manipulation' or 'distant reading' headings.
