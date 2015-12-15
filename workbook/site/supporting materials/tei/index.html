@@ -205,6 +205,8 @@
                 
                     <li><a class="toctree-l4" href="#viewing-your-encoded-text">Viewing Your Encoded Text</a></li>
                 
+                    <li><a class="toctree-l4" href="#if-you-still-dont-see-your-text">If you still don't see your text</a></li>
+                
                     <li><a class="toctree-l4" href="#more-on-transformations">More on transformations</a></li>
                 
             
@@ -343,18 +345,21 @@
                 <h1 id="close-reading-with-tei">Close Reading with TEI</h1>
 <p>This worksheet, and all related files, are released CC-BY. </p>
 <p><a href="https://github.com/mhbeals/TEI-Close-Reading">By M. H. Beals</a>; Adapted for HIST3907b by S Graham</p>
+<p>You will need the files in <a href="https://github.com/mhbeals/TEI-Close-Reading">https://github.com/mhbeals/TEI-Close-Reading</a> so download that repository as a zip file and unzip it somewhere handy on your machine.</p>
 <p>This exercise will explore a historical text and help you create a digital record of your analysis</p>
 <h3 id="vetting-a-website">Vetting a Website</h3>
-<p>Visit the Recovered Histories Website at http://www.recoveredhistories.org</p>
-<p>Examine the site's layout and read its introduction<br />
-+ What makes you believe this site is a trustworthy provider of historical texts?
-+ What makes you believe this site is NOT a trustworthy provider of historical texts? </p>
+<p>Visit the Recovered Histories Website at <a href="http://www.recoveredhistories.org">http://www.recoveredhistories.org</a></p>
+<p>Examine the site's layout and read its introduction</p>
+<ul>
+<li>What makes you believe this site is a trustworthy provider of historical texts?</li>
+<li>What makes you believe this site is NOT a trustworthy provider of historical texts? </li>
+</ul>
 <h3 id="finding-a-source">Finding a Source</h3>
 <p>Visit the site's collections via the 'Browse' function</p>
 <p>Locate the pamphlet <em>Negro Slavery</em> by Zachary Macaulay and open it</p>
-<p>This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting and examine evidence of how it is run.  When you approach a primary source like this, it is tempting to read through it from beginning to end, to get an overview of its contents, and then 'mine' or 'cherry-pick' good quotations to include in your assessments.  However, we are going to focus on examine a very small part of the text in a very high level of detail.  </p>
+<p>This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting and examine evidence of how it is run.  When you approach a primary source like this, it is tempting to read through it from beginning to end, to get an overview of its contents, and then 'mine' or 'cherry-pick' good quotations to include in your assessments.  However, we are going to focus on examining a very small part of the text in a very high level of detail.  </p>
 <h3 id="setting-up-your-workspace">Setting Up Your Workspace</h3>
-<p>Arrange your workspace so that you have the scanned text of the pamphlet easily visible on one side of your screen. Open the 'blanktemplate.txt' file in Textwrangler or Notepadd++ (or any text editor that understands encoding) and have that on the other side of the screen.</p>
+<p>Arrange your workspace so that you have the scanned text of the pamphlet easily visible on one side of your screen. Open the 'blanktemplate.txt' file in Sublime Text, Textwrangler or Notepadd++ (or any text editor that understands encoding) and have that on the other side of the screen.</p>
 <p>The last lines will be 
 <code>&lt;/body&gt;&lt;/text&gt;&lt;/TEI&gt;&lt;/teiCorpus&gt;</code>. Everything you write today should be just above <code>&lt;/body&gt;</code>.</p>
 <h3 id="transcribing-your-page">Transcribing Your Page</h3>
@@ -378,13 +383,14 @@ Now that you have highlighted these, you are going to put proper code around the
 <li>Inside the speech marks for <strong>key</strong>, include the real full name of the person mentioned </li>
 <li>In <strong>from</strong> and <strong>to</strong>, include their birth and death years, using ? for unknown years</li>
 <li>In <strong>role</strong>, put the occupation, role or 'claim to fame' for this individual.  </li>
-<li>In <strong>ref</strong>, put the URL (link) to the Dictionary of National Biography, Wikipedia or other biography website where you found this information. If there is a &amp; in your link, you will need to replace this with &amp;amp;</li>
+<li>In <strong>ref</strong>, put the URL (link) to the Dictionary of National Biography, Wikipedia or other biography website where you found this information. If there is a <code>&amp;</code> in your link, you will need to replace this with &amp;amp;</li>
 </ul>
 <p>For places, surround your text with these</p>
 <p><code>&lt;placeName key="Sheffield, United Kingdom" ref="http://tools.wmflabs.org/geohack/geohack.php?pagename=Sheffield&amp;params=53_23_01_N_1_28_01_W_type:city_region:GB""&gt; &lt;/placeName&gt;</code></p>
 <ul>
 <li>In <strong>key</strong>, put the city and country with best information you can find for the modern names for this location</li>
-<li>In <strong>ref</strong>, put a link to the relevant coordinates on Wikipedia GeoHack website (http://tools.wmflabs.org/geohack/)  (Where can you go to find coordinates in the first place? Why would we link to this particular site?)</li>
+<li>In <strong>ref</strong>, put a link to the relevant coordinates on Wikipedia GeoHack website (http://tools.wmflabs.org/geohack/) 
+<strong>To obtain this, go to the Wikipedia page for this city and click on the latitude/longitude coordinates for the location. For large areas, such as entire countries or continents, just use the Wikipedia page URL.</strong></li>
 </ul>
 <p>For claims or arguments, surround your text with these</p>
 <p><code>&lt;interp key="reason" n="citation" cert="high" ref="http://www.website.com/webpage.html"&gt; &lt;/interp&gt;</code></p>
@@ -392,30 +398,44 @@ Now that you have highlighted these, you are going to put proper code around the
 <li>In <strong>key</strong>, explain why you believe this claim is true or not</li>
 <li>In <strong>n</strong>, put a full citation to the relevant source</li>
 <li>In <strong>cert</strong> (short for certainty), put: high, medium, low or unknown</li>
-<li>In <strong>ref</strong>, put the link to the website where you got the information to assess this claim. If you are doing it based on lecture material, write "http://www.shu.ac.uk", but know that lecture material is a very weak source and should be avoided wherever possible</li>
+<li>In <strong>ref</strong>, put the link to the website where you got the information to assess this claim. </li>
 </ul>
 <p>When you are happy with your work, hit save your work, give it a useful name, make sure it has .xml as the extension, and save it <em>and the .xsl file</em> to your repository.</p>
 <blockquote>
 <p>Alex Gill has made <a href="https://docs.google.com/document/edit?id=12ErwXGHGaFL71M3cWHpI6gkfVzzsKHfk7U6N6vRmIS4&amp;authkey=CKG3l6oG&amp;hl=en#heading=h.uy40z0-ctpi0">The Short and Sweet TEI Handout</a> which you might want to explore as well. When you embark on encoding documents for your own research, <a href="http://www.wwp.northeastern.edu/outreach/seminars/_current/handouts/document_analysis.xhtml">here are some questions to think about</a> to help you decide what kinds of tagging you'll need; these <a href="https://github.com/odaata/HisTEI/tree/master/frameworks/HisTEI/templates">templates from HisTEI</a> might be useful (open the whole project with OxygenXML for full functionality, but you can copy those templates in any editor). </p>
 </blockquote>
 <h3 id="viewing-your-encoded-text">Viewing Your Encoded Text</h3>
-<p>To see your encoded text, make sure your .xml and .xsl file are in the same folder. Open your .xml file within a browser - you can do this by dragging the .xml file onto your browser.</p>
-<p>If you now see a colour-coded version of your text, Congratulations!  </p>
-<p>If you hover over the coloured sections, you should see a pop-up with the additional information you entered. </p>
-<p><em>If you do not see the colour-coded version of your text, this does not necessarily mean that you've done something wrong</em>
-+ Some browsers will not perform the transformation, for security reasons.
-+ In which case, here's what we can do. If you are using Notepad++, go to 'Plugins' &gt;&gt; Plugin Tools. Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the <a href="../../1.xml">1.xml</a> file in Notepad ++. Then, under 'plugins'&gt;&gt;'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: <code>...</code> to open up the file finder, and select the <code>000style.xsl</code> stylesheet. Click 'transform'. A new tab will open in Notepad++ <em>with a fully-formed html file displaying your data according to the stylesheet.</em> Save this, and then open it in a browser!
-+ You can also check 'validate' from the XML Tools menu, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the <a href="../../1.xml">1.xml</a> reference document. </p>
+<p>To see your encoded text, make sure your .xml and .xsl file are in the same folder. <strong>Open either Internet Explorer or Firefox</strong>. The following will not work in Chrome because it has different security settings.</p>
+<p>Making sure both your (page number).xml file and your 000style.xsl file are in the same folder (or both on your desktop), drag the icon for (page number).xml into your Internet Explorer Browser window.</p>
+<p>If you now see a colour-coded version of your text, Congratulations! If you hover over the coloured sections, you should see a pop-up with the additional information you entered.</p>
+<p>If your text comes up only in black, with no paragraph divisions or headings, or doesn't come up at all, something has gone wrong. Re-open your .xml file and check that you have:</p>
+<p>Placed <code>&lt;p&gt;</code> at the start of every paragraph, including the start of the page</p>
+<p>Placed <code>&lt;/p&gt;</code> at the end of every paragraph, including the end of the page</p>
+<p>Made sure all your <code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code> and <code>&lt;interp&gt;</code> tags are properly enclosed in <code>&lt;&gt;</code>s</p>
+<p>Made sure you have both an open <code>&lt;&gt;</code> and close <code>&lt;\&gt;</code> tag for each tag you use</p>
+<p>Made sure you attribute values are fully enclosed in <code>""</code>s</p>
+<p>Made sure you have a space between the `"`` of one attribute and the start of the next</p>
+<p>Made sure you do NOT have a space after the `=`` of an attribute</p>
+<p>If your text still does not appear formatted, you may need to remove the text one paragraph at a time, refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it).</p>
+<h3 id="if-you-still-dont-see-your-text">If you still don't see your text</h3>
+<p><em>If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong</em></p>
 <ul>
-<li><em>Advanced</em>: If you install a <a href="http://www.wampserver.com/en/">WAMP</a> or <a href="http://www.mamp.info/en/">MAMP</a> server, and put your xml and xsl files in the WWW folder, you <em>should</em> be able to see the transformation no problem at <code>localhost\myxml.xml</code> (for example).</li>
+<li>Some browsers will not perform the transformation, for security reasons.</li>
+<li>
+<p>In which case, here's what we can do. If you are using Notepad++, go to 'Plugins' &gt;&gt; Plugin Tools. Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the <a href="../../1.xml">1.xml</a> file in Notepad ++. Then, under 'plugins'&gt;&gt;'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: <code>...</code> to open up the file finder, and select the <code>000style.xsl</code> stylesheet. Click 'transform'. A new tab will open in Notepad++ <em>with a fully-formed html file displaying your data according to the stylesheet.</em> Save this, and then open it in a browser!</p>
+</li>
+<li>
+<p>You can also check 'validate' from the XML Tools menu, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the <a href="../../1.xml">1.xml</a> reference document. </p>
+</li>
+<li>
+<p><em>Advanced</em>: If you install a <a href="http://www.wampserver.com/en/">WAMP</a> or <a href="http://www.mamp.info/en/">MAMP</a> server, and put your xml and xsl files in the WWW folder, you <em>should</em> be able to see the transformation no problem at <code>localhost\myxml.xml</code> (for example). (You can also use <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's built in webserver if you have Python on your machine</a> - all Mac users for instance do.)</p>
+</li>
 </ul>
 <blockquote>
-<p><em>Neat Trick</em> If you have a 'gh-pages' branch in your repository, and it contains your .xml and your .xsl documents, you can view your xml live on the web. For instance, in my repository, I have the Colonial Newspaper Database as an xml document, and it points to <code>csvcreator.xsl</code>. Here's my repo: https://github.com/shawngraham/exercise/tree/gh-pages and here's the location of the 'live' version http://shawngraham.github.io/exercise  . Any of your repos can be viewed live at </p>
-<p><code>your username dot github dot io / reponame</code></p>
 <p>So here's the CND.xml, transformed into a csv: http://shawngraham.github.io/exercise/cnd.xml . If you 'view page source', you'll see the original XML again! Save-as the page as .csv and you can do some data mining on it.</p>
 </blockquote>
 <h3 id="more-on-transformations">More on transformations</h3>
-<p>In the TEI Close Reading folder, there is a file called <a href="../SG_transformer.xsl">SG_transformer.xsl</a>. Open that file in your text editor. What tags would it be looking for? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.</p>
+<p>I made a file I've called <a href="https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl">SG_transformer.xsl</a>. Open that file in your text editor. What tags would it be looking for in the xml file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.</p>
 <p>If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like <a href="http://www.oxygenxml.com/">OxygenXML</a>, which has a free 1 month trial. The editor makes it easy to maintain <em>consistency</em> in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be <a href="https://code.google.com/p/xml2csv-conv/">found here</a>. But the best way to transform these XML files is with XSL. </p>
               
             </div>

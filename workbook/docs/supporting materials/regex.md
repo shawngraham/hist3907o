@@ -8,7 +8,7 @@ A regular expression (also called regex) is a powerful tool for finding and mani
 
 Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Notepad++ on Windows, or TextWrangler on OS X. Do not use Microsoft Word, however! To find these text editors, you can find [Notepad++ here](http://notepad-plus-plus.org/) or [TextWrangler here](http://www.barebones.com/products/textwrangler/).
 
-+ NB in Notepad++ when you do a search, to use regular expressions in your search you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact _text_ rather than the _pattern_. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel.
++ NB in Notepad++ when you do a search, to use regular expressions in your search you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact _text_ rather than the _pattern_. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches. Please also note that while this tutorial was initially written with the text editors Notepad++ and Textwrangler in mind, all that follows applies equally to other text editors that can work with regular expressions.
 
 ## Some basic principles
 
@@ -106,5 +106,7 @@ in the 'find' box, and
 
 in the 'replace' box. That would replace the entire string with group 3 ("cats") in the first spot, group 2 (" and ") in the second spot, and group 1 ("dogs") in the last spot, thus changing the result to "cats and dogs".
 
-The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that we sometimes use is http://regexlib.com/CheatSheet.aspx. Another good one is at http://docs.activestate.com/komodo/4.4/regex-intro.html)
+The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that I sometimes use is [http://regexlib.com/CheatSheet.aspx](http://regexlib.com/CheatSheet.aspx). Another good one is at [http://docs.activestate.com/komodo/4.4/regex-intro.html](http://docs.activestate.com/komodo/4.4/regex-intro.html))
 
+
+## Now, continue on to the [main exercise](../supporting materials/regexex.md)

@@ -1,5 +1,5 @@
 # An Introduction to Open Refine 
-_This text is adopted from the first drafts of The Macroscope which is currently in-press with Imperial College Press. Users should consult that version once it's published._
+_This text was adopted from the first drafts of The Macroscope_
 
 (An alternative Open Refine exercise is offered by [Thomas Padilla](http://thomaspadilla.org/dataprep/) and you may wish to give it a try instead/too.) 
 
@@ -54,15 +54,17 @@ _An interesting use case is discussed [here](http://blog.spaziodati.eu/en/2014/0
 
 + Open a command prompt in the Stanford NER folder on your Windows machine (you can right-click on the folder in your windows explorer, and select ‘open command prompt here’).
 
-+ Type the following as a single line:
++ Type the following as a single line (highlight the text with your mouse - it scrolls to the right beyond the page, and then copy it):
 
-> java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
+```
+java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
+```
 
 The first bit, java –mx500m says how much memory to use. If you have 1gb of memory available, you can type java –mx 1g (or 2g, or 3g, etc). The next part of the command calls the NER programme itself. You can set which classifier to use after the –loadClassifier classifiers/ by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). At –textFile you give it the name of your input file (on our machine, called ‘texas-letters.txt’, and then specify the outputFormat. The > character sends the output to a new text file, here called “my-ner-output.txt”. Hit enter, and a few moments later the programme will tell you something along the lines of
 
 > CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second
 
-Open the text file in Notepad++, and you’ll see output like this:
+Open the text file in your text editor, and you’ll see output like this:
 
 > In the name of the ```<LOCATION>```Republic of Texas```</LOCATION>```, Free, Sovereign and Independent. To all whom these Presents shall come or may in any wise concern. I ```<PERSON>```Sam Houston```</PERSON>``` President thereof send Greeting
 

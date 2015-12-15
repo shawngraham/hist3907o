@@ -217,3 +217,5 @@ For this exercise, I would recommend you try Gibbs' first tutorial,
 
 ## Going Further
 There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'data manipulation' or 'distant reading' headings.
+
+If you're into social media as a data source, you might [try Twarc](../supporting materials/twarc.md).

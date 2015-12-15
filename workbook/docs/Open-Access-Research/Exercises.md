@@ -86,11 +86,7 @@ In this exercise, you will create a new repository, and then set up your note ta
     b. For **ResophNotes**, click on the cogwheel icon at the bottom right. Then select the storage tab. Tick the 'plain text file' radio button, and the 'save title in text file' option. Then, in 'file directory', change the path to your open notebook repository. Then click ok. Under 'options' click the 'enable markdown' radiobox. (A quick guide to Resophnotes lives [here](http://www.thewindowsclub.com/resophnotes-create-notes-synchronize-simplenote))
 5. You now have a system in place for quickly taking notes, and for archiving them online on github. Let's take some notes. **At this point, please put the piece you wrote for exercise 1 - the markdown version - into a new note in your notetaking software set up in the preceding step. Then, make a new note with the direct URL to the demo repository you created in exercise 2.**
 
-    Let's take a moment and think about how you take notes. Knowing that this software searches the titles of your notes, you might like to figure out a system for grouping notes in the title. I will create a new 'to read' note for instance by titling it  `.xtoread The Information James Gleick`
-
-    The bit with the `.toread` can be thought of as a tag. I'm not likely to use that particular pattern of letters anywhere else, so it makes a good tag to search on. Then, when I want to know what it is I have under that tag, I just type into the search field .xtoread and I get all my notes.
-
-6. Think of five tags you would often use in your research. Then, I would like you to make ten notes on this keynote by Tim Hitchock, [Big Data For Dead People](http://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
+6. Think of five tags (descriptive labels) you would often use in your research. Then, I would like you to make ten notes on this keynote by Tim Hitchock, [Big Data For Dead People](http://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html). Include at the start of each note's title one (or more) of your tags/descriptive labels. This way, if your tag was 'british history', each time you started a new note with that tag, you'd quickly see all the other notes! 
 
 7. Once you've finished your notes (summarize! don't copy out text! include some bibliography in every note, so you know where your thoughts came from! you can copy your notes into your essay drafts as part of your writing if you've used summaries!) open your github software. It will now be showing that changes have happened in your repository. Commit the changes, then synchronize. Remember: you have to leave a message in the 'commit summary' box in order to commit.
 
@@ -124,6 +120,8 @@ You can try this out for yourself with a python package called 'MkDocs'. If you'
 Then, install `mk-docs` ([instructions here](http://www.mkdocs.org/)). Since you already have a repository, navigate to it via your terminal or command line. Follow the instructions on that page to generate your site. Then, there's one command that will push your entire site to the `gh-pages` branch of your repository [instructions here](http://www.mkdocs.org/user-guide/deploying-your-docs/). Ta da!
 
 Now, you might run into hiccups, depending on how your system is set up. That's why this part of the exercises is called 'advanced'. See if you can solve them. Re-write this exercise with all the tacit bits spelt out - put it into your open notebook. Often, a major part of being a 'digital humanist' is uncovering all the tacit bits of how our digital tools are affecting our lives.
+
+You can also see this in action in [this video](http://site.craftingdigitalhistory.ca/landingpageingithub.html).
 
 -----
 

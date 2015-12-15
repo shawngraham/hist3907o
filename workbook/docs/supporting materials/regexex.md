@@ -4,29 +4,32 @@ The correspondence of the Republic of Texas was collated into a single volume an
 
 There are several hundred entries in that index. You could clean them up by hand, deleting and cutting and pasting, but with the power of regex, we'll go from this:
 
-``` Sam Houston to A. B. Roman, September 12, 1842 101 ```
-
-``` Sam Houston to A. B. Roman, October 29, 1842 101 `` 
-
-``` Correspondence for 1843-1846 — ```
-
-``` Isaac Van Zandt to Anson Jones, January 11, 1843 103 ```
+```
+Sam Houston to A. B. Roman, September 12, 1842 101
+Sam Houston to A. B. Roman, October 29, 1842 101
+Correspondence for 1843-1846 —
+Isaac Van Zandt to Anson Jones, January 11, 1843 103
+```
 
 ...to nicely CSV-formatted table like this:
 
-``` Sam Houston, A. B. Roman, September 12 1842 ```
+``` 
+Sam Houston, A. B. Roman, September 12 1842
+Sam Houston, A. B. Roman, October 29 1842
+Isaac Van Zandt, Anson Jones, January 11 1843
+```
 
-``` Sam Houston, A. B. Roman, October 29 1842 ```
+The change doesn't look like much, and you might think to yourself, 'hey, I could just do that by hand'. You could; but it'd take you ages, and if you made a mistake somewhere - are you sure you could do this consisently, for a couple of hours at a time? Probably not. Your time is better spent figuring out the search and replace patterns, and then setting your machine loose to implement it.
 
-``` Isaac Van Zandt, Anson Jones, January 11 1843 ```
+Data formatted like this could be fed into a network analysis program, for instance, or otherwise visualized and analyzed. Regex as we are going to use in this tutorial allows us to go from unstructured to structured data.
 
 ## Getting started
 
 In the previous module, we learned how to automatically grab text from sites like the Internet Archive. In this particular exercise today, we'll just copy and paste from the OCR'd text page (as we're working with a single document).
 
-+ Copy the OCR'd text from this file: http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt
++ Copy the OCR'd text from this file: [http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt](http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt)
 
-and paste it into a new Notepad++ or Textwrangler file. Save it as 'texan-correspondence.txt'. Remember to save a spare copy of your file before you begin - this is very important, because you're going to make mistakes that you won't be sure how to fix. 
+and paste it into a text file (using your text editor). Save it as `texan-correspondence.txt`. Remember to save a spare copy of your file before you begin - this is very important, because you're going to make mistakes that you won't be sure how to fix. 
 
 + Delete everything in your working copy of the file except for the index of the list of letters. 
 
@@ -34,12 +37,14 @@ That is, you’re looking for the table of letters, starting with ‘Sam Houston
 
 Notice that there is a lot of text that we are not interested in at the moment: page numbers, headers, footers, or categories. We're going to use regular expressions to get rid of them. What we want to end up with is a spreadsheet that is arranged in three columns:
 
-``` Sender, Recipient, Date ```
+```
+Sender, Recipient, Date 
+```
 
 Scroll down through the text; notice there are many lines which don't include a letter, because they're either header info, or blank, or some other extraneous text. We're going to get rid of all of those lines. We want to keep every line that has this information in it: Sender to Recipient, Month, Date, Year, Page
 
 ## The workflow
-We start by finding every line that looks like a reference to a letter, and put a tilde (a ~ symbol) at the beginning of it so we know to save it for later. Next, we get rid of all the lines that don't start with tildes, so that we're left with only the relevant text. After this is done, we format the remaining text by putting commas in appropriate places, so we can import it into a spreadsheet and do further edits there.
+We start by finding every line that looks like a reference to a letter, and put a tilde (a `~` symbol) at the beginning of it so we know to save it for later. Next, we get rid of all the lines that don't start with tildes, so that we're left with only the relevant text. After this is done, we format the remaining text by putting commas in appropriate places, so we can import it into a spreadsheet and do further edits there.
 
 ### Step One
 
@@ -47,13 +52,15 @@ We start by finding every line that looks like a reference to a letter, and put 
 
 _Discussion_ Read in full before doing any manipulation of your text!
 
-In Notepad++, press ctrl-f or search->find to open the find dialogue box.  In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. In TextWrangler, hit command+f to open the find and replace dialogue box. Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere).
+In Notepad++, press ctrl-f or search->find to open the find dialogue box.  In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. In TextWrangler, hit command+f to open the find and replace dialogue box.  Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere). In Sublime text, command+f opens the 'find' box (and shift+command+f opens find _and_ replace). Tick the '.*' button to tell Sublime we're working with regular expressions.
 
 Remember from our basic introduction that there's a way to see if the word "to" appears in full. Type
 
-``` \<to\> ```
+```
+\<to\>
+```
 
-in the search bar.  Recall in TextWrangler we would look for ``` \bto\b ``` instead. This will find every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’).  
+in the search bar.  Recall in TextWrangler we would look for ``` \bto\b ``` instead. This will find every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’). (If you find your text editor doesn't seem to recognize some of these flags, try the others. Sadly, not every text editor implements regular expressions in quite the same way.) 
 
 We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. You learned earlier that the query ``` .+ ``` returns any amount of text, no matter what it says. Assuming you are using Notepad++, if your query is 
 
@@ -71,7 +78,7 @@ and the entire line is placed within a parenthetical group. In the 'replace' box
 
 which just means replace the line with itself (group 1), placing a tilde before it. 
 
-+ Copy and past some of your text into [RegExr.com]. Write your regular expression (ie, what you're trying to find), and your substitution (ie, what you're replace with) in the RegExr interface. Once you're satisfied that you've got it right, run this on your working copy of your text. You might want to save with a new name at each step of this process, so that if something goes wrong, you can recover easily!
++ Copy and past some of your text into [RegExr.com](http://RegExr.com). Write your regular expression (ie, what you're trying to find), and your substitution (ie, what you're replace with) in the RegExr interface. Once you're satisfied that you've got it right, run this on your working copy of your text. You might want to save with a new name at each step of this process, so that if something goes wrong, you can recover easily!
 
 ### Step Two
 
@@ -82,7 +89,11 @@ _Discussion_
 After running the find-and-replace, you should note your document now has most of the lines with tildes in front of it, and a few which do not. The next step is to remove all the lines that do not include a tilde. The search string to find all lines which don't begin with tildes is 
 ``` \n[^~].+ ```
 
-A ``` \n ``` at the beginning of a query searches for a new line, which means it's going to start searching at the first character of each new line.  *However, given the evolution of computing, it may well be that this won’t quite work on your system*. Linux based systems use ``` \n ``` for a new line, while Windows often uses ``` \r\n ```, and older Macs just use ``` \r ````. These are the sorts of things that digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, this will be:
+A ``` \n ``` at the beginning of a query searches for a new line, which means it's going to start searching at the first character of each new line.  
+
+*However, given the evolution of computing, it may well be that this won’t quite work on your system*. 
+
+Linux based systems use ``` \n ``` for a new line, while Windows often uses ``` \r\n ```, and older Macs just use ``` \r ````. These are the sorts of things that can drive us crazy, and so we digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, this will be:
 
 ``` \r\n[^~].+ ```
 
@@ -162,9 +173,9 @@ Finally, to separate the sender and recipient by a comma, we find all instances 
 
 _Discussion_
 
-You may notice that some lines still do not fit our criteria. Line 22, for example, reads "Abner S. Lipscomb, James Hamilton and A. T. Bumley, AugUHt 15, ". It has an incomplete date; these we don't need to worry about for our purposes. More worrisome are lines, like 61 "Copy and summary of instructions United States Department of State, " which include none of the information we want. We can get rid of these lines later in Excel. 	
+You may notice that some lines still do not fit our criteria. Line 22, for example, reads "Abner S. Lipscomb, James Hamilton and A. T. Bumley, AugUHt 15, ". It has an incomplete date; these we don't need to worry about for our purposes. More worrisome are lines, like 61 "Copy and summary of instructions United States Department of State, " which include none of the information we want. We can get rid of these lines later in a spreadsheet. 	
 
-The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the recipient, has a comma inside of it. If you were to import this directly into Excel, you would get four columns, one for sender, two for recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:
+The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the recipient, has a comma inside of it. If you were to import this directly into a spreadsheet, you would get four columns, one for sender, two for recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:
 
 ``` .+,.+,.+, ```
 
@@ -172,8 +183,8 @@ will show you every line with more than 2 commas, because it finds any line that
 
 + Devise a regex to find these lines with more than 2 commas in them. Fix these lines manually, and then click 'find next' to grab the next one.
 
-+ At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Save as 'cleaned-correspondence.csv'.
++ At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Save as `cleaned-correspondence.csv`.
 
 *Congratulations!*
 
-You've now used regex to extract, transform, and clean historical text. As a csv file, you could now load this data into a network analysis program such as [Gephi](http://gephi.org) to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your 'cleaned-correspondence.csv' file in the next exercise using *Open Refine*, where we'll sort out some of the messy OCR (fixing names, and so on). 
+You've now used regex to extract, transform, and clean historical text. As a csv file, you could now load this data into a network analysis program such as [Gephi](http://gephi.org) to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your `cleaned-correspondence.csv` file in the next exercise using [*Open Refine*](../supporting materials/open-refine.md), where we'll sort out some of the messy OCR (fixing names, and so on). 

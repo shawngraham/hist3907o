@@ -4,7 +4,7 @@ In our regular expressions example, we were able to extract some of the metadata
 
 ## Grab the Stanford NER
 
-Let us use the NER to extract person, organization, and locations.  First, download the Stanford NER from http://nlp.stanford.edu/software/CRF-NER.shtml and extract it to your machine. Open the location where you extracted the files. 
+Let us use the NER to extract person, organization, and locations.  First, download the Stanford NER from [http://nlp.stanford.edu/software/CRF-NER.shtml](http://nlp.stanford.edu/software/CRF-NER.shtml]) and extract it to your machine. Open the location where you extracted the files. 
 + On a Mac, double-click on the one called ‘ner-gui.command’. (Mac Users: there is also this excellent tutorial from Michelle Moravec [you may wish to consult](http://historyinthecity.blogspot.ca/2014/06/how-to-use-stanfords-ner-and-extract.html).
 + On PC, double-click on ner-gui.bat. This opens up a new window (using Java) with ‘Stanford Named Entity Recognizer’ and also a terminal window. 
 

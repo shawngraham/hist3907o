@@ -2,6 +2,8 @@
 
 The exercises in this module are about colour, layout, and manipulating graphics - but not necessarily in that order. All students must complete the 'Sprucing up a PDF in Inkscape' exercise, as well as the 'Typography', 'Colour', and 'Layout' exercises. Everything after that is optional (including the option to not do them).
 
+Finally: while we haven't explored the possibilities here, I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you try my [series of tutorials on augmented reality, games, and 3d models for history and archaeology](https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials).
+
 [Sprucing up a PDF in Inkscape](#sprucing-up-a-pdf-in-inkscape) | [Typography](#typography) | [Colour](#colour) | [Layout](#layout) | [More](#more)
 
 ![ukraine](http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg)
