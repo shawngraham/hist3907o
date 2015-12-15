@@ -417,7 +417,7 @@
 <li>Click 'train topics' to run the algorithm.</li>
 <li>When it finishes, go to the folder you selected for output, and find the file 'all_topics.html' in the 'output_html' folder. Click on that, and you now have a browser-based way of navigating your topics and documents. In the output_csv folder created, you will find the same information as csv, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)</li>
 </ol>
-<p>Make a note in your open notebook about your process and your observations.</p>
+<p>Make a note in your open notebook about your process and your observations. How does reading this material in this way change/challenge/or focus your understanding of the material?</p>
 <p><em>Going Further</em> Remember when we did the Canadiana API and WGET exercises in Module 2? Somewhere on your machine you have a collection of those materials. Now, you can load those materials into the Topic Modeling Tool if you have all of the txt files in a single folder. In the case of the slavery documents, that was something like 7500 items. That's a lot of drag-and-drop. You can 'flatten' the folder structure so that all of the documents in your subfolders are put into a single folder. If you are on a Mac, <a href="http://osxdaily.com/2015/02/11/flatten-nested-directory-structure-command-line/">try these instructions</a>. On a PC, <a href="http://superuser.com/questions/412982/win-7-copy-all-files-from-a-complex-folder-structure-to-one-folder">try this one</a> (there are scripts you can use, but for the time being this is probably simplest).  Then, you can point your topic modeling tool at your flattened folder, and <em>boom</em> you have a topic model fitted to your collection.</p>
 <hr />
 <h2 id="exercise-3">exercise 3</h2>
@@ -429,8 +429,8 @@
 <p>Make a note in your open notebook about your process and your observations.</p>
 <p><em>Going further</em> If you wanted to use that script on the materials you collected in module 2, you would have to tell R to load up those materials from a directory, rather than by reading a csv file. Take a look at <a href="https://github.com/shawngraham/ferguson/blob/master/R%20script/ferguson-topicmodel.R">my script for topic modeling the Ferguson Grand Jury documents</a>, especially this line:</p>
 <p><code>documents &lt;- mallet.read.dir("originaldocs/1000chunks/")</code></p>
-<p>You feed it the path to your documents. If you are on a windows machine, the path would look a bit different, for instance: 
-<code>"C:\\research\\originaldocs\\1000chunks\\"</code></p>
+<p>You feed it the path to your documents. If you are on a windows machine, the path would look a bit different, for instance: </p>
+<p><code>"C:\\research\\originaldocs\\1000chunks\\"</code></p>
 <hr />
 <h2 id="exercise-4">exercise 4</h2>
 <h3 id="text-analysis-with-overview">Text Analysis with Overview</h3>
@@ -490,19 +490,36 @@
 <li>You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open <a href="https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&amp;output=classic&amp;dg=feature">like so</a>. For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: <code>http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png</code>   Save that info. You'll need it later.</li>
 </ol>
 <p>You have now georectified a map. Let's use that map as a base layer in <a href="http://palladio.designhumanities.org/#/">Palladio</a></p>
-<ol>
-<li>
 <p>We need some place data for Palladio. Here's what I'm using <br> <img alt="Imgur" src="http://i.imgur.com/vTEiRxh.png" /> <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see <a href="http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf">this tutorial</a>). Basically, you want something like this:<br></p>
-<pre><code>  Place   Coordinates&lt;br&gt;
-</code></pre>
-<p>Mexico  23.634501,-102.552784<br>
-California  36.778261,-119.4179324<br>
-Brazos  32.661389,-98.121667<br></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Place</th>
+<th>Coordinates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Mexico</td>
+<td>23.634501,-102.552784</td>
+</tr>
+<tr>
+<td></td>
+<td>California</td>
+<td>36.778261,-119.4179324</td>
+</tr>
+<tr>
+<td></td>
+<td>Brazos</td>
+<td>32.661389,-98.121667</td>
+</tr>
+</tbody>
+</table>
 <p>etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. </p>
-</li>
-<li>
-<p>Go to <a href="http://palladio.designhumanities.org/">Palladio</a>. Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. <strong>You can progress to the next step without having any real data: just paste or type something in.</strong> Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.</p>
-</li>
+<ol>
+<li>Go to <a href="http://palladio.designhumanities.org/">Palladio</a>. Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. <strong>You can progress to the next step without having any real data: just paste or type something in - see the video below.</strong> Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.</li>
 <li>Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but <strong>replace</strong> the <code>/z/x/y</code> part with <code>{z}/{x}/{y}</code>. Click add.</li>
 </ol>
 <p>Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.</p>
