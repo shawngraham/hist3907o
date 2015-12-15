@@ -455,7 +455,7 @@
 <hr />
 <h2 id="exercise-7">exercise 7</h2>
 <h3 id="quick-charts-using-raw">Quick Charts Using RAW</h3>
-<p>A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="../../texas.csv">this</a>. Can we do a quick visualization of this information? One useful tool is <a href="http://raw.densitydesign.org/">RAW</a>. Open that in a new window. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen. </p>
+<p>A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv">this</a>. Can we do a quick visualization of this information? One useful tool is <a href="http://raw.densitydesign.org/">RAW</a>. Open that in a new window. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen. </p>
 <p>RAW takes your data, and depending on your choices, passes it into chart templates built on the d3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in <a href="http://manning.com/meeks/">Elijah Meeks' excellent new book</a>.</p>
 <p>With your data pasted in, you can now experiment with a number of different visualizations that are all built on the d3.js code library.  Try the ‘alluvial’ diagram.  Pick place1 and place2 as your dimensions. Does anything jump out? Try place3 and place 4. Try place1, place2, place3, and place4 in a single alluvial diagram. When we look at the original letters, we see that the writer often identified the town in which he was writing, and the town of the addressee. Why choose the third and fourth places? Perhaps it makes sense, for a given research question, to assume that with the pleasantries out of the way the writers will discuss the places important to their message. Experiment! This is one of the joys of working with data, experimenting to see how you can deform your materials to see them in a new light.</p>
 <hr />
@@ -477,10 +477,22 @@
 </ol>
 <p>You have now georectified a map. Let's use that map as a base layer in <a href="http://palladio.designhumanities.org/#/">Palladio</a></p>
 <ol>
-<li>We need some place data for Palladio. Here's what I'm using <br> <img alt="Imgur" src="http://i.imgur.com/vTEiRxh.png" /> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see <a href="http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf">this tutorial</a>.</li>
-<li>Go to <a href="http://palladio.designhumanities.org/">Palladio</a>. Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data.</li>
-<li>Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but replace the <code>/z/x/y</code> part with <code>{z}/{x}/{y}</code>. Click add.</li>
+<li>
+<p>We need some place data for Palladio. Here's what I'm using <br> <img alt="Imgur" src="http://i.imgur.com/vTEiRxh.png" /> <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see <a href="http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf">this tutorial</a>. Basically, you want something like this:
+          Place   Coordinates<br>
+    Mexico  23.634501,-102.552784<br>
+    California  36.778261,-119.4179324<br>
+    Brazos  32.661389,-98.121667<br></p>
+<p>etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. </p>
+</li>
+<li>
+<p>Go to <a href="http://palladio.designhumanities.org/">Palladio</a>. Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. <strong>You can progress to the next step without having any real data: just paste or type something in.</strong> Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.</p>
+</li>
+<li>Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but <strong>replace</strong> the <code>/z/x/y</code> part with <code>{z}/{x}/{y}</code>. Click add.</li>
 </ol>
+<p>Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe>
+
 <p>Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. Here are some <a href="https://gist.github.com/shawngraham/a49a9834984ae0792345">notes on using a georectified map with the CartoDB service</a>.</p>
 <p><img alt="Imgur" src="http://i.imgur.com/0gCjh5X.jpg" /></p>
 <hr />
@@ -491,9 +503,9 @@
 <p>in the console. Then, you can create the /corpus/text folder &amp; subfolder at that location. Alternatively, you can set the working directory to wherever you like like so:</p>
 <p><code>setwd("C://my-working-folder//")</code> on a pc, or <code>setwd("~/my-working-folder/")</code> on a mac.</p>
 <p>Then, to get going, you'd need</p>
-<p><code>install.packages("tm")</code>
-<code>library(tm)</code> </p>
-<p>You can then work through the entire pdf, or jump ahead to page 37 to see what the completed script would look like (here's <a href="../../text-analysis-cnd.R">my version using the CND again</a>. Makes notes of what you find. Google any error messages you find to try to figure out a solution.</p>
+<p><code>install.packages("tm")</code></p>
+<p><code>library(tm)</code> </p>
+<p>You can then work through the entire pdf, or jump ahead to page 37 to see what the completed script would look like (here's <a href="https://github.com/hist3907b-winter2015/module4-holes/blob/master/text-analysis-cnd.R">my version using the CND again</a>. Makes notes of what you find. Google any error messages you find to try to figure out a solution.</p>
 <h2 id="exercise-10">exercise 10</h2>
 <h3 id="qgis">QGIS</h3>
 <p>There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the <a href="https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre">MADGIC centre</a> has tremendous resources and I would encourage you to speak with the map librarians before embarking on any <em>serious</em> mapping projects. In the short term, the historian <a href="http://fredgibbs.net/">Fred Gibbs</a> has an excellent series on using the open source GIS platform <em>QGIS</em> to make and map historical data.</p>
