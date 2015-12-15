@@ -2,15 +2,15 @@
 
 This exercise draws from the work of [Fred Gibbs](http://fredgibbs.net/)
 
-+ http://fredgibbs.net/tutorials/tutorial/extract-transform-save-csv/
-+ http://fredgibbs.net/tutorials/tutorial/extract-geocode-placenames-from-text-file/
-+ http://fredgibbs.net/tutorials/tutorial/create-kml-file-python/
++ [extract, transform, and save as csv](http://fredgibbs.net/tutorials/tutorial/extract-transform-save-csv/)
++ [extract geocoded placenames from a text file](http://fredgibbs.net/tutorials/tutorial/extract-geocode-placenames-from-text-file/)
++ [create a kml file with python](http://fredgibbs.net/tutorials/tutorial/create-kml-file-python/)
 
 In this exercise, you will need to [have Python installed on your machine; download here](https://www.python.org/downloads/). I have version 2.7.9 on this machine, and know that what follows works with that version.
 
 You should also read and understand Fred Gibbs' tutorial on [installing python modules](http://fredgibbs.net/tutorials/tutorial/install-python-modules/) because you will need to install some helper modules.
 
-In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this](/texas.csv).
+In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv).
 
 1. Use Openrefine to open that csv file. In the same way you tidied up in the [openrefine tutorial in module 3](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/openrefine.md), clean up this CSV so that you merge together place names appropriately (ie, so that '4ustin' gets merged with 'Austin'). Do this for all the columns.
 2. Export the table as a new csv - call it 'cleaned-places.csv'.
@@ -33,7 +33,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-...but check your folder. Do you have a ```geocoded-places.txt``` file? If so, it worked! Or at least, it got most of your places from the Google maps api. (For the rest, you can try uploading your places list to http://scargill.inf.ed.ac.uk/geoparser.html and then copying and pasting the output to an excel file. This parser will give you several columns of results, where the first column represents its best guess and the other columns other possibilities).
+...but check your folder. Do you have a ```geocoded-places.txt``` file? If so, it worked! Or at least, it got most of your places from the Google maps api. (For the rest, you can try uploading your places list to [http://scargill.inf.ed.ac.uk/geoparser.html](http://scargill.inf.ed.ac.uk/geoparser.html) and then copying and pasting the output to an excel file. This parser will give you several columns of results, where the first column represents its best guess and the other columns other possibilities).
 
 You can now import your geocoded places into many other software packages. Gibbs also shows us how to convert our list into KML, the format that Google Earth and Google Maps can read. [Try it now](http://fredgibbs.net/tutorials/tutorial/create-kml-file-python/). You can double-click on the resulting KML file, and if you have Google Earth installed, it will open up there. Within google earth, you can start adding more information, other annotations... pretty soon, you'll have a complete map!
 

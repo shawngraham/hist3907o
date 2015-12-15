@@ -109,7 +109,7 @@ Explore the corpus, comparing terms over time, looking at keywords in context, a
 ## exercise 7
 ### Quick Charts Using RAW
 
-A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this](/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). Open that in a new window. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen. 
+A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). Open that in a new window. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen. 
 
 RAW takes your data, and depending on your choices, passes it into chart templates built on the d3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
@@ -137,15 +137,24 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
-1. We need some place data for Palladio. Here's what I'm using <br> ![Imgur](http://i.imgur.com/vTEiRxh.png) Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see [this tutorial](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf).
-2. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data.
-3. Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but replace the ```/z/x/y``` part with ```{z}/{x}/{y}```. Click add.
+1. We need some place data for Palladio. Here's what I'm using <br> ![Imgur](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see [this tutorial](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf). Basically, you want something like this:
+          Place   Coordinates<br>
+    Mexico  23.634501,-102.552784<br>
+    California  36.778261,-119.4179324<br>
+    Brazos  32.661389,-98.121667<br>
+
+    etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. 
+
+2. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+3. Click on 'map'. Under 'places', select 'coordinates'. Then, click 'add new layer'. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper. Paste it in, but **replace** the ```/z/x/y``` part with ```{z}/{x}/{y}```. Click add.
+
+Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe>
 
 Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. Here are some [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
 
 ![Imgur](http://i.imgur.com/0gCjh5X.jpg)
-
-
 
 ----
 
@@ -163,9 +172,10 @@ in the console. Then, you can create the /corpus/text folder & subfolder at that
 Then, to get going, you'd need
 
 ``` install.packages("tm") ```
+
 ``` library(tm) ``` 
 
-You can then work through the entire pdf, or jump ahead to page 37 to see what the completed script would look like (here's [my version using the CND again](/text-analysis-cnd.R). Makes notes of what you find. Google any error messages you find to try to figure out a solution.
+You can then work through the entire pdf, or jump ahead to page 37 to see what the completed script would look like (here's [my version using the CND again](https://github.com/hist3907b-winter2015/module4-holes/blob/master/text-analysis-cnd.R). Makes notes of what you find. Google any error messages you find to try to figure out a solution.
 
 ## exercise 10
 ### QGIS

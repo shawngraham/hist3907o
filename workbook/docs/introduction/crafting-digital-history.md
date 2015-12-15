@@ -28,13 +28,15 @@ Finally, while there is no formal requirement for you to do this, it would be a 
 
 # Some Readings To Kick Things Off
 
-To get things underway, you should read and reflect on the following three pieces. We will discuss these in our initial face-to-face virtual meeting.
+To get things underway, you should read and reflect on the following three pieces. We can discuss these in our initial face-to-face virtual meeting; you should also feel free to reflect upon these in your narrative blog.
 
 > William G Thomas III. 'What is digital scholarship? A typology'. [http://railroads.unl.edu/blog/?p=1159](http://railroads.unl.edu/blog/?p=1159)
 
 > Jefferson Bailey, Lily Pregill. 'Speak to the Eyes: The History and Practice of Information Visualization' *Art Documentation: Journal of the Art Libraries Society of North America*, vol. 33 (fall 2014) 0730-7187/2014/3302-0002 [text](http://www.jeffersonbailey.com/speak-to-the-eyes-the-history-and-practice-of-information-visualization/)
 
 > Shawn Graham, Ian Milligan, Scott Weingart. 'Principles of Information Visualization' *The Historian's Macroscope* - working title. Under contract with Imperial College Press. Open Draft Version, Autumn 2013, [site](http://www.themacroscope.org/?page_id=469)
+> 
+> --- On Diversity in Digital History [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/)
 
 # Acknowledgements
 
