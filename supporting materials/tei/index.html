@@ -413,26 +413,26 @@ Now that you have highlighted these, you are going to put proper code around the
 <p>Placed <code>&lt;/p&gt;</code> at the end of every paragraph, including the end of the page</p>
 <p>Made sure all your <code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code> and <code>&lt;interp&gt;</code> tags are properly enclosed in <code>&lt;&gt;</code>s</p>
 <p>Made sure you have both an open <code>&lt;&gt;</code> and close <code>&lt;\&gt;</code> tag for each tag you use</p>
-<p>Made sure you attribute values are fully enclosed in <code>""</code>s</p>
-<p>Made sure you have a space between the `"`` of one attribute and the start of the next</p>
-<p>Made sure you do NOT have a space after the `=`` of an attribute</p>
+<p>Made sure you attribute values are fully enclosed in <code>""</code>.</p>
+<p>Made sure you have a space between the <code>"</code> of one attribute and the start of the next</p>
+<p>Made sure you do NOT have a space after the <code>=</code> of an attribute</p>
 <p>If your text still does not appear formatted, you may need to remove the text one paragraph at a time, refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it).</p>
 <h3 id="if-you-still-dont-see-your-text">If you still don't see your text</h3>
 <p><em>If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong</em></p>
 <ul>
 <li>Some browsers will not perform the transformation, for security reasons.</li>
 <li>
-<p>In which case, here's what we can do. If you are using Notepad++, go to 'Plugins' &gt;&gt; Plugin Tools. Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the <a href="https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml">1.xml</a> file in Notepad ++. Then, under 'plugins'&gt;&gt;'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: <code>...</code> to open up the file finder, and select the <code>000style.xsl</code> stylesheet. Click 'transform'. A new tab will open in Notepad++ <em>with a fully-formed html file displaying your data according to the stylesheet.</em> Save this, and then open it in a browser!</p>
+<p>In which case, here's what we can do. If you are on a Windows machine using Notepad++, go to 'Plugins' &gt;&gt; Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the <a href="https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml">1.xml</a> file in Notepad ++. Then, under 'plugins'&gt;&gt;'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: <code>...</code> to open up the file finder, and select the <code>000style.xsl</code> stylesheet. Click 'transform'. A new tab will open in Notepad++ <em>with a fully-formed html file displaying your data according to the stylesheet.</em> Save this, and then open it in a browser!</p>
 </li>
 <li>
-<p>You can also check 'validate' from the XML Tools menu, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the <a href="../../1.xml">1.xml</a> reference document. </p>
+<p>You can also check 'validate' from the XML Tools menu in Notepad++, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the <a href="https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml">1.xml</a> reference document. </p>
 </li>
 <li>
 <p><em>Advanced</em>: If you install a <a href="http://www.wampserver.com/en/">WAMP</a> or <a href="http://www.mamp.info/en/">MAMP</a> server, and put your xml and xsl files in the WWW folder, you <em>should</em> be able to see the transformation no problem at <code>localhost\myxml.xml</code> (for example). (You can also use <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's built in webserver if you have Python on your machine</a> - all Mac users for instance do.)</p>
 </li>
 </ul>
 <blockquote>
-<p>So here's the CND.xml, transformed into a csv: http://shawngraham.github.io/exercise/cnd.xml . If you 'view page source', you'll see the original XML again! Save-as the page as .csv and you can do some data mining on it.</p>
+<p>So here's the CND.xml, transformed into a csv: <a href="http://shawngraham.github.io/exercise/cnd.xml">http://shawngraham.github.io/exercise/cnd.xml</a> . If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.</p>
 </blockquote>
 <h3 id="more-on-transformations">More on transformations</h3>
 <p>I made a file I've called <a href="https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl">SG_transformer.xsl</a>. Open that file in your text editor. What tags would it be looking for in the xml file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.</p>
