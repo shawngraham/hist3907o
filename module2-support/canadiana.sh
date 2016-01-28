@@ -11,6 +11,9 @@
 
 # only code difference in this script compared to the original posted by Milligan (based on Marti, see http://ianmilligan.ca/api-example-sh/) is that http had to be added in line 30, with awk.
 
+# to adapt for your own search, change the 
+
+
 pages=$(curl 'http://eco.canadiana.ca/search?q=montenegr*&field=&so=score&df=1914&dt=1918&fmt=json' | jq '.pages')
 
 # this goes into the results and reads the value of 'pages' in each one of them.
@@ -20,7 +23,7 @@ echo "Pages:"$pages
 
 # this says 'for each one of these pages, download the 'key' value on each page'
 
-for i in $(seq 10)
+for i in $(seq 1 $pages)
 do
         curl 'http://eco.canadiana.ca/search/'${i}'?q=montenegr*&field=&so=score&df=1914&dt=1918&fmt=json' | jq '.docs[] | {key}' >> results.txt
 done
