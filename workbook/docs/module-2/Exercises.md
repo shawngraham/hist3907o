@@ -35,13 +35,14 @@ Explore both databases. Perform a search of interest to you. In the case of the 
 # Exercise 2: Outwit Hub
 Download, and install, [outwit hub](https://www.outwit.com/products/hub/). Do not buy it (not unless you really want to; the free trial is good enough for our purposes here)
 
-Outwit hub is a piece of software that lets you scrape the html of a webpage. It comes with its own browser. In essence, you look at the html source code of your page to identify the *markers* that embrace the information you want. Outwit then copies just that information into a table for you, which you can then download. Take a look at the [Suda Online](http://www.stoa.org/sol/) and do a search for 'pie' (the Suda is a 10th century Byzantine Greek encyclopedia, and its online version is one of the earliest examples of what we'd now recognize as digital humanities scholarship).
+Outwit hub is a piece of software that lets you scrape the html of a webpage. It comes with its own browser. In essence, you look at the html source code of your page to identify the *markers* that embrace the information you want. Outwit then copies just that information into a table for you, which you can then download. Take a look at the [Suda Online](http://www.stoa.org/sol/) and do a search for `pie` (the Suda is a 10th century Byzantine Greek encyclopedia, and its online version is one of the earliest examples of what we'd now recognize as digital humanities scholarship).
 
 Right-click anywhere on the results page, and 'view source'. You'll see something like this:
 ![Imgur](http://i.imgur.com/zCSRR9H.png)
 The record number - the Adler number - is very clearly marked, as is the translation. Those are the bits we want. So
 
-Open outwit hub. Copy and paste the search URL into the Outwit hub address bar:
+Open outwit hub. In the address bar at the top of the screen, type in [http://www.stoa.org/sol/](http://www.stoa.org/sol/). The page will load up. Do your search again there by putting `pie` in there. (Remember, we're not searching for pie, but rather, the transliterated characters that form a root in many ancient Greek words!). The results will load up. If you then click on 'source' on the left hand side of the screen, you'll see the underlying html. Now click on 'scrapers' (again, at left hand side of screen, under 'automators'). Your page will look very similar to this:
+
 ![Imgur](http://i.imgur.com/fDM1tog.png)
 
 At the bottom of the page - that's where you tell Outwit how to scrape that source.  Click ‘scrapers,’ then ‘new,’ give it a name. Enter the markers that you are interested in:
@@ -87,8 +88,6 @@ http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1
 
 The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found here](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably 'curl', 'jq', 'sed', 'awk'. curl  is a program for downloading webpages, jq for dealing with json, and sed and awk for searching within and cleaning up text. If this all sounds greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
 
-I've put a copy [in the module 2 repository, to save you the trouble.](https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-mac.sh)
-
 ### Mac instructions:
 
 First question: do you have wget installed on your computer? If you don't, you'll need it for this exercise and the next one (if you look in the program 'api-ex-mac.sh', you'll see that the final line of the program asks wget to go get the results you've scraped from Canadiana). Installing wget is quite straightforward - follow [the Programming Historian's instructions](http://programminghistorian.org/lessons/automated-downloading-with-wget).
@@ -107,6 +106,8 @@ And then you can run it by typing:
 
 `./api-ex-mac.sh`  but *don't* do that yet! You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name, and then run the new command. Move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data.
 
+I've put a copy of the script for Mac folks [here.](https://github.com/hist3907b-winter2015/module2-findingdata/blob/master/api-ex-mac.sh)
+
 ### Windows7&8&10 instructions:
 Begin by making a folder for this exercise on your desktop.
 
@@ -124,13 +125,17 @@ Begin by making a folder for this exercise on your desktop.
 
 ...so yes, start that with a semicolon- and what you are putting in is the exact location of where the coreutils package of programs is located.
 
-Finally, you'll need wget installed on your machine. Get it [here](http://users.ugent.be/~bpuype/wget/) and download it to C:Windows directory.
+Finally, you'll need the windows version of wget installed on your machine. Get it [here](https://eternallybored.org/misc/wget/) and download it to C:Windows directory.
 
 Now:  
-- download canadiana.sh from this [zip file](https://github.com/shawngraham/hist3907o/raw/master/module2-support/windows-canadiana-script-w-all-helpers.zip)
-- open *git bash* - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. *Git bash*. (You can also navigate to a folder in explorer, then right-click in that folder and select 'open git bash here'.)
-- make sure you are working within the folder you made on your desktop. The command to change directory when you are in bash (or the command line, for that matter) is `cd`  ie `cd course-notes` would go one level down into a folder called 'course notes'. To go one level up, you'd type `cd ..` <- ie, two periods. More help on finding your way around this interface is [here](http://programminghistorian.org/lessons/intro-to-bash)
-- Once you're in the right folder, all you have to do is type the name of our programme: `canadiana.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!*
+
++ download this [zip file](https://github.com/shawngraham/hist3907o/raw/master/module2-support/windows-canadiana-script-w-all-helpers.zip). It contains the Canadiana shell script *and* all the necessary helper files. **Nb** these all need to be in the same folder in order for this to work.
+
++ open *git bash* - it'll be available via your programs menu. You do not want 'Git Gui' nor 'GitHub' nor 'Git Shell'. *Git bash*. (You can also navigate to a folder in explorer, then right-click in that folder and select 'open git bash here'.)
+
++ make sure you are working within the folder you made on your desktop. The command to change directory when you are in bash (or the command line, for that matter) is `cd`  ie `cd course-notes` would go one level down into a folder called 'course notes'. To go one level up, you'd type `cd ..` <- ie, two periods. More help on finding your way around this interface is [here](http://programminghistorian.org/lessons/intro-to-bash)
+
++ Once you're in the right folder, all you have to do is type the name of our programme: `./canadiana.sh` and your program will query the Canadiana API, save the results, and then use wget to retrieve the full text of each result by asking the API for those results in turn. *But don't do that yet!*
 
 You'll need to change the search parameters to reflect your own interests. Do you see how you can do that? Open the program in a text editor, make the relevant change, save with a new name (make sure to keep the same file extenion, `.sh` - in notepad, change the save as file type to `all files` and then write the new name, e.g, `canadiana-2.sh`, and then run your program by typing its name at the prompt in the git bash window. When it's finished, move your results into a sensible location on your computer. Make a new entry (or entries) into your research notebook about this process, what worked, what hasn't, what you've found, where things are, and so on. You might want to upload your script (your .sh file) to your repository. Remember: the goal is so that you can come back to all this in a month's time and figure out _exactly what you did_ to collect your data.
 
@@ -140,6 +145,8 @@ If this happens, your computer is not finding the coreutils installation or the 
 + `libiconv2.dll`
 + `libintl3.dll`
 ...to the same folder. (*shortcut* - the same zip file I gave you that has the `canadiana.sh` in it has all of the helper files in it too. You could navigate to this unzipped folder, open a gitbash window there, and run the scripts. In this case, FYI, all you needed installed was gitbash.)
+
+**A Windows Gotcha** It might happen that you have my zipfile with all the necessary files downloaded and extracted on your machine, and yet, despite everything, when you type the `canadiana.sh` command you get a `file not found error`. On Windows 10 machines (and perhaps some Windows 8 machines), you will need to add the dot slash at the beginning: `./canadiana.sh`. The script might then run, but if you look at the output carefully, nothing is being downloaded and there is also a `jq not found` error being printed out. To solve this, you'll need to edit `canadiana.sh` and find the spots where the script calls the `jq` command and replace it with `./jq`. 
 
 ###An alternative Windows installation
 
@@ -182,6 +189,14 @@ There are two commands there, divided by the | ('pipe') character. Indeed, the o
 
 Experiment with the `sed` command. Google `sed patterns`. Can you improve the pattern to make the resulting files more useful for you?
 
+A student in the open access version of the course, Lee Mordechai, suggests the following script (which Windows users can run in Git Bash)
+
+`awk '/identifier/{"F"++i;}{print > "newoutput"i".txt";}' output.txt`
+
+where 'identifier' is the keyword where you want the split to occur. 
+
+There are many different ways of getting the job done; be prepared to explore and tinker! In the end, sometimes, the best solution is the one that works, however cludgy it might seem.
+
 # Exercise 4: Tracking the ephemeral web
 
 Nothing lasts for ever on the internet. By some measures, for some kinds of content, the half-life is on the order of *hours*. In this exercise, I want you to [read this post](http://www.anonymousswisscollector.com/2015/10/saving-info-and-your-skin-on-the-ephemeral-internet-a-how-to-for-researchers.html) from Donna Yates of the _[Trafficking Culture](http://traffickingculture.org)_ project at the University of Glasgow. Consider her workflow, and develop your own workflow for preserving copies of what you find in the course of your research. You might wish to investigate [BibDesk](http://bibdesk.sourceforge.net/) or [Zotero](https://www.zotero.org/). Then, in the narrative of your work for me in this class (ie, on your blog or similar) describe your research interests and the ways in which your materials might prove ephemeral online. Describe your workflow for dealing with this problem (that is, show you understand how your chosen tools/flow work). Integrate what you have already learned in modules 1 & 2.
@@ -206,7 +221,7 @@ This section will follow [Milligan p52-64](https://ianmilli.files.wordpress.com/
 *but* if that's all you get, and nothing downloads, the problem is in your txt file. *Make sure* to create your txt file with a text editor (textwrangler, sublime text, notepad) and *not* from `save as...txt` in excel. (If you have an option when you create the text file, make sure the encoding is 'utf-8' rather than 'utf-16').
 - if you're really stuck, see this [blog post from the Internet Archive](http://blog.archive.org/2012/04/26/downloading-in-bulk-using-wget/)
 
-# Going Further: Archiving Twitter
+# Going Further Still: Archiving Twitter
 - use Ed Summer's [TWARC](https://github.com/shawngraham/twarc) to grab, archive, share, inflate, and visualize tweets
 - convert JSON to CSV with [this tool](http://konklone.io/json/)
 - use R to grab resources from [dp.la](http://dp.la) with this wee R script on my [gists](https://gist.github.com/shawngraham/0907ab2c2185cfe9f91b) (What's R? a great environment for doing many many things. Get it [here](https://cran.r-project.org/) and use [RStudio to work in it](https://www.rstudio.com/) (grab the free version))

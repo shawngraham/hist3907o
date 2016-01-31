@@ -4,7 +4,7 @@ This worksheet, and all related files, are released CC-BY.
 
 [By M. H. Beals](https://github.com/mhbeals/TEI-Close-Reading); Adapted for HIST3907b by S Graham
 
-You will need the files in [https://github.com/mhbeals/TEI-Close-Reading](https://github.com/mhbeals/TEI-Close-Reading) so download that repository as a zip file and unzip it somewhere handy on your machine.
+You will need the files in [this subfolder](https://github.com/craftingdigitalhistory/module3-wranglingdata/tree/master/tei-hist3907) so download that repository as a zip file and unzip it somewhere handy on your machine.
 
 This exercise will explore a historical text and help you create a digital record of your analysis
 
@@ -103,11 +103,11 @@ Made sure all your `<persName>`, `<placeName>` and `<interp>` tags are properly 
 
 Made sure you have both an open `<>` and close `<\>` tag for each tag you use
 
-Made sure you attribute values are fully enclosed in `""`s
+Made sure you attribute values are fully enclosed in `""`.
 
-Made sure you have a space between the `"`` of one attribute and the start of the next
+Made sure you have a space between the `"` of one attribute and the start of the next
 
-Made sure you do NOT have a space after the `=`` of an attribute
+Made sure you do NOT have a space after the `=` of an attribute
 
 If your text still does not appear formatted, you may need to remove the text one paragraph at a time, refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it).
 
@@ -116,13 +116,13 @@ If your text still does not appear formatted, you may need to remove the text on
 *If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong*
 
 + Some browsers will not perform the transformation, for security reasons.
-+ In which case, here's what we can do. If you are using Notepad++, go to 'Plugins' >> Plugin Tools. Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the [1.xml](/1.xml) file in Notepad ++. Then, under 'plugins'>>'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: ``` ... ``` to open up the file finder, and select the ``` 000style.xsl ``` stylesheet. Click 'transform'. A new tab will open in Notepad++ _with a fully-formed html file displaying your data according to the stylesheet._ Save this, and then open it in a browser!
++ In which case, here's what we can do. If you are on a Windows machine using Notepad++, go to 'Plugins' >> Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++. Then, under 'plugins'>>'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: ``` ... ``` to open up the file finder, and select the ``` 000style.xsl ``` stylesheet. Click 'transform'. A new tab will open in Notepad++ _with a fully-formed html file displaying your data according to the stylesheet._ Save this, and then open it in a browser!
 
-+ You can also check 'validate' from the XML Tools menu, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the [1.xml](/1.xml) reference document. 
++ You can also check 'validate' from the XML Tools menu in Notepad++, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) reference document. 
 
 + _Advanced_: If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your xml and xsl files in the WWW folder, you *should* be able to see the transformation no problem at ``` localhost\myxml.xml ``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) - all Mac users for instance do.)
 
-> So here's the CND.xml, transformed into a csv: http://shawngraham.github.io/exercise/cnd.xml . If you 'view page source', you'll see the original XML again! Save-as the page as .csv and you can do some data mining on it.
+> So here's the CND.xml, transformed into a csv: [http://shawngraham.github.io/exercise/cnd.xml](http://shawngraham.github.io/exercise/cnd.xml) . If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.
 
 
 ### More on transformations

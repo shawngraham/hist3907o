@@ -21,7 +21,7 @@ Isaac Van Zandt, Anson Jones, January 11 1843
 
 The change doesn't look like much, and you might think to yourself, 'hey, I could just do that by hand'. You could; but it'd take you ages, and if you made a mistake somewhere - are you sure you could do this consisently, for a couple of hours at a time? Probably not. Your time is better spent figuring out the search and replace patterns, and then setting your machine loose to implement it.
 
-Data formatted like this could be fed into a network analysis program, for instance, or otherwise visualized and analyzed. Regex as we are going to use in this tutorial allows us to go from unstructured to structured data.
+Data formatted like this could be fed into a network analysis program, for instance, or otherwise visualized and analyzed. Regex as we are going to use in this tutorial allows us to go from unstructured to structured data. _There is a video at the end of this document that captures someone working through this exercise._
 
 ## Getting started
 
@@ -188,3 +188,6 @@ will show you every line with more than 2 commas, because it finds any line that
 *Congratulations!*
 
 You've now used regex to extract, transform, and clean historical text. As a csv file, you could now load this data into a network analysis program such as [Gephi](http://gephi.org) to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your `cleaned-correspondence.csv` file in the next exercise using [*Open Refine*](../supporting materials/open-refine.md), where we'll sort out some of the messy OCR (fixing names, and so on). 
+
+### Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yQzfJsyfMNw" frameborder="0" allowfullscreen></iframe>
