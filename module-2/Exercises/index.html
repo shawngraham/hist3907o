@@ -138,7 +138,7 @@
                     <li><a class="toctree-l4" href="#hints">hints:</a></li>
                 
             
-                <li class="toctree-l3"><a href="#going-further-archiving-twitter">Going Further: Archiving Twitter</a></li>
+                <li class="toctree-l3"><a href="#going-further-still-archiving-twitter">Going Further Still: Archiving Twitter</a></li>
                 
                     <li><a class="toctree-l4" href="#did-you-know">Did you know?</a></li>
                 
@@ -496,6 +496,10 @@ The record number - the Adler number - is very clearly marked, as is the transla
 <p><code>sed 's/oocihm/\n&amp;/2g' output.txt | split -dl1 --aditional-suffix=.txt - splitfile</code></p>
 <p>There are two commands there, divided by the | ('pipe') character. Indeed, the output of the first command is 'piped' as the input into the second one. The first command, <code>sed</code> (which stands for 'stream editor') looks for the pattern in each line in your <code>output.txt</code>. When it finds it, it pipes it to the <code>split</code> command which throws it into a new file called <code>splitfile000.txt</code>, iterating the file name upwards each time. Google 'sed' and 'split' for examples to try on your own. <em>Windows users</em> things are not quite as easy, but not too bad. In the zip file I provided you there is a script called <code>splitthingsup.sh</code> which contains the same <code>sed</code> command (modified slightly to work on your machine). Just run <code>splitthingsup.sh</code> from the git bash prompt. Ta da! Having everything split up will allow you to start doing text analysis.</p>
 <p>Experiment with the <code>sed</code> command. Google <code>sed patterns</code>. Can you improve the pattern to make the resulting files more useful for you?</p>
+<p>A student in the open access version of the course, Lee Mordechai, suggests the following script (which Windows users can run in Git Bash)</p>
+<p><code>awk '/identifier/{"F"++i;}{print &gt; "newoutput"i".txt";}' output.txt</code></p>
+<p>where 'identifier' is the keyword where you want the split to occur. </p>
+<p>There are many different ways of getting the job done; be prepared to explore and tinker! In the end, sometimes, the best solution is the one that works, however cludgy it might seem.</p>
 <h1 id="exercise-4-tracking-the-ephemeral-web">Exercise 4: Tracking the ephemeral web</h1>
 <p>Nothing lasts for ever on the internet. By some measures, for some kinds of content, the half-life is on the order of <em>hours</em>. In this exercise, I want you to <a href="http://www.anonymousswisscollector.com/2015/10/saving-info-and-your-skin-on-the-ephemeral-internet-a-how-to-for-researchers.html">read this post</a> from Donna Yates of the <em><a href="http://traffickingculture.org">Trafficking Culture</a></em> project at the University of Glasgow. Consider her workflow, and develop your own workflow for preserving copies of what you find in the course of your research. You might wish to investigate <a href="http://bibdesk.sourceforge.net/">BibDesk</a> or <a href="https://www.zotero.org/">Zotero</a>. Then, in the narrative of your work for me in this class (ie, on your blog or similar) describe your research interests and the ways in which your materials might prove ephemeral online. Describe your workflow for dealing with this problem (that is, show you understand how your chosen tools/flow work). Integrate what you have already learned in modules 1 &amp; 2.</p>
 <h1 id="going-further-wget">Going Further: Wget</h1>
@@ -514,7 +518,7 @@ The record number - the Adler number - is very clearly marked, as is the transla
 </ul>
 <p><em>but</em> if that's all you get, and nothing downloads, the problem is in your txt file. <em>Make sure</em> to create your txt file with a text editor (textwrangler, sublime text, notepad) and <em>not</em> from <code>save as...txt</code> in excel. (If you have an option when you create the text file, make sure the encoding is 'utf-8' rather than 'utf-16').
 - if you're really stuck, see this <a href="http://blog.archive.org/2012/04/26/downloading-in-bulk-using-wget/">blog post from the Internet Archive</a></p>
-<h1 id="going-further-archiving-twitter">Going Further: Archiving Twitter</h1>
+<h1 id="going-further-still-archiving-twitter">Going Further Still: Archiving Twitter</h1>
 <ul>
 <li>use Ed Summer's <a href="https://github.com/shawngraham/twarc">TWARC</a> to grab, archive, share, inflate, and visualize tweets</li>
 <li>convert JSON to CSV with <a href="http://konklone.io/json/">this tool</a></li>
