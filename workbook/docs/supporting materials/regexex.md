@@ -177,7 +177,7 @@ You may notice that some lines still do not fit our criteria. Line 22, for examp
 
 The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the recipient, has a comma inside of it. If you were to import this directly into a spreadsheet, you would get four columns, one for sender, two for recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:
 
-``` .+,.+,.+, ```
+``` .+,.+,.+ ```
 
 will show you every line with more than 2 commas, because it finds any line that has any set of characters, then a comma, then any other set, then another comma, and so forth.
 
