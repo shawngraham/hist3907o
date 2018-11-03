@@ -1,6 +1,6 @@
 #Twitter Archiving, or TWARC
 
-[Ed Summers](http://inkdroid.org/journal/) is a software developer with feet firmly planted in the digital humanities world. He's currently at the Univeristy of Maryland, in the [Maryland Institute for Technology in the Humanities](http://mith.umd.edu/). Recently, he has built a [python tool](http://mith.umd.edu/) for searching and grabbing tweets (and all their associated metadata, which is extremely rich), called '[Twarc](https://github.com/edsu/twarc)'.
+[Ed Summers](http://inkdroid.org/journal/) is a software developer with feet firmly planted in the digital humanities world. He's currently at the Univeristy of Maryland, in the [Maryland Institute for Technology in the Humanities](http://mith.umd.edu/). Recently, he has built a [python tool](http://mith.umd.edu/) for searching and grabbing tweets (and all their associated metadata, which is extremely rich), called '[Twarc](https://github.com/DocNow/twarc)'.
 
 In this optional exercise, you will install Twarc on your machine and use it to download all of the tweets hashtagged with '#hist3907b'. Once you've seen that it's working, you will then consider Twitter as a place for performing history. Perhaps you'll search for tweets related to a current event (the first draft of history, as the journalists used to call their work), perhaps you'll see what people are saying about a historic event, person, or place. Perhaps you'll try to map out how effective/affective those 'historical' twitter accounts are (like the ones that tweet WWII in 'real-time', or that purport to be the Emperor Hadrian).
 
@@ -12,7 +12,7 @@ The first thing you'll need for this exercise is Python. Python is a programming
 
 1. Download and install [Python](https://www.python.org/downloads/) version 2.7.9. (Twarc will use with Python 2 or 3, but I know it works with 2.7.9 because that's what I have installed on my own machine). Follow all prompts given to you by the installer.
 2. Make sure you have [Pip](https://pip.pypa.io/en/latest/installing.html) installed. *NB* Pip *should* be installed when you installed Python - it's included by default in version 2.7.9 or above, so you should be ok (this note is aimed at those of you who already have Python). You can check, on the command line, if pip is installed with this command: ``` pip list ```. This will list every module you've got installed for Python - if Pip is installed, it'll be in the list.
-3. Next thing to do is to get the Twarc files from Summers' repository. Go to [https://github.com/edsu/twarc](https://github.com/edsu/twarc) and download as zip. Unzip somewhere easy-to-get-to on your machine. (As it happens, you can also type `` pip install twarc `` from the command line to install it, but it won't give you the utilities folder you'll need later).
+3. Next thing to do is to get the Twarc files from the DocNow repository. Go to [https://github.com/DocNow/twarc](https://github.com/DocNow/twarc) and download as zip. Unzip somewhere easy-to-get-to on your machine. (As it happens, you can also type `` pip install twarc `` from the command line to install it, but it won't give you the utilities folder you'll need later).
 
 ## Telling Twitter Who You Are
 
@@ -66,15 +66,15 @@ This command tells your machine to run the code in the Twarc.py file, which asks
 
 ### Extracting Geolocated tweets
 
-There are a number of utilities for Twarc - see [Summer's documentation here](https://github.com/edsu/twarc#utilities). One that you might be interested is the one for grabbing geolocated tweets.
+There are a number of utilities for Twarc - see [Summers' documentation here](https://github.com/DocNow/twarc#utilities). One that you might be interested is the one for grabbing geolocated tweets.
 
 You can output GeoJSON from tweets where geo coordinates are available:
 
 ``` utils/geojson.py tweets.json > tweets.geojson ```
 
-This command tells your machine to look in the utils subfolder for a file called geojson.py and to run the code therein on your previously created json file with tweets in it. It filters that file and writes just the ones with location data into the geojson format. 
+This command tells your machine to look in the utils subfolder for a file called geojson.py and to run the code therein on your previously created json file with tweets in it. It filters that file and writes just the ones with location data into the GeoJSON format. 
 
-+ *Instant Map!* Github can recognize geojson and represent it on a map. In a new browser window, and assuming that you are logged into Github, go to [github gist](http://gist.github.com). Drag and drop your tweets.geojson file onto that browser window. Github will upload it. In the 'gist description' write 'geotagged tweets re ferguson'. Save. Instant, clickable, map!
++ *Instant Map!* GitHub can recognize GeoJSON and represent it on a map. In a new browser window, and assuming that you are logged into GitHub, go to [GitHub Gist](https://gist.github.com). Drag and drop your tweets.geojson file onto that browser window. GitHub will upload it. In the 'gist description' write 'geotagged tweets re ferguson'. Save. Instant, clickable, map!
 
 ### Your turn
 
